@@ -1,9 +1,26 @@
+"use client";
 import { Hammer } from "lucide-react";
+import Particles from "@/components/Particles";
 
 export default function App() {
   return (
     <>
-      <main className="flex min-h-svh items-center justify-center bg-[linear-gradient(180deg,#000000_0%,#00030f_30%,#00072D_100%)] px-6 py-16 text-white pt-24">
+      <div className="fixed inset-0 -z-10">
+        <Particles
+          particleCount={200}
+          particleSpread={10}
+          speed={0.1}
+          particleColors={["#0118f5"]}
+          moveParticlesOnHover={false}
+          particleHoverFactor={1}
+          alphaParticles={false}
+          particleBaseSize={100}
+          sizeRandomness={1}
+          cameraDistance={20}
+          disableRotation={false}
+        />
+      </div>
+      <main className="flex min-h-svh items-center justify-center px-6 py-16 text-white pt-24">
         <section className="mx-auto flex max-w-5xl flex-col items-center text-center">
           <div className="inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/4 px-4 py-3 backdrop-blur-sm">
             <span className="flex size-9 items-center justify-center rounded-full border border-white/10 bg-white/6">
