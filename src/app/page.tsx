@@ -22,18 +22,21 @@ export default function App() {
           disableRotation={false}
         />
       </div>
-      <main className="flex min-h-svh items-center justify-center px-6 py-16 text-white pt-24">
-        <section id="inicio" className="mx-auto flex max-w-5xl flex-col items-center text-center">
-          <div className="inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/4 px-4 py-3 backdrop-blur-sm">
-            <span className="flex size-9 items-center justify-center rounded-full border border-white/10 bg-white/6">
+      <main className="flex min-h-svh items-center justify-center px-6 py-16 text-foreground pt-24">
+        <section
+          id="inicio"
+          className="mx-auto flex max-w-5xl flex-col items-center text-center"
+        >
+          <div className="inline-flex items-center gap-3 rounded-full border border-border bg-card/40 px-4 py-3 backdrop-blur-sm">
+            <span className="flex size-9 items-center justify-center rounded-full border border-border bg-background/40">
               <Hammer className="size-4" />
             </span>
-            <span className="text-xs font-medium tracking-[0.26em] text-white/70 uppercase">
+            <span className="text-xs font-medium tracking-[0.26em] text-muted-foreground uppercase">
               Syncforge em construção
             </span>
           </div>
 
-          <p className="mt-10 text-xs font-medium tracking-[0.22em] text-white/42 uppercase sm:text-sm">
+          <p className="mt-10 text-xs font-medium tracking-[0.22em] text-muted-foreground/70 uppercase sm:text-sm">
             SyncForge
           </p>
 
@@ -41,24 +44,24 @@ export default function App() {
             Nosso site está em construção.
           </h1>
 
-          <p className="mt-7 max-w-xl text-sm leading-7 text-white/68 sm:text-base">
+          <p className="mt-7 max-w-xl text-sm leading-7 text-muted-foreground sm:text-base">
             A SyncForge oferece serviços digitais para empresas e pessoas
             físicas, com soluções desenvolvidas de acordo com cada necessidade.
           </p>
 
-          <div className="mt-12 h-px w-full max-w-3xl bg-white/10" />
+          <div className="mt-12 h-px w-full max-w-3xl bg-border" />
 
-          <div className="mt-7 flex flex-wrap items-center justify-center gap-3 text-sm text-white/78 sm:text-base">
-            <span className="rounded-full border border-white/10 bg-white/5 px-4 py-2">
+          <div className="mt-7 flex flex-wrap items-center justify-center gap-3 text-sm text-muted-foreground sm:text-base">
+            <span className="rounded-full border border-border bg-card/40 px-4 py-2">
               Desenvolvimento de software
             </span>
-            <span className="rounded-full border border-white/10 bg-white/5 px-4 py-2">
+            <span className="rounded-full border border-border bg-card/40 px-4 py-2">
               Design
             </span>
-            <span className="rounded-full border border-white/10 bg-white/5 px-4 py-2">
+            <span className="rounded-full border border-border bg-card/40 px-4 py-2">
               Edição de vídeo
             </span>
-            <span className="rounded-full border border-white/10 bg-white/5 px-4 py-2">
+            <span className="rounded-full border border-border bg-card/40 px-4 py-2">
               Marketing
             </span>
           </div>
