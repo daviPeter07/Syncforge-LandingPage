@@ -3,6 +3,7 @@
 import { Sparkles } from "lucide-react";
 import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";
 import { TypingAnimation } from "@/components/magicui/typing-animation";
+import CountUp from "@/components/reactbits/count-up";
 import { Reveal } from "@/components/Reveal";
 import { useSmoothScroll } from "@/hooks/use-smooth-scroll";
 import { HeroTerminal } from "./HeroTerminal";
@@ -28,18 +29,18 @@ export function Hero() {
 
           <Reveal delay={0.1}>
             <h1 className="mt-6 text-balance text-4xl font-semibold tracking-[-0.03em] sm:text-5xl lg:text-[3.6rem] lg:leading-[1.05]">
-              Sincronize{" "}
+              Software, vídeo e design{" "}
               <span className="bg-gradient-to-r from-white via-[#9ec0ff] to-[#4d8cff] bg-clip-text text-transparent">
-                marca, software e conteúdo
-              </span>{" "}
-              em um único lugar.
+                no mesmo time
+              </span>
+              . Sem terceirizar o que importa.
             </h1>
           </Reveal>
 
           <Reveal delay={0.2}>
             <div className="mt-6 max-w-xl text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg">
               <TypingAnimation duration={28}>
-                Software sob medida, edição de vídeo e design para empresas e clientes finais que querem crescer com qualidade.
+                Construímos sistemas, peças audiovisuais e identidade visual sob medida — para empresas que tratam o digital como parte séria da operação.
               </TypingAnimation>
             </div>
           </Reveal>
@@ -63,15 +64,24 @@ export function Hero() {
           <Reveal delay={0.5}>
             <div className="mt-12 grid grid-cols-3 gap-6 border-t border-border/40 pt-6">
               <div>
-                <div className="text-2xl font-semibold tracking-tight">120+</div>
-                <div className="text-xs text-muted-foreground">Projetos</div>
+                <div className="flex items-baseline gap-0.5 text-2xl font-semibold tracking-tight">
+                  <CountUp to={147} duration={1.8} />
+                  <span className="text-[#4d8cff]">+</span>
+                </div>
+                <div className="text-xs text-muted-foreground">Entregas</div>
               </div>
               <div>
-                <div className="text-2xl font-semibold tracking-tight">60+</div>
-                <div className="text-xs text-muted-foreground">Clientes</div>
+                <div className="flex items-baseline gap-0.5 text-2xl font-semibold tracking-tight">
+                  <CountUp to={68} duration={1.8} />
+                  <span className="text-[#4d8cff]">+</span>
+                </div>
+                <div className="text-xs text-muted-foreground">Clientes ativos</div>
               </div>
               <div>
-                <div className="text-2xl font-semibold tracking-tight">98%</div>
+                <div className="flex items-baseline gap-0.5 text-2xl font-semibold tracking-tight">
+                  <CountUp to={98} duration={1.8} />
+                  <span className="text-[#4d8cff]">%</span>
+                </div>
                 <div className="text-xs text-muted-foreground">Satisfação</div>
               </div>
             </div>

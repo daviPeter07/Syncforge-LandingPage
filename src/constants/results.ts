@@ -3,31 +3,31 @@ import type { ResultStat } from "@/types/results";
 
 export const RESULTS: ResultStat[] = [
   {
-    value: "120",
+    value: 147,
     suffix: "+",
     label: "Projetos entregues",
-    description: "Sistemas, vídeos e marcas em produção",
+    description: "Sistemas, vídeos e marcas em produção desde 2020",
     icon: Rocket,
   },
   {
-    value: "60",
+    value: 68,
     suffix: "+",
     label: "Clientes atendidos",
-    description: "Empresas e creators em todo o Brasil",
+    description: "De pequenos negócios a redes com várias unidades",
     icon: Users,
   },
   {
-    value: "98",
+    value: 98,
     suffix: "%",
     label: "Satisfação",
-    description: "Avaliação média dos nossos clientes",
+    description: "Nota média no acompanhamento pós-entrega",
     icon: Award,
   },
   {
-    value: "5",
+    value: 5,
     suffix: " anos",
-    label: "De experiência",
-    description: "Construindo soluções digitais sob medida",
+    label: "De estrada",
+    description: "Operação consolidada, sem terceirização do core",
     icon: Clock,
   },
 ];

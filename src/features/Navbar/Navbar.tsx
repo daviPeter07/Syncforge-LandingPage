@@ -3,6 +3,7 @@
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { NAV_ITEMS } from "@/constants/navbar";
 import { useSmoothScroll } from "@/hooks/use-smooth-scroll";
 import { LanguageDropdown } from "./LanguageDropdown";
@@ -54,6 +55,7 @@ export function Navbar() {
         </div>
 
         <div className="hidden items-center gap-2 lg:flex">
+          <ThemeToggle />
           <LanguageDropdown />
         </div>
 
@@ -86,8 +88,9 @@ export function Navbar() {
               {item.label}
             </button>
           ))}
-          <div className="pt-3">
-            <LanguageDropdown className="w-full justify-between" />
+          <div className="flex items-center gap-3 pt-3">
+            <ThemeToggle />
+            <LanguageDropdown className="flex-1 justify-between" />
           </div>
         </div>
       </div>

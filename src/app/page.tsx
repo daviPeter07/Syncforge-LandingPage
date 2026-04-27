@@ -6,12 +6,12 @@ import { Contact } from "@/features/Contact";
 import { Faq } from "@/features/Faq";
 import { Footer } from "@/features/Footer";
 import { Hero } from "@/features/Hero";
+import { ManifestoStrip } from "@/features/ManifestoStrip";
 import { Navbar } from "@/features/Navbar";
 import { Process } from "@/features/Process";
 import { Results } from "@/features/Results";
 import { Services } from "@/features/Services";
 import { Team } from "@/features/Team";
-import { Technologies } from "@/features/Technologies";
 
 export default function HomePage() {
   return (
@@ -22,11 +22,11 @@ export default function HomePage() {
       <main className="relative">
         <Hero />
         <About />
+        <ManifestoStrip />
         <Services />
         <Clients />
         <Process />
         <Team />
-        <Technologies />
         <Results />
         <Faq />
         <Contact />
