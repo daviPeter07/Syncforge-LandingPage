@@ -22,7 +22,7 @@ function LanguageBadge({ code }: { code: string }) {
   return (
     <Badge
       variant="outline"
-      className="h-5 rounded-md border-0 bg-[#0a3499] px-1.5 font-mono text-[10px] font-bold tracking-[0.08em] text-white"
+      className="h-5 rounded-md border-0 bg-[#4d8cff] dark:bg-[#0a3499] px-1.5 font-mono text-[10px] font-bold tracking-[0.08em] text-white"
     >
       {code}
     </Badge>
@@ -38,7 +38,7 @@ export function LanguageDropdown({ className }: { className?: string }) {
             type="button"
             variant="ghost"
             className={cn(
-              "h-9 gap-2 rounded-lg bg-card/60 px-2.5 text-foreground shadow-none hover:bg-[#0a3499]/20 hover:text-foreground data-[state=open]:bg-[#0a3499]/20",
+              "h-9 gap-2 rounded-lg bg-card/60 px-2.5 text-foreground shadow-none hover:bg-[#4d8cff]/10 dark:hover:bg-[#0a3499]/20 hover:text-foreground data-[state=open]:bg-[#4d8cff]/10 dark:data-[state=open]:bg-[#0a3499]/20",
               className,
             )}
           >
@@ -53,10 +53,10 @@ export function LanguageDropdown({ className }: { className?: string }) {
         </DropdownMenuTrigger>
         <DropdownMenuContent
           align="end"
-          className="min-w-[160px] rounded-xl border border-border/60 bg-card/95 p-1.5 text-foreground shadow-[0_18px_50px_rgba(0,7,45,0.4)] backdrop-blur-xl"
+          className="min-w-[160px] rounded-xl border border-border/60 bg-card p-1.5 text-foreground shadow-xl"
         >
           <DropdownMenuItem
-            className="h-10 rounded-lg px-2 font-semibold text-foreground focus:bg-[#0a3499]/20 focus:text-foreground"
+            className="h-10 rounded-lg px-2 font-semibold text-foreground focus:bg-[#4d8cff]/10 dark:focus:bg-[#0a3499]/20 focus:text-foreground"
             onSelect={(event) => event.preventDefault()}
           >
             <LanguageBadge code="PT" />
@@ -67,19 +67,20 @@ export function LanguageDropdown({ className }: { className?: string }) {
             <Tooltip key={language.code}>
               <TooltipTrigger asChild>
                 <DropdownMenuItem
-                  aria-disabled="true"
-                  className="h-10 cursor-not-allowed rounded-lg px-2 font-semibold text-muted-foreground focus:bg-[#0a3499]/10 focus:text-muted-foreground"
+                  className="h-10 cursor-not-allowed rounded-lg px-2 font-semibold text-muted-foreground focus:bg-[#4d8cff]/5 dark:focus:bg-[#0a3499]/10 focus:text-muted-foreground flex items-center justify-between"
                   onSelect={(event) => event.preventDefault()}
                 >
-                  <LanguageBadge code={language.code} />
-                  <span>{language.label}</span>
+                  <div className="flex items-center gap-2">
+                    <LanguageBadge code={language.code} />
+                    <span>{language.label}</span>
+                  </div>
                 </DropdownMenuItem>
               </TooltipTrigger>
               <TooltipContent
                 side="right"
                 sideOffset={10}
                 hideArrow
-                className="border-0 bg-[#0a3499] text-white shadow-xl"
+                className="border-0 bg-[#4d8cff] dark:bg-[#0a3499] text-white shadow-xl"
               >
                 {language.message}
               </TooltipContent>

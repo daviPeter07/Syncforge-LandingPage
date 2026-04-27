@@ -6,7 +6,6 @@ import { useState } from "react";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { NAV_ITEMS } from "@/constants/navbar";
 import { useSmoothScroll } from "@/hooks/use-smooth-scroll";
-import { LanguageDropdown } from "./LanguageDropdown";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -56,7 +55,6 @@ export function Navbar() {
 
         <div className="hidden items-center gap-2 lg:flex">
           <ThemeToggle />
-          <LanguageDropdown />
         </div>
 
         <button
@@ -90,7 +88,6 @@ export function Navbar() {
           ))}
           <div className="flex items-center gap-3 pt-3">
             <ThemeToggle />
-            <LanguageDropdown className="flex-1 justify-between" />
           </div>
         </div>
       </div>
