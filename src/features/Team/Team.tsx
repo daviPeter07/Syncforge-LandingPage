@@ -12,10 +12,10 @@ export function Team() {
           eyebrow="Equipe"
           title={
             <>
-              Talentos que <span className="text-[#4d8cff]">forjam</span> juntos
+              Quem faz a <span className="text-[#4d8cff]">SyncForge</span> acontecer
             </>
           }
-          description="Um time enxuto e multidisciplinar, com profissionais experientes em desenvolvimento, design e produção audiovisual."
+          description="Conheça o time por trás da SyncForge. Desenvolvedores, designers e criadores de vídeo trabalhando juntos para entregar soluções digitais de qualidade."
         />
 
         <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
