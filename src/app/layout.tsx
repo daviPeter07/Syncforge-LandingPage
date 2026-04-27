@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Geist_Mono, Poppins } from "next/font/google";
 import { Providers } from "@/components/Providers";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -60,6 +61,7 @@ export default function RootLayout({
         suppressHydrationWarning
         className="min-h-full flex flex-col bg-background text-foreground"
       >
+        <Analytics />
         <Providers>{children}</Providers>
       </body>
     </html>
