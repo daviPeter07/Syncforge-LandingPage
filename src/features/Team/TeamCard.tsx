@@ -22,10 +22,9 @@ export function TeamCard({ member, index }: TeamCardProps) {
             sizes="(max-width: 768px) 100vw, 25vw"
             className="object-cover transition-transform duration-500 group-hover:scale-[1.04]"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-card via-card/40 to-transparent" />
         </div>
 
-        <div className="flex flex-1 flex-col gap-3 p-5">
+        <div className="flex flex-1 flex-col gap-3 p-5 bg-card/80">
           <div>
             <h3 className="text-lg font-semibold tracking-tight">
               {member.name}

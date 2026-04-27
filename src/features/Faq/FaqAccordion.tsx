@@ -1,7 +1,6 @@
 "use client";
 
 import { Minus, Plus } from "lucide-react";
-import { AnimatePresence, motion } from "motion/react";
 import { useState } from "react";
 import type { FaqItem } from "@/types/faq";
 import { cn } from "@/lib/utils";
@@ -33,7 +32,7 @@ export function FaqAccordion({ items }: FaqAccordionProps) {
               aria-expanded={isOpen}
               className="flex w-full items-center gap-4 px-5 py-4 text-left"
             >
-              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-border/60 bg-background/40 text-muted-foreground">
+              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-border/60 bg-background/40 text-muted-foreground transition-all">
                 {isOpen ? (
                   <Minus className="size-4 text-[#4d8cff]" />
                 ) : (
@@ -41,7 +40,7 @@ export function FaqAccordion({ items }: FaqAccordionProps) {
                 )}
               </span>
               <div className="flex-1">
-                <span className="text-[10px] font-medium uppercase tracking-[0.2em] text-[#4d8cff]/80">
+                <span className="block mb-1 text-[10px] font-medium uppercase tracking-[0.2em] text-[#4d8cff]/80">
                   {item.category}
                 </span>
                 <h3 className="text-sm font-semibold tracking-tight sm:text-base">
@@ -50,20 +49,19 @@ export function FaqAccordion({ items }: FaqAccordionProps) {
               </div>
             </button>
 
-            <AnimatePresence initial={false}>
-              {isOpen && (
-                <motion.div
-                  initial={{ height: 0, opacity: 0 }}
-                  animate={{ height: "auto", opacity: 1 }}
-                  exit={{ height: 0, opacity: 0 }}
-                  transition={{ duration: 0.25, ease: "easeInOut" }}
-                >
-                  <div className="px-5 pb-5 pl-[calc(20px+32px+16px)] text-sm leading-relaxed text-muted-foreground">
-                    {item.answer}
-                  </div>
-                </motion.div>
+            {/* Otimização de Performance: Usando CSS Grid em vez de framer-motion com 'height: auto' para evitar layout thrashing */}
+            <div
+              className={cn(
+                "grid transition-all duration-300 ease-in-out",
+                isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0 pointer-events-none"
               )}
-            </AnimatePresence>
+            >
+              <div className="overflow-hidden">
+                <div className="px-5 pb-5 pl-[calc(20px+32px+16px)] text-sm leading-relaxed text-muted-foreground">
+                  {item.answer}
+                </div>
+              </div>
+            </div>
           </article>
         );
       })}

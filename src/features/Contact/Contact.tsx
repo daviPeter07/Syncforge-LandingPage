@@ -9,8 +9,8 @@ export function Contact() {
     <section id="contato" className="relative py-24 sm:py-32">
       <div className="mx-auto max-w-6xl px-6">
         <Reveal>
-          <h2 className="text-center text-4xl font-bold tracking-tight text-balance text-white sm:text-5xl">
-            Entre em <span className="text-blue-500">Contato</span>
+          <h2 className="text-center text-4xl font-bold tracking-tight text-balance text-foreground sm:text-5xl">
+            Entre em <span className="text-[#4d8cff]">Contato</span>
           </h2>
         </Reveal>
 

@@ -10,10 +10,10 @@ export function ContactForm() {
   const isSuccess = status === "success";
 
   return (
-    <div className="rounded-2xl border border-white/10 bg-[#000A3A]/60 p-6 backdrop-blur-sm sm:p-8">
+    <div className="rounded-2xl border border-border/40 bg-card/60 p-6 backdrop-blur-sm sm:p-8">
       <div className="mb-6">
-        <h3 className="text-xl font-semibold text-white">Envie uma mensagem</h3>
-        <p className="mt-1 text-sm text-slate-400">
+        <h3 className="text-xl font-semibold text-foreground">Envie uma mensagem</h3>
+        <p className="mt-1 text-sm text-muted-foreground">
           Preencha o formulário abaixo e entraremos em contato o mais breve
           possível.
         </p>
@@ -52,7 +52,7 @@ export function ContactForm() {
         <div className="space-y-2">
           <label
             htmlFor="message"
-            className="block text-sm font-semibold text-white"
+            className="block text-sm font-semibold text-foreground"
           >
             Mensagem
           </label>
@@ -63,14 +63,14 @@ export function ContactForm() {
             value={values.message}
             onChange={(e) => handleChange("message", e.target.value)}
             required
-            className="w-full resize-y rounded-lg border border-white/10 bg-[#00072D]/80 px-4 py-3 text-sm text-white placeholder:text-slate-500 outline-none transition focus:border-blue-500/60 focus:ring-2 focus:ring-blue-500/20"
+            className="w-full resize-y rounded-lg border border-border/60 bg-background/80 px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground outline-none transition focus:border-[#4d8cff]/60 focus:ring-2 focus:ring-[#4d8cff]/20"
           />
         </div>
 
         <button
           type="submit"
           disabled={isLoading}
-          className="group flex w-full items-center justify-center gap-2 rounded-lg bg-blue-600 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-600/20 transition hover:bg-blue-500 disabled:cursor-not-allowed disabled:opacity-70"
+          className="group flex w-full items-center justify-center gap-2 rounded-lg bg-[#4d8cff] px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-[#4d8cff]/20 transition hover:bg-[#3d7aee] disabled:cursor-not-allowed disabled:opacity-70 dark:text-[#00072d]"
         >
           {isLoading ? (
             <Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" />
@@ -110,7 +110,7 @@ function Field({
 }: FieldProps) {
   return (
     <div className="space-y-2">
-      <label htmlFor={id} className="block text-sm font-semibold text-white">
+      <label htmlFor={id} className="block text-sm font-semibold text-foreground">
         {label}
       </label>
       <input
@@ -120,7 +120,7 @@ function Field({
         value={value}
         onChange={(e) => onChange(e.target.value)}
         required={required}
-        className="w-full rounded-lg border border-white/10 bg-[#00072D]/80 px-4 py-3 text-sm text-white placeholder:text-slate-500 outline-none transition focus:border-blue-500/60 focus:ring-2 focus:ring-blue-500/20"
+        className="w-full rounded-lg border border-border/60 bg-background/80 px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground outline-none transition focus:border-[#4d8cff]/60 focus:ring-2 focus:ring-[#4d8cff]/20"
       />
     </div>
   );

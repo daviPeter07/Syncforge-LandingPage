@@ -43,10 +43,10 @@ export function Footer() {
 
   return (
     <footer className="relative overflow-hidden border-t border-border/40 bg-background">
-      {/* Glow azul decorativo */}
+      {/* Glow azul decorativo - Atenuado no light mode para leitura limpa */}
       <div
         aria-hidden
-        className="pointer-events-none absolute -top-40 left-1/2 h-[420px] w-[1100px] -translate-x-1/2 rounded-full bg-[#0a3499]/20 blur-[140px]"
+        className="pointer-events-none absolute -top-40 left-1/2 h-[420px] w-[1100px] -translate-x-1/2 rounded-full bg-[#4d8cff]/10 dark:bg-[#0a3499]/20 blur-[140px]"
       />
 
       <div className="relative mx-auto max-w-7xl px-6 pt-20 pb-10 sm:px-8">
@@ -193,12 +193,14 @@ export function Footer() {
         {/* Barra inferior */}
         <div className="flex flex-col-reverse items-start justify-between gap-6 border-t border-border/40 pt-7 md:flex-row md:items-center">
           <p className="text-xs text-muted-foreground">
-            © {new Date().getFullYear()} SyncForge. CNPJ 00.000.000/0001-00. Todos
-            os direitos reservados.
+            © {new Date().getFullYear()} SyncForge. CNPJ 00.000.000/0001-00.
+            Todos os direitos reservados.
           </p>
 
           <div className="flex items-center gap-4">
-            <span className="text-xs text-muted-foreground">Siga a SyncForge</span>
+            <span className="text-xs text-muted-foreground">
+              Siga a SyncForge
+            </span>
             <div className="flex items-center gap-2">
               {SOCIAL.map(({ Icon, href, label }) => (
                 <Link

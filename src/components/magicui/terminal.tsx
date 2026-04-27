@@ -13,20 +13,20 @@ export function Terminal({ children, className }: TerminalProps) {
   return (
     <div
       className={cn(
-        "z-0 h-full max-h-130 w-full max-w-2xl rounded-2xl border border-border/60 bg-card/80 backdrop-blur-xl",
-        "shadow-[0_30px_120px_-20px_rgba(10,52,153,0.45)]",
+        "z-0 h-full max-h-130 w-full max-w-2xl rounded-2xl border border-border/40 bg-zinc-100/80 dark:bg-zinc-900/80 backdrop-blur-xl",
+        "shadow-[0_30px_120px_-20px_rgba(100,100,100,0.2)] dark:shadow-[0_30px_120px_-20px_rgba(0,0,0,0.45)] text-zinc-800 dark:text-zinc-200",
         className,
       )}
     >
-      <div className="flex flex-col gap-y-2 border-b border-border/60 p-4">
+      <div className="flex flex-col gap-y-2 border-b border-border/40 p-4">
         <div className="flex flex-row gap-x-2">
           <div className="h-2.5 w-2.5 rounded-full bg-red-500/80" />
           <div className="h-2.5 w-2.5 rounded-full bg-yellow-500/80" />
           <div className="h-2.5 w-2.5 rounded-full bg-green-500/80" />
         </div>
       </div>
-      <pre className="p-4">
-        <code className="grid gap-y-1 font-mono text-[13px] leading-relaxed">
+      <pre className="p-4 overflow-x-auto">
+        <code className="grid gap-y-1 font-mono text-[12px] sm:text-[13px] leading-relaxed whitespace-pre-wrap break-words">
           {children}
         </code>
       </pre>
@@ -77,7 +77,9 @@ export function TypingAnimation({
   return (
     <MotionComponent className={cn("font-mono", className)} {...props}>
       {displayed}
-      {!done && <span className="ml-0.5 inline-block h-3 w-1.5 animate-pulse bg-foreground/80" />}
+      {!done && (
+        <span className="ml-0.5 inline-block h-3 w-1.5 animate-pulse bg-foreground/80" />
+      )}
     </MotionComponent>
   );
 }
