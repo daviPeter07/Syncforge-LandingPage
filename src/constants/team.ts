@@ -5,7 +5,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     name: "Davi Peterson",
     role: "Founder & Full-Stack Developer",
     bio: "Lidera a engenharia e arquitetura de soluções digitais.",
-    image: "/team/member-1.jpg",
     socials: [
       { type: "linkedin", url: "https://linkedin.com" },
       { type: "instagram", url: "https://instagram.com" },
@@ -13,10 +12,9 @@ export const TEAM_MEMBERS: TeamMember[] = [
     ],
   },
   {
-    name: "Marina Costa",
+    name: "William Breno",
     role: "Head of Design",
     bio: "Comanda a direção visual e experiências de marca.",
-    image: "/team/member-2.jpg",
     socials: [
       { type: "linkedin", url: "https://linkedin.com" },
       { type: "instagram", url: "https://instagram.com" },
@@ -24,10 +22,9 @@ export const TEAM_MEMBERS: TeamMember[] = [
     ],
   },
   {
-    name: "Rafael Lima",
+    name: "Caio",
     role: "Video Producer",
     bio: "Cria narrativas em vídeo que convertem audiências.",
-    image: "/team/member-3.jpg",
     socials: [
       { type: "linkedin", url: "https://linkedin.com" },
       { type: "instagram", url: "https://instagram.com" },
@@ -35,10 +32,9 @@ export const TEAM_MEMBERS: TeamMember[] = [
     ],
   },
   {
-    name: "Beatriz Almeida",
+    name: "Miguel",
     role: "Project Manager",
     bio: "Garante entregas no prazo e alinhadas à estratégia.",
-    image: "/team/member-4.jpg",
     socials: [
       { type: "linkedin", url: "https://linkedin.com" },
       { type: "instagram", url: "https://instagram.com" },
