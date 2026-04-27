@@ -1,3 +1,5 @@
+"use client";
+
 import { SectionHeading } from "@/components/SectionHeading";
 import { SERVICES } from "@/constants/services";
 import { ServiceCard } from "./ServiceCard";

@@ -1,3 +1,5 @@
+"use client";
+
 import { SectionHeading } from "@/components/SectionHeading";
 import { TEAM_MEMBERS } from "@/constants/team";
 import { TeamCard } from "./TeamCard";

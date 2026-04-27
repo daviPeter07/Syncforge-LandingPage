@@ -1,15 +1,23 @@
-import { Github, Globe, Instagram, Linkedin, Twitter } from "lucide-react";
-import type { LucideIcon } from "lucide-react";
+import type { ComponentType, SVGProps } from "react";
+import {
+  GithubIcon,
+  GlobeIcon,
+  InstagramIcon,
+  LinkedinIcon,
+  TwitterIcon,
+} from "@/components/icons/BrandIcons";
 import type { SocialLink } from "@/types/team";
 
-const ICONS: Record<SocialLink["type"], LucideIcon> = {
-  linkedin: Linkedin,
-  instagram: Instagram,
-  github: Github,
-  twitter: Twitter,
-  dribbble: Globe,
-  behance: Globe,
-  website: Globe,
+type IconType = ComponentType<SVGProps<SVGSVGElement>>;
+
+const ICONS: Record<SocialLink["type"], IconType> = {
+  linkedin: LinkedinIcon,
+  instagram: InstagramIcon,
+  github: GithubIcon,
+  twitter: TwitterIcon,
+  dribbble: GlobeIcon,
+  behance: GlobeIcon,
+  website: GlobeIcon,
 };
 
 const LABELS: Record<SocialLink["type"], string> = {
