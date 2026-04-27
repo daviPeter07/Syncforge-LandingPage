@@ -13,7 +13,7 @@ export function Terminal({ children, className }: TerminalProps) {
   return (
     <div
       className={cn(
-        "z-0 h-full max-h-[520px] w-full max-w-2xl rounded-2xl border border-border/60 bg-card/80 backdrop-blur-xl",
+        "z-0 h-full max-h-130 w-full max-w-2xl rounded-2xl border border-border/60 bg-card/80 backdrop-blur-xl",
         "shadow-[0_30px_120px_-20px_rgba(10,52,153,0.45)]",
         className,
       )}

@@ -2,6 +2,7 @@
 
 import {
   motion,
+  useInView,
   useMotionValue,
   useScroll,
   useSpring,
@@ -30,6 +31,12 @@ function ParallaxText({
   baseVelocity = 100,
   className,
 }: ParallaxProps) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const textRef = useRef<HTMLSpanElement>(null);
+
+  // Otimização: Apenas animar quando estiver visível no viewport
+  const isInView = useInView(containerRef, { margin: "0px" });
+
   const baseX = useMotionValue(0);
   const { scrollY } = useScroll();
   const scrollVelocity = useVelocity(scrollY);
@@ -42,8 +49,6 @@ function ParallaxText({
   });
 
   const [repetitions, setRepetitions] = useState(1);
-  const containerRef = useRef<HTMLDivElement>(null);
-  const textRef = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
     const calculate = () => {
@@ -63,6 +68,8 @@ function ParallaxText({
   const directionFactor = useRef<number>(1);
 
   useEffect(() => {
+    if (!isInView) return; // Pausa no loop principal se o componente não estiver na tela
+
     let lastTime = performance.now();
     let raf = 0;
     const loop = (now: number) => {
@@ -80,7 +87,7 @@ function ParallaxText({
     };
     raf = requestAnimationFrame(loop);
     return () => cancelAnimationFrame(raf);
-  }, [baseVelocity, baseX, velocityFactor]);
+  }, [baseVelocity, baseX, velocityFactor, isInView]);
 
   return (
     <div

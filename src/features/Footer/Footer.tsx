@@ -220,7 +220,7 @@ export function Footer() {
         aria-hidden
         className="pointer-events-none relative -mt-2 select-none overflow-hidden"
       >
-        <div className="bg-gradient-to-b from-foreground/[0.04] to-transparent bg-clip-text text-center font-sans text-[18vw] font-bold leading-none tracking-[-0.04em] text-transparent">
+        <div className="bg-gradient-to-b from-foreground/20 to-transparent bg-clip-text text-center font-sans text-[18vw] font-bold leading-none tracking-[-0.04em] text-transparent">
           SyncForge
         </div>
       </div>
