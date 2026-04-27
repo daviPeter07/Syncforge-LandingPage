@@ -5,9 +5,10 @@ import { useContactForm } from "@/hooks/use-contact-form";
 
 export function ContactForm() {
   const {
-    form: values,
+    register,
+    errors,
     status,
-    update: handleChange,
+    error,
     submit: handleSubmit,
   } = useContactForm();
   const isLoading = status === "submitting";
@@ -27,33 +28,77 @@ export function ContactForm() {
 
       <form onSubmit={handleSubmit} className="space-y-5" noValidate>
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
-          <Field
-            id="name"
-            label="Nome"
-            placeholder="Seu nome completo"
-            value={values.name}
-            onChange={(v) => handleChange("name", v)}
-            required
-          />
-          <Field
-            id="email"
-            label="Email"
-            type="email"
-            placeholder="seu@email.com"
-            value={values.email}
-            onChange={(v) => handleChange("email", v)}
-            required
-          />
+          <div className="space-y-2">
+            <label
+              htmlFor="name"
+              className="block text-sm font-semibold text-foreground"
+            >
+              Nome
+            </label>
+            <input
+              id="name"
+              type="text"
+              placeholder="Seu nome completo"
+              {...register("name", { required: "Nome e obrigatorio." })}
+              className="w-full rounded-lg border border-border/60 bg-background/80 px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground outline-none transition focus:border-[#4d8cff]/60 focus:ring-2 focus:ring-[#4d8cff]/20"
+            />
+            {errors.name ? (
+              <p className="text-sm font-medium text-red-500" role="alert">
+                {errors.name.message}
+              </p>
+            ) : null}
+          </div>
+
+          <div className="space-y-2">
+            <label
+              htmlFor="email"
+              className="block text-sm font-semibold text-foreground"
+            >
+              Email
+            </label>
+            <input
+              id="email"
+              type="email"
+              placeholder="seu@email.com"
+              {...register("email", {
+                required: "Email e obrigatorio.",
+                pattern: {
+                  value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                  message: "Email invalido.",
+                },
+              })}
+              className="w-full rounded-lg border border-border/60 bg-background/80 px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground outline-none transition focus:border-[#4d8cff]/60 focus:ring-2 focus:ring-[#4d8cff]/20"
+            />
+            {errors.email ? (
+              <p className="text-sm font-medium text-red-500" role="alert">
+                {errors.email.message}
+              </p>
+            ) : null}
+          </div>
         </div>
 
-        <Field
-          id="subject"
-          label="Assunto"
-          placeholder="Assunto da mensagem"
-          value={values.subject}
-          onChange={(v) => handleChange("subject", v)}
-          required
-        />
+        <div className="space-y-2">
+          <label
+            htmlFor="subject"
+            className="block text-sm font-semibold text-foreground"
+          >
+            Assunto
+          </label>
+          <input
+            id="subject"
+            type="text"
+            placeholder="Assunto da mensagem"
+            {...register("subject", {
+              required: "Assunto e obrigatorio.",
+            })}
+            className="w-full rounded-lg border border-border/60 bg-background/80 px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground outline-none transition focus:border-[#4d8cff]/60 focus:ring-2 focus:ring-[#4d8cff]/20"
+          />
+          {errors.subject ? (
+            <p className="text-sm font-medium text-red-500" role="alert">
+              {errors.subject.message}
+            </p>
+          ) : null}
+        </div>
 
         <div className="space-y-2">
           <label
@@ -65,12 +110,21 @@ export function ContactForm() {
           <textarea
             id="message"
             rows={5}
-            placeholder="Descreva seu projeto ou dúvida..."
-            value={values.message}
-            onChange={(e) => handleChange("message", e.target.value)}
-            required
+            placeholder="Descreva seu projeto ou duvida..."
+            {...register("message", {
+              required: "Mensagem e obrigatoria.",
+              minLength: {
+                value: 10,
+                message: "Mensagem deve ter pelo menos 10 caracteres.",
+              },
+            })}
             className="w-full resize-y rounded-lg border border-border/60 bg-background/80 px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground outline-none transition focus:border-[#4d8cff]/60 focus:ring-2 focus:ring-[#4d8cff]/20"
           />
+          {errors.message ? (
+            <p className="text-sm font-medium text-red-500" role="alert">
+              {errors.message.message}
+            </p>
+          ) : null}
         </div>
 
         <button
@@ -90,47 +144,13 @@ export function ContactForm() {
           )}
           {isSuccess ? "Mensagem enviada" : "Enviar Mensagem"}
         </button>
+
+        {error ? (
+          <p className="text-sm font-medium text-red-500" role="alert">
+            {error}
+          </p>
+        ) : null}
       </form>
-    </div>
-  );
-}
-
-interface FieldProps {
-  id: string;
-  label: string;
-  placeholder: string;
-  value: string;
-  onChange: (value: string) => void;
-  type?: string;
-  required?: boolean;
-}
-
-function Field({
-  id,
-  label,
-  placeholder,
-  value,
-  onChange,
-  type = "text",
-  required,
-}: FieldProps) {
-  return (
-    <div className="space-y-2">
-      <label
-        htmlFor={id}
-        className="block text-sm font-semibold text-foreground"
-      >
-        {label}
-      </label>
-      <input
-        id={id}
-        type={type}
-        placeholder={placeholder}
-        value={value}
-        onChange={(e) => onChange(e.target.value)}
-        required={required}
-        className="w-full rounded-lg border border-border/60 bg-background/80 px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground outline-none transition focus:border-[#4d8cff]/60 focus:ring-2 focus:ring-[#4d8cff]/20"
-      />
     </div>
   );
 }

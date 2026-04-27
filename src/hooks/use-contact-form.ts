@@ -1,13 +1,10 @@
 "use client";
 
 import { useState } from "react";
+import { useForm } from "react-hook-form";
+import type { ContactFormData } from "@/types/contact-form";
 
-export interface ContactFormState {
-  name: string;
-  email: string;
-  subject: string;
-  message: string;
-}
+export type ContactFormState = ContactFormData;
 
 const INITIAL_STATE: ContactFormState = {
   name: "",
@@ -17,27 +14,57 @@ const INITIAL_STATE: ContactFormState = {
 };
 
 export function useContactForm() {
-  const [form, setForm] = useState<ContactFormState>(INITIAL_STATE);
-  const [status, setStatus] = useState<"idle" | "submitting" | "success">(
-    "idle",
-  );
+  const [status, setStatus] = useState<
+    "idle" | "submitting" | "success" | "error"
+  >("idle");
+  const [error, setError] = useState<string | null>(null);
 
-  const update = <K extends keyof ContactFormState>(
-    key: K,
-    value: ContactFormState[K],
-  ) => {
-    setForm((prev) => ({ ...prev, [key]: value }));
-  };
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm<ContactFormState>({
+    defaultValues: INITIAL_STATE,
+    mode: "onTouched",
+  });
 
-  const submit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const onSubmit = async (form: ContactFormState) => {
     setStatus("submitting");
-    // Mock: integração real pode ser plugada aqui (API route, e-mail, etc.)
-    await new Promise((r) => setTimeout(r, 900));
-    setStatus("success");
-    setForm(INITIAL_STATE);
-    setTimeout(() => setStatus("idle"), 3000);
+    setError(null);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+      });
+
+      if (!response.ok) {
+        const data = (await response.json()) as { message?: string };
+        throw new Error(data.message ?? "Falha ao enviar mensagem.");
+      }
+
+      setStatus("success");
+      reset(INITIAL_STATE);
+      setTimeout(() => setStatus("idle"), 3000);
+    } catch (submitError) {
+      setStatus("error");
+      setError(
+        submitError instanceof Error
+          ? submitError.message
+          : "Falha ao enviar mensagem.",
+      );
+    }
   };
 
-  return { form, status, update, submit };
+  return {
+    register,
+    errors,
+    status,
+    error,
+    submit: handleSubmit(onSubmit),
+  };
 }
