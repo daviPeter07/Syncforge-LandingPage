@@ -1,72 +1,68 @@
-"use client";
-import { Hammer } from "lucide-react";
-import { Navbar } from "@/components/Navbar";
-import Particles from "@/components/Particles";
+import dynamic from "next/dynamic";
+import { BackToTop } from "@/components/BackToTop";
+import { SiteBackground } from "@/components/SiteBackground";
+import { Hero } from "@/features/Hero";
+import { Navbar } from "@/features/Navbar";
 
-export default function App() {
+// Lazy loading de componentes "abaixo da dobra" (below the fold)
+const About = dynamic(
+  () => import("@/features/About").then((mod) => mod.About),
+  { ssr: true },
+);
+const Services = dynamic(
+  () => import("@/features/Services").then((mod) => mod.Services),
+  { ssr: true },
+);
+const Clients = dynamic(
+  () => import("@/features/Clients").then((mod) => mod.Clients),
+  { ssr: true },
+);
+const Process = dynamic(
+  () => import("@/features/Process").then((mod) => mod.Process),
+  { ssr: true },
+);
+const Team = dynamic(() => import("@/features/Team").then((mod) => mod.Team), {
+  ssr: true,
+});
+const Results = dynamic(
+  () => import("@/features/Results").then((mod) => mod.Results),
+  { ssr: true },
+);
+const Faq = dynamic(() => import("@/features/Faq").then((mod) => mod.Faq), {
+  ssr: true,
+});
+const Contact = dynamic(
+  () => import("@/features/Contact").then((mod) => mod.Contact),
+  { ssr: true },
+);
+const Footer = dynamic(
+  () => import("@/features/Footer").then((mod) => mod.Footer),
+  { ssr: true },
+);
+
+export default function HomePage() {
   return (
     <>
+      <SiteBackground />
       <Navbar />
-      <div className="fixed inset-0 -z-10">
-        <Particles
-          particleCount={200}
-          particleSpread={10}
-          speed={0.1}
-          particleColors={["#0118f5"]}
-          moveParticlesOnHover={false}
-          particleHoverFactor={1}
-          alphaParticles={false}
-          particleBaseSize={100}
-          sizeRandomness={1}
-          cameraDistance={20}
-          disableRotation={false}
-        />
-      </div>
-      <main className="flex min-h-svh items-center justify-center px-6 py-16 text-foreground pt-24">
-        <section
-          id="inicio"
-          className="mx-auto flex max-w-5xl flex-col items-center text-center"
-        >
-          <div className="inline-flex items-center gap-3 rounded-full border border-border bg-card/40 px-4 py-3 backdrop-blur-sm">
-            <span className="flex size-9 items-center justify-center rounded-full border border-border bg-background/40">
-              <Hammer className="size-4" />
-            </span>
-            <span className="text-xs font-medium tracking-[0.26em] text-muted-foreground uppercase">
-              Syncforge em construção
-            </span>
-          </div>
 
-          <p className="mt-10 text-xs font-medium tracking-[0.22em] text-muted-foreground/70 uppercase sm:text-sm">
-            SyncForge
-          </p>
+      <main className="relative">
+        {/* Renderiza apenas a Hero no load inicial mais pesado */}
+        <Hero />
 
-          <h1 className="mt-4 max-w-3xl text-3xl leading-[1.05] font-semibold tracking-tighter sm:text-5xl lg:text-[4rem]">
-            Nosso site está em construção.
-          </h1>
-
-          <p className="mt-7 max-w-xl text-sm leading-7 text-muted-foreground sm:text-base">
-            A SyncForge oferece serviços digitais para empresas e pessoas
-            físicas, com soluções desenvolvidas de acordo com cada necessidade.
-          </p>
-
-          <div className="mt-12 h-px w-full max-w-3xl bg-border" />
-
-          <div className="mt-7 flex flex-wrap items-center justify-center gap-3 text-sm text-muted-foreground sm:text-base">
-            <span className="rounded-full border border-border bg-card/40 px-4 py-2">
-              Desenvolvimento de software
-            </span>
-            <span className="rounded-full border border-border bg-card/40 px-4 py-2">
-              Design
-            </span>
-            <span className="rounded-full border border-border bg-card/40 px-4 py-2">
-              Edição de vídeo
-            </span>
-            <span className="rounded-full border border-border bg-card/40 px-4 py-2">
-              Marketing
-            </span>
-          </div>
-        </section>
+        {/* Blocos lazy loaded sobem a prioridade de load de fundo garantindo o scroll mais leve */}
+        <About />
+        <Services />
+        <Clients />
+        <Process />
+        <Team />
+        <Results />
+        <Faq />
+        <Contact />
       </main>
+
+      <Footer />
+      <BackToTop />
     </>
   );
 }

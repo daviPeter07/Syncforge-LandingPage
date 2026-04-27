@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist_Mono, Poppins } from "next/font/google";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import "./globals.css";
@@ -15,9 +15,34 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "SyncForge | Em construcao",
+  title: "SyncForge | Software, Design e Vídeo sob medida",
   description:
-    "A SyncForge oferece desenvolvimento de software, edicao de video, design e marketing.",
+    "A SyncForge entrega software (CRM, ERP, PDV, OS, WMS), edição de vídeo e design para empresas e creators que querem crescer com qualidade.",
+  keywords: [
+    "SyncForge",
+    "Software sob medida",
+    "CRM",
+    "ERP",
+    "PDV",
+    "Design",
+    "Edição de vídeo",
+    "Identidade visual",
+    "Landing page",
+    "Manaus",
+  ],
+  openGraph: {
+    title: "SyncForge | Software, Design e Vídeo sob medida",
+    description:
+      "Soluções digitais sob medida em software, design e produção audiovisual.",
+    type: "website",
+    locale: "pt_BR",
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#00072D",
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({
@@ -29,14 +54,14 @@ export default function RootLayout({
     <html
       lang="pt-BR"
       suppressHydrationWarning
-      className={`${poppins.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${poppins.variable} ${geistMono.variable} h-full bg-background antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col bg-background text-foreground">
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
           enableSystem={false}
-          disableTransitionOnChange
+          themes={["light", "dark"]}
         >
           {children}
         </ThemeProvider>

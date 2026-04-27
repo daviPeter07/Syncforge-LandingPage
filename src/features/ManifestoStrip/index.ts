@@ -1,0 +1,1 @@
+export { ManifestoStrip } from "./ManifestoStrip";
