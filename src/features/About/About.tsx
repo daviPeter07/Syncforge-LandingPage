@@ -9,19 +9,19 @@ const PILLARS = [
     icon: Shapes,
     title: "Tudo num time só",
     description:
-      "Software, vídeo e design moram debaixo do mesmo teto. Você fala com um responsável — não com três fornecedores diferentes.",
+      "Software, vídeo e design moram debaixo do mesmo teto. Você fala com um responsável, não com três fornecedores diferentes.",
   },
   {
     icon: GitBranch,
     title: "Versão por versão",
     description:
-      "Demos quinzenais, código aberto pra você acompanhar e arquivos sempre na sua mão. Sem refém, sem caixa-preta.",
+      "Entregas quinzenais, código aberto pra você acompanhar e arquivos sempre na sua mão. Sem refém, sem caixa-preta.",
   },
   {
     icon: Wallet,
     title: "Orçamento honesto",
     description:
-      "Escopo fechado por etapa. O que sair do combinado é discutido antes — não vira surpresa na fatura.",
+      "Escopo fechado por etapa. O que sair do combinado é discutido antes, não vira surpresa na fatura.",
   },
   {
     icon: Headphones,

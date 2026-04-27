@@ -1,5 +1,12 @@
 export interface SocialLink {
-  type: "linkedin" | "instagram" | "github" | "twitter" | "dribbble" | "behance" | "website";
+  type:
+    | "linkedin"
+    | "instagram"
+    | "github"
+    | "twitter"
+    | "dribbble"
+    | "behance"
+    | "website";
   url: string;
 }
 

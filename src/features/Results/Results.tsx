@@ -13,11 +13,12 @@ export function Results() {
           eyebrow="Resultados"
           title={
             <>
-              Os números falam — <br />
-              <span className="text-[#4d8cff]">a operação aguenta</span>.
+              Os números dizem
+              <br />
+              <span className="text-[#4d8cff]">bastante</span> sobre gente.
             </>
           }
-          description="Métricas reais de quem trabalha com a SyncForge — e segue trabalhando."
+          description="Números de verdade de quem já trabalha com a SyncForge."
         />
 
         <div className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -35,9 +36,6 @@ export function Results() {
                     <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-border/60 bg-[#00072d] text-[#4d8cff]">
                       <StatIcon className="size-5" />
                     </div>
-                    <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-                      KPI {String(i + 1).padStart(2, "0")}
-                    </span>
                   </div>
 
                   <div className="mt-6 flex items-baseline gap-1">

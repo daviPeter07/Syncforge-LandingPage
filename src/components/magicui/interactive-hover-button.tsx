@@ -29,10 +29,10 @@ export const InteractiveHoverButton = forwardRef<
           {text}
         </span>
       </div>
-      <div className="absolute top-0 z-10 flex h-full w-full translate-x-12 items-center justify-center gap-2 text-primary-foreground opacity-0 transition-all duration-300 group-hover:-translate-x-1 group-hover:opacity-100">
-        <span>{text}</span>
+      <span className="absolute inset-0 z-10 flex items-center justify-center gap-2 text-primary-foreground opacity-0 transition-all duration-300 group-hover:opacity-100">
+        {text}
         <ArrowRight className="size-4" />
-      </div>
+      </span>
     </button>
   );
 });

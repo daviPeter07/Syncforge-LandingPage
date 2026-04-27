@@ -30,7 +30,9 @@ export function Faq() {
           title={
             <>
               Perguntas frequentes <br />
-              <span className="text-[#4d8cff]">tudo que você precisa saber</span>
+              <span className="text-[#4d8cff]">
+                tudo que você precisa saber
+              </span>
             </>
           }
           description="Não encontrou a resposta que precisava? Fale com a gente que respondemos em até 24h."

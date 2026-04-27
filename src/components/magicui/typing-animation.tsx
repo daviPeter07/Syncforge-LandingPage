@@ -66,10 +66,7 @@ export function TypingAnimation({
   return (
     <MotionComponent
       ref={ref}
-      className={cn(
-        "text-balance font-semibold tracking-tight",
-        className,
-      )}
+      className={cn("text-balance font-semibold tracking-tight", className)}
       {...props}
     >
       {displayed}

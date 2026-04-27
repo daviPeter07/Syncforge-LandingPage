@@ -21,7 +21,9 @@ export function ServiceCard({ category, index }: ServiceCardProps) {
     <Reveal delay={index * 0.1}>
       <article
         className={`group relative flex h-full flex-col overflow-hidden rounded-3xl border border-border/50 bg-card/40 p-6 backdrop-blur-md transition-all duration-300 hover:border-[#4d8cff]/40 lg:p-8 ${
-          open ? "border-[#4d8cff]/50 shadow-[0_0_0_1px_rgba(77,140,255,0.15)]" : ""
+          open
+            ? "border-[#4d8cff]/50 shadow-[0_0_0_1px_rgba(77,140,255,0.15)]"
+            : ""
         }`}
       >
         <div
@@ -38,7 +40,9 @@ export function ServiceCard({ category, index }: ServiceCardProps) {
               <h3 className="text-xl font-semibold tracking-tight">
                 {category.title}
               </h3>
-              <p className="text-xs text-muted-foreground">{category.subtitle}</p>
+              <p className="text-xs text-muted-foreground">
+                {category.subtitle}
+              </p>
             </div>
           </div>
 

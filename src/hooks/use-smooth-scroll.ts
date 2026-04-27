@@ -13,8 +13,7 @@ export function useSmoothScroll() {
     if (!target) return;
 
     const offset = 80; // compensa altura da navbar fixa
-    const top =
-      target.getBoundingClientRect().top + window.scrollY - offset;
+    const top = target.getBoundingClientRect().top + window.scrollY - offset;
 
     window.scrollTo({ top, behavior: "smooth" });
   }, []);

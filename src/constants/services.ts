@@ -13,7 +13,10 @@ export const SERVICES: ServiceCategory[] = [
       { name: "ERP", description: "Toda a operação em uma plataforma" },
       { name: "OS", description: "Ordens de serviço com fluxo customizado" },
       { name: "WMS", description: "Gestão inteligente de estoque" },
-      { name: "Financeiro", description: "Fluxo de caixa, contas e relatórios" },
+      {
+        name: "Financeiro",
+        description: "Fluxo de caixa, contas e relatórios",
+      },
     ],
     details: {
       longDescription:
@@ -36,12 +39,21 @@ export const SERVICES: ServiceCategory[] = [
     subtitle: "Conteúdo audiovisual que prende a atenção",
     icon: Film,
     items: [
-      { name: "Vídeos Promocionais", description: "Peças institucionais e comerciais" },
+      {
+        name: "Vídeos Promocionais",
+        description: "Peças institucionais e comerciais",
+      },
       { name: "Entretenimento", description: "Edições criativas e dinâmicas" },
       { name: "TikTok", description: "Cortes verticais para engajamento" },
       { name: "YouTube", description: "Edição completa para canais" },
-      { name: "Reels & Shorts", description: "Conteúdo curto de alta conversão" },
-      { name: "Motion Graphics", description: "Animações e elementos gráficos" },
+      {
+        name: "Reels & Shorts",
+        description: "Conteúdo curto de alta conversão",
+      },
+      {
+        name: "Motion Graphics",
+        description: "Animações e elementos gráficos",
+      },
     ],
     details: {
       longDescription:
@@ -70,7 +82,10 @@ export const SERVICES: ServiceCategory[] = [
       { name: "Story Maker", description: "Stories de alta conversão" },
       { name: "Cardápios", description: "Físicos e digitais" },
       { name: "Anúncios", description: "Criativos para Meta, Google e TikTok" },
-      { name: "Landing Pages", description: "Páginas otimizadas para conversão" },
+      {
+        name: "Landing Pages",
+        description: "Páginas otimizadas para conversão",
+      },
       { name: "Mockups", description: "Têxteis e de objetos" },
     ],
     details: {

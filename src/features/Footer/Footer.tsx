@@ -32,12 +32,6 @@ const SECTIONS = {
   ],
 };
 
-const SOCIAL = [
-  { Icon: LinkedinIcon, href: "#", label: "LinkedIn" },
-  { Icon: InstagramIcon, href: "#", label: "Instagram" },
-  { Icon: GithubIcon, href: "#", label: "GitHub" },
-];
-
 export function Footer() {
   const { scrollToId } = useSmoothScroll();
 
@@ -100,17 +94,17 @@ export function Footer() {
 
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-muted-foreground">
               Studio digital especializado em software sob medida, vídeo e
-              design — para quem trata o digital como parte séria da operação.
+              design. Para quem trata o digital como parte séria da operação.
             </p>
 
             <ul className="mt-6 space-y-2.5 text-sm">
               <li className="flex items-center gap-2.5 text-muted-foreground">
                 <Mail className="size-4 text-[#4d8cff]" />
                 <a
-                  href="mailto:contato@syncforge.com.br"
+                  href="mailto:contato.syncforge@gmail.com"
                   className="transition-colors hover:text-foreground"
                 >
-                  contato@syncforge.com.br
+                  contato.syncforge@gmail.com
                 </a>
               </li>
               <li className="flex items-center gap-2.5 text-muted-foreground">
@@ -124,7 +118,7 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-2.5 text-muted-foreground">
                 <MapPin className="size-4 text-[#4d8cff]" />
-                Manaus, AM — Brasil
+                Brasil
               </li>
             </ul>
           </div>
@@ -193,27 +187,9 @@ export function Footer() {
         {/* Barra inferior */}
         <div className="flex flex-col-reverse items-start justify-between gap-6 border-t border-border/40 pt-7 md:flex-row md:items-center">
           <p className="text-xs text-muted-foreground">
-            © {new Date().getFullYear()} SyncForge. CNPJ 00.000.000/0001-00.
-            Todos os direitos reservados.
+            © {new Date().getFullYear()} SyncForge. Todos os direitos
+            reservados. CNPJ 64.616.637/0001-90.
           </p>
-
-          <div className="flex items-center gap-4">
-            <span className="text-xs text-muted-foreground">
-              Siga a SyncForge
-            </span>
-            <div className="flex items-center gap-2">
-              {SOCIAL.map(({ Icon, href, label }) => (
-                <Link
-                  key={label}
-                  href={href}
-                  aria-label={label}
-                  className="grid h-9 w-9 place-items-center rounded-lg border border-border/50 bg-card/40 text-muted-foreground transition-colors hover:border-[#4d8cff]/50 hover:bg-card/60 hover:text-foreground"
-                >
-                  <Icon className="h-4 w-4" />
-                </Link>
-              ))}
-            </div>
-          </div>
         </div>
       </div>
 
@@ -222,7 +198,7 @@ export function Footer() {
         aria-hidden
         className="pointer-events-none relative -mt-2 select-none overflow-hidden"
       >
-        <div className="bg-gradient-to-b from-foreground/20 to-transparent bg-clip-text text-center font-sans text-[18vw] font-bold leading-none tracking-[-0.04em] text-transparent">
+        <div className="bg-linear-to-b from-foreground/20 to-transparent bg-clip-text text-center font-sans text-[18vw] font-bold leading-none tracking-[-0.04em] text-transparent">
           SyncForge
         </div>
       </div>

@@ -53,7 +53,9 @@ export function FaqAccordion({ items }: FaqAccordionProps) {
             <div
               className={cn(
                 "grid transition-all duration-300 ease-in-out",
-                isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0 pointer-events-none"
+                isOpen
+                  ? "grid-rows-[1fr] opacity-100"
+                  : "grid-rows-[0fr] opacity-0 pointer-events-none",
               )}
             >
               <div className="overflow-hidden">

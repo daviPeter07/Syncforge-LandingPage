@@ -6,7 +6,7 @@ const items = [
   {
     icon: Mail,
     label: "Email",
-    value: "contato@syncforge.com.br",
+    value: "contato.syncforge@gmail.com",
   },
   {
     icon: Phone,
@@ -16,7 +16,7 @@ const items = [
   {
     icon: MapPin,
     label: "Localização",
-    value: "Manaus, AM - Brasil",
+    value: "Brasil",
   },
 ];
 

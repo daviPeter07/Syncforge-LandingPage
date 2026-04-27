@@ -41,8 +41,7 @@ export function Hero() {
             <div className="mt-6 max-w-xl text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg">
               <TypingAnimation duration={28}>
                 Construímos sistemas, peças audiovisuais e identidade visual sob
-                medida — para empresas que tratam o digital como parte séria da
-                operação.
+                medida para empresas que levam o digital a sério.
               </TypingAnimation>
             </div>
           </Reveal>

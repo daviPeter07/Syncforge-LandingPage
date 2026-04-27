@@ -56,10 +56,11 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${poppins.variable} ${geistMono.variable} h-full bg-background antialiased`}
     >
-      <body suppressHydrationWarning className="min-h-full flex flex-col bg-background text-foreground">
-        <Providers>
-          {children}
-        </Providers>
+      <body
+        suppressHydrationWarning
+        className="min-h-full flex flex-col bg-background text-foreground"
+      >
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

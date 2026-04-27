@@ -3,7 +3,8 @@
 import { cn } from "@/lib/utils";
 import React from "react";
 
-export interface OrbitingCirclesProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface OrbitingCirclesProps
+  extends React.HTMLAttributes<HTMLDivElement> {
   className?: string;
   children?: React.ReactNode;
   reverse?: boolean;

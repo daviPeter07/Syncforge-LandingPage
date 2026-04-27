@@ -4,15 +4,21 @@ import { Send, Loader2, Check } from "lucide-react";
 import { useContactForm } from "@/hooks/use-contact-form";
 
 export function ContactForm() {
-  const { form: values, status, update: handleChange, submit: handleSubmit } =
-    useContactForm();
+  const {
+    form: values,
+    status,
+    update: handleChange,
+    submit: handleSubmit,
+  } = useContactForm();
   const isLoading = status === "submitting";
   const isSuccess = status === "success";
 
   return (
     <div className="rounded-2xl border border-border/40 bg-card/60 p-6 backdrop-blur-sm sm:p-8">
       <div className="mb-6">
-        <h3 className="text-xl font-semibold text-foreground">Envie uma mensagem</h3>
+        <h3 className="text-xl font-semibold text-foreground">
+          Envie uma mensagem
+        </h3>
         <p className="mt-1 text-sm text-muted-foreground">
           Preencha o formulário abaixo e entraremos em contato o mais breve
           possível.
@@ -110,7 +116,10 @@ function Field({
 }: FieldProps) {
   return (
     <div className="space-y-2">
-      <label htmlFor={id} className="block text-sm font-semibold text-foreground">
+      <label
+        htmlFor={id}
+        className="block text-sm font-semibold text-foreground"
+      >
         {label}
       </label>
       <input
