@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Geist_Mono, Poppins } from "next/font/google";
-import { ThemeProvider } from "@/components/ThemeProvider";
+import { Providers } from "@/components/Providers";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -56,15 +56,10 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${poppins.variable} ${geistMono.variable} h-full bg-background antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-background text-foreground">
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem={false}
-          themes={["light", "dark"]}
-        >
+      <body suppressHydrationWarning className="min-h-full flex flex-col bg-background text-foreground">
+        <Providers>
           {children}
-        </ThemeProvider>
+        </Providers>
       </body>
     </html>
   );

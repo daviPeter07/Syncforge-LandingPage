@@ -27,7 +27,7 @@ export function Navbar() {
         >
           <div className="relative h-10 w-10">
             <Image
-              src="/Syncforgesemfundo-logo.png"
+              src={"/syncforge.png"}
               alt="SyncForge"
               fill
               className="object-contain"
