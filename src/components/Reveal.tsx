@@ -18,8 +18,8 @@ interface RevealProps {
 export function Reveal({
   children,
   delay = 0,
-  duration = 0.6,
-  y = 24,
+  duration = 0.28,
+  y = 10,
   className,
   once = true,
 }: RevealProps) {
@@ -28,7 +28,7 @@ export function Reveal({
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration, delay, ease: [0.21, 0.47, 0.32, 0.98] },
+      transition: { duration, delay, ease: [0.25, 0.1, 0.25, 1] },
     },
   };
 

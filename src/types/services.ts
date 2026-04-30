@@ -3,6 +3,7 @@ import type { LucideIcon } from "lucide-react";
 export interface ServiceItem {
   name: string;
   description: string;
+  expandedDescription: string;
 }
 
 export interface ServiceCategoryDetails {

@@ -12,17 +12,29 @@ export function Services() {
           eyebrow="Serviços"
           title={
             <>
-              Tudo que sua marca precisa <br />
-              em <span className="text-[#4d8cff]">um único time</span>
+              Sua marca com mais presença, <br />
+              gestão e <span className="text-[#4d8cff]">resultado digital</span>
             </>
           }
-          description="Software para escalar sua operação, vídeo para amplificar sua mensagem e design para construir uma marca inesquecível."
+          description="Criamos soluções sob medida para negócios que querem organizar processos, vender melhor e fortalecer sua presença digital."
         />
-
         <div className="mt-16 grid gap-6 lg:grid-cols-3">
-          {SERVICES.map((category, i) => (
-            <ServiceCard key={category.id} category={category} index={i} />
-          ))}
+          {SERVICES.map((category, i) =>
+            category.id === "software" ? (
+              <div
+                key={category.id}
+                className="flex justify-center lg:col-span-3"
+              >
+                <ServiceCard
+                  category={category}
+                  index={i}
+                  className="w-full lg:w-230 lg:flex-none"
+                />
+              </div>
+            ) : (
+              <ServiceCard key={category.id} category={category} index={i} />
+            ),
+          )}
         </div>
       </div>
     </section>
