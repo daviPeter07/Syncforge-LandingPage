@@ -5,36 +5,66 @@ export const FAQ_ITEMS: FaqItem[] = [
     category: "Geral",
     question: "Quais serviços a SyncForge oferece?",
     answer:
-      "Desenvolvimento de software (CRM, PDV, ERP, OS, WMS e Financeiro), edição de vídeo para redes sociais e YouTube, e design completo de marca incluindo identidade visual, social media, anúncios e landing pages.",
+      "Atualmente trabalhamos com desenvolvimento de software sob medida, landing pages, sistemas web e soluções digitais para negócios. Também estamos estruturando novas frentes como design, marketing e edição de vídeo para atender empresas de forma mais completa.",
   },
   {
     category: "Geral",
     question: "A SyncForge atende empresas e pessoas físicas?",
     answer:
-      "Sim. Trabalhamos com empresas de diferentes portes e também com clientes finais que precisam de soluções pontuais como logotipo, vídeos para redes sociais ou cardápio digital.",
+      "Sim. Atendemos pequenos negócios, comércios, prestadores de serviço, empresas em crescimento e também clientes finais que precisam de soluções digitais específicas.",
   },
   {
     category: "Projetos",
     question: "Como começa um projeto com vocês?",
     answer:
-      "Tudo começa com uma conversa de descoberta. Entendemos seu objetivo, mapeamos o escopo, enviamos uma proposta detalhada e, após aprovação, iniciamos o cronograma de execução.",
+      "O projeto começa com uma conversa inicial para entender a necessidade, o objetivo e o momento do cliente. Depois disso, organizamos o escopo, montamos o orçamento e apresentamos uma proposta com prazos, etapas e condições.",
+  },
+  {
+    category: "Projetos",
+    question: "Vocês trabalham com contrato?",
+    answer:
+      "Sim. Projetos fechados com a SyncForge podem ser formalizados por contrato, deixando claro o escopo, os prazos, os valores, as responsabilidades e as condições de suporte ou manutenção.",
   },
   {
     category: "Projetos",
     question: "Quanto tempo leva para entregar um projeto?",
     answer:
-      "Depende do escopo. Edições de vídeo e peças de design saem entre 2 e 7 dias. Sistemas customizados podem variar de 4 a 16 semanas, sempre com entregas parciais ao longo do desenvolvimento.",
+      "O prazo depende do tamanho e da complexidade da solução. Uma landing page pode ser entregue em menos tempo, enquanto sistemas personalizados exigem planejamento, desenvolvimento, testes e validações por etapa.",
+  },
+  {
+    category: "Software",
+    question: "Que tipos de sistemas vocês desenvolvem?",
+    answer:
+      "Desenvolvemos sistemas web sob medida, como CRM, PDV, ERP, sistemas financeiros, ordens de serviço, controle de estoque, dashboards, painéis administrativos e integrações entre plataformas.",
+  },
+  {
+    category: "Software",
+    question: "O sistema pode começar simples e evoluir depois?",
+    answer:
+      "Sim. Em muitos casos, recomendamos começar com uma primeira versão mais objetiva, focada no essencial. Depois, o sistema pode receber novas telas, relatórios, integrações, automações e melhorias conforme o negócio crescer.",
   },
   {
     category: "Suporte",
     question: "Vocês oferecem suporte após a entrega?",
     answer:
-      "Sim. Oferecemos planos de manutenção e evolução contínua, com SLA definido em contrato e canais diretos com o time responsável pelo seu projeto.",
+      "Sim. Após a entrega, podemos oferecer suporte ao software, correções, ajustes e melhorias conforme o plano contratado ou conforme novas demandas combinadas com o cliente.",
+  },
+  {
+    category: "Suporte",
+    question: "O que está incluso no suporte?",
+    answer:
+      "O suporte pode incluir correções de problemas, pequenos ajustes, acompanhamento técnico e orientações de uso. Melhorias maiores, novas funcionalidades ou mudanças de escopo são avaliadas separadamente.",
   },
   {
     category: "Pagamento",
     question: "Como funcionam os valores e pagamentos?",
     answer:
-      "Cada projeto tem orçamento personalizado conforme escopo. Trabalhamos com entrada e parcelas vinculadas a entregas, ou modelos mensais para serviços recorrentes.",
+      "Os valores são definidos conforme o escopo do projeto. Trabalhamos com orçamento personalizado, podendo dividir o pagamento por etapas, entrada e parcelas, ou planos mensais para suporte e evolução contínua.",
+  },
+  {
+    category: "Pagamento",
+    question: "Vocês têm planos acessíveis?",
+    answer:
+      "Sim. Buscamos montar propostas compatíveis com a realidade de pequenos e médios negócios, priorizando o que realmente faz sentido para o momento da empresa.",
   },
 ];
