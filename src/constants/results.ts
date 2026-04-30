@@ -12,14 +12,6 @@ export const RESULTS: ResultStat[] = [
     icon: Rocket,
   },
   {
-    value: 100,
-    suffix: "%",
-    label: "Foco em entrega real",
-    description:
-      "Cada proposta é pensada para resolver uma necessidade prática do negócio.",
-    icon: ClipboardCheck,
-  },
-  {
     value: 1,
     suffix: "",
     label: "Processo definido",

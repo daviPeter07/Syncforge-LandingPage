@@ -3,11 +3,6 @@
 import { ArrowUpRight, Mail, MapPin, Phone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import {
-  GithubIcon,
-  InstagramIcon,
-  LinkedinIcon,
-} from "@/components/icons/BrandIcons";
 import { useSmoothScroll } from "@/hooks/use-smooth-scroll";
 
 const SECTIONS = {
@@ -15,20 +10,19 @@ const SECTIONS = {
     { label: "Início", href: "#inicio" },
     { label: "Sobre", href: "#sobre" },
     { label: "Serviços", href: "#servicos" },
-    { label: "Clientes", href: "#clientes" },
     { label: "Como trabalhamos", href: "#como-trabalhamos" },
   ],
   empresa: [
     { label: "Equipe", href: "#equipe" },
-    { label: "Resultados", href: "#resultados" },
+    { label: "Primeiros passos", href: "#resultados" },
     { label: "Ajuda / FAQ", href: "#ajuda" },
     { label: "Contato", href: "#contato" },
   ],
   servicos: [
     { label: "Software sob medida", href: "#servicos" },
-    { label: "Edição de vídeo", href: "#servicos" },
-    { label: "Identidade visual", href: "#servicos" },
     { label: "Landing pages", href: "#servicos" },
+    { label: "Sistemas web", href: "#servicos" },
+    { label: "Integrações", href: "#servicos" },
   ],
 };
 
@@ -52,8 +46,8 @@ export function Footer() {
               <span className="text-[#4d8cff]">do papel?</span>
             </h2>
             <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted-foreground sm:text-base">
-              Conta o que precisa, pra quando precisa, e a gente volta com um
-              plano honesto em até 24h úteis.
+              Conta o que precisa, pra quando precisa, e a gente retorna com um
+              caminho claro para começar.
             </p>
           </div>
 
@@ -62,7 +56,7 @@ export function Footer() {
             onClick={() => scrollToId("#contato")}
             className="group inline-flex items-center gap-2 rounded-full border border-[#4d8cff]/40 bg-[#4d8cff]/10 px-6 py-3.5 text-sm font-semibold text-foreground transition-all hover:border-[#4d8cff] hover:bg-[#4d8cff] hover:text-[#00072d]"
           >
-            Iniciar projeto
+            Solicitar orçamento
             <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </button>
         </div>
@@ -93,8 +87,9 @@ export function Footer() {
             </Link>
 
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-muted-foreground">
-              Studio digital especializado em software sob medida, vídeo e
-              design. Para quem trata o digital como parte séria da operação.
+              Studio digital focado em software sob medida, landing pages e
+              soluções digitais para empresas, comércios e profissionais que
+              querem crescer com mais organização.
             </p>
 
             <ul className="mt-6 space-y-2.5 text-sm">

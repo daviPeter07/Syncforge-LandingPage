@@ -20,7 +20,7 @@ export function Results() {
           description="A SyncForge está iniciando sua trajetória com foco em transparência, contratos claros, suporte ao cliente e soluções digitais pensadas para a realidade de cada negócio."
         />
 
-        <div className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {RESULTS.map((stat, i) => {
             const StatIcon = stat.icon;
 

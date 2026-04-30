@@ -21,8 +21,8 @@ export function ContactForm() {
           Envie uma mensagem
         </h3>
         <p className="mt-1 text-sm text-muted-foreground">
-          Preencha o formulário abaixo e entraremos em contato o mais breve
-          possível.
+          Preencha o formulário abaixo e retornaremos com um caminho claro para
+          começar.
         </p>
       </div>
 

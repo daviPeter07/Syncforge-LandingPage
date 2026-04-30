@@ -28,8 +28,9 @@ export function ContactInfo() {
           Vamos conversar!
         </h3>
         <p className="mt-4 max-w-md leading-relaxed text-muted-foreground">
-          Estamos sempre disponíveis para discutir novos projetos, oportunidades
-          criativas ou parcerias estratégicas. Não hesite em entrar em contato.
+          Fale com a SyncForge para explicar sua necessidade, solicitar um
+          orçamento ou entender qual solução digital faz mais sentido para o seu
+          negócio.
         </p>
       </div>
 
