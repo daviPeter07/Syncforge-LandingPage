@@ -57,16 +57,19 @@ export function Navbar() {
           <ThemeToggle />
         </div>
 
-        <button
-          type="button"
-          aria-controls="navbar-menu"
-          aria-expanded={isOpen}
-          aria-label={isOpen ? "Fechar menu" : "Abrir menu"}
-          className="p-2 text-foreground lg:hidden"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-        </button>
+        <div className="flex items-center gap-2 lg:hidden">
+          <ThemeToggle />
+          <button
+            type="button"
+            aria-controls="navbar-menu"
+            aria-expanded={isOpen}
+            aria-label={isOpen ? "Fechar menu" : "Abrir menu"}
+            className="p-2 text-foreground"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
+        </div>
       </div>
 
       <div
@@ -86,9 +89,6 @@ export function Navbar() {
               {item.label}
             </button>
           ))}
-          <div className="flex items-center gap-3 pt-3">
-            <ThemeToggle />
-          </div>
         </div>
       </div>
     </nav>
