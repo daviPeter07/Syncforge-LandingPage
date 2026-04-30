@@ -53,7 +53,7 @@ export default function HomePage() {
         {/* Blocos lazy loaded sobem a prioridade de load de fundo garantindo o scroll mais leve */}
         <About />
         <Services />
-        <Clients />
+        {/*<Clients />*/}
         <Process />
         <Team />
         <Results />
