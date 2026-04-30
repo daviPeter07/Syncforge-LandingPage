@@ -1,33 +1,38 @@
-import { Award, Clock, Rocket, Users } from "lucide-react";
+import { ClipboardCheck, Handshake, Rocket, ShieldCheck } from "lucide-react";
+
 import type { ResultStat } from "@/types/results";
 
 export const RESULTS: ResultStat[] = [
   {
-    value: 147,
-    suffix: "+",
-    label: "Projetos entregues",
-    description: "Sistemas, vídeos e marcas em produção desde 2020",
+    value: 1,
+    suffix: "",
+    label: "Projeto em andamento",
+    description:
+      "Primeira solução sendo desenvolvida com escopo, etapas e acompanhamento.",
     icon: Rocket,
   },
   {
-    value: 68,
-    suffix: "+",
-    label: "Clientes atendidos",
-    description: "De pequenos negócios a redes com várias unidades",
-    icon: Users,
-  },
-  {
-    value: 98,
+    value: 100,
     suffix: "%",
-    label: "Satisfação",
-    description: "Nota média no acompanhamento pós-entrega",
-    icon: Award,
+    label: "Foco em entrega real",
+    description:
+      "Cada proposta é pensada para resolver uma necessidade prática do negócio.",
+    icon: ClipboardCheck,
   },
   {
-    value: 5,
-    suffix: " anos",
-    label: "De estrada",
-    description: "Operação consolidada, sem terceirização do core",
-    icon: Clock,
+    value: 1,
+    suffix: "",
+    label: "Processo definido",
+    description:
+      "Orçamento, contrato, escopo e etapas alinhados antes do desenvolvimento.",
+    icon: ShieldCheck,
+  },
+  {
+    value: 1,
+    suffix: "",
+    label: "Time próximo",
+    description:
+      "Atendimento direto, suporte ao software e evolução conforme a demanda.",
+    icon: Handshake,
   },
 ];
