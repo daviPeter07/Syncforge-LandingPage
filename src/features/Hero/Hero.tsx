@@ -22,26 +22,27 @@ export function Hero() {
             <div className="inline-flex w-fit items-center gap-2 rounded-full border border-border/60 bg-card/60 px-3.5 py-1.5 backdrop-blur-sm">
               <Sparkles className="size-3.5 text-[#4d8cff]" />
               <span className="text-[10.5px] font-medium tracking-[0.22em] text-muted-foreground uppercase">
-                Studio Digital
+                Software sob medida
               </span>
             </div>
           </Reveal>
 
           <Reveal delay={0.1}>
             <h1 className="mt-6 text-balance text-4xl font-semibold tracking-[-0.03em] sm:text-5xl lg:text-[3.6rem] lg:leading-[1.05]">
-              Software, vídeo e design{" "}
-              <span className="bg-gradient-to-r from-[#18181b] dark:from-white via-[#4d8cff] dark:via-[#9ec0ff] to-[#4d8cff] bg-clip-text text-transparent">
-                no mesmo time
+              Sistemas e soluções digitais para negócios que precisam{" "}
+              <span className="bg-gradient-to-r from-[#18181b] via-[#4d8cff] to-[#4d8cff] bg-clip-text text-transparent dark:from-white dark:via-[#9ec0ff]">
+                sair do improviso
               </span>
-              . Sem terceirizar o que importa.
+              .
             </h1>
           </Reveal>
 
           <Reveal delay={0.2}>
             <div className="mt-6 max-w-xl text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg">
-              <TypingAnimation duration={28}>
-                Construímos sistemas, peças audiovisuais e identidade visual sob
-                medida para empresas que levam o digital a sério.
+              <TypingAnimation duration={18}>
+                Desenvolvemos softwares, landing pages e sistemas web para
+                empresas, comércios e profissionais que querem organizar
+                processos, vender melhor e crescer com mais controle.
               </TypingAnimation>
             </div>
           </Reveal>
@@ -52,6 +53,7 @@ export function Hero() {
                 text="Começar projeto"
                 onClick={() => scrollToId("#contato")}
               />
+
               <button
                 type="button"
                 onClick={() => scrollToId("#servicos")}
@@ -59,34 +61,6 @@ export function Hero() {
               >
                 Ver serviços →
               </button>
-            </div>
-          </Reveal>
-
-          <Reveal delay={0.5}>
-            <div className="mt-12 grid grid-cols-3 gap-6 border-t border-border/40 pt-6">
-              <div>
-                <div className="flex items-baseline gap-0.5 text-2xl font-semibold tracking-tight">
-                  <CountUp to={147} duration={1.8} />
-                  <span className="text-[#4d8cff]">+</span>
-                </div>
-                <div className="text-xs text-muted-foreground">Entregas</div>
-              </div>
-              <div>
-                <div className="flex items-baseline gap-0.5 text-2xl font-semibold tracking-tight">
-                  <CountUp to={68} duration={1.8} />
-                  <span className="text-[#4d8cff]">+</span>
-                </div>
-                <div className="text-xs text-muted-foreground">
-                  Clientes ativos
-                </div>
-              </div>
-              <div>
-                <div className="flex items-baseline gap-0.5 text-2xl font-semibold tracking-tight">
-                  <CountUp to={98} duration={1.8} />
-                  <span className="text-[#4d8cff]">%</span>
-                </div>
-                <div className="text-xs text-muted-foreground">Satisfação</div>
-              </div>
             </div>
           </Reveal>
         </div>
