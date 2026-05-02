@@ -3,7 +3,7 @@ import type { TeamMember } from "@/types/team";
 export const TEAM_MEMBERS: TeamMember[] = [
   {
     name: "Davi Peterson",
-    role: "CEO e Desenvolvedor Full Stack",
+    role: "Founder e Desenvolvedor",
     bio: "Lidera e transforma requisitos em produtos que entregam valor real para o negócio.",
     image: "/team/davi-peterson.jpg",
     socials: [
