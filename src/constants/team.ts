@@ -24,4 +24,16 @@ export const TEAM_MEMBERS: TeamMember[] = [
       { type: "github", url: "https://github.com/willsx69" },
     ],
   },
+  {
+    name: "Ronaldy Baia",
+    role: "Gestor de projetos ",
+    bio: "Planeja, executa e monitora projetos, garantindo que os objetivos e meta sejam atingidos no prazo",
+    image: "/team/ronaldy-baia.jpg",
+    socials: [
+      {
+        type: "linkedin",
+        url: "https://www.linkedin.com/in/ronaldy-souza",
+      },
+    ],
+  },
 ];
