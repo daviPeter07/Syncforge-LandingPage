@@ -25,6 +25,26 @@ export const TEAM_MEMBERS: TeamMember[] = [
     ],
   },
   {
+    name: "Gabriel Moreira",
+    role: "Desenvolvedor",
+    bio: "Traduzo visões de negócio em ferramentas digitais potentes que elevam o patamar tecnológico da sua empresa",
+    image: "/team/gabriel-moreira.jpeg",
+    socials: [
+      {
+        type: "website",
+        url: "https://portf-lio-bice-xi.vercel.app/",
+      },
+      {
+        type: "instagram",
+        url: "https://www.instagram.com/sugiiartz?igsh=eGdxaDhzZjhkZjRq",
+      },
+      {
+        type: "linkedin",
+        url: "https://www.linkedin.com/in/gabriel-moreira-624971257?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+      },
+    ],
+  },
+  {
     name: "Ronaldy Baia",
     role: "Gestor de projetos ",
     bio: "Planeja, executa e monitora projetos, garantindo que os objetivos e meta sejam atingidos no prazo",

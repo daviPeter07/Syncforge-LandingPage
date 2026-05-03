@@ -14,7 +14,7 @@ export function TeamCard({ member, index }: TeamCardProps) {
   return (
     <Reveal delay={index * 0.08}>
       <article className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-border/50 bg-card/40 backdrop-blur-md transition-colors hover:border-[#4d8cff]/40">
-        <div className="relative aspect-[4/5] overflow-hidden">
+        <div className="relative aspect-4/5 overflow-hidden">
           <Image
             src={member.image || "/placeholder.svg"}
             alt={`Foto de ${member.name}`}
