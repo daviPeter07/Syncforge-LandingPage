@@ -1,9 +1,9 @@
+import { Analytics } from "@vercel/analytics/next";
 import type { Metadata, Viewport } from "next";
 import { Geist_Mono, Poppins } from "next/font/google";
 import { Providers } from "@/components/Providers";
 import { FAQ_ITEMS } from "@/constants/faq";
 import { getSiteUrl } from "@/lib/seo";
-import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const siteUrl = getSiteUrl();
@@ -58,9 +58,9 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "SyncForge | Software, Design e Vídeo sob medida",
+  title: "SyncForge | Software sob medida em Manaus",
   description:
-    "A SyncForge entrega software (CRM, ERP, PDV, OS, WMS), edição de vídeo e design para empresas e creators que querem crescer com qualidade.",
+    "A SyncForge desenvolve software sob medida em Manaus: CRM, ERP, PDV, OS, WMS, sistemas web, integrações e landing pages para empresas.",
   alternates: {
     canonical: "/",
   },
@@ -81,16 +81,17 @@ export const metadata: Metadata = {
     "CRM",
     "ERP",
     "PDV",
-    "Design",
-    "Edição de vídeo",
-    "Identidade visual",
+    "OS",
+    "WMS",
+    "Sistemas web",
+    "Integrações",
     "Landing page",
     "Manaus",
   ],
   openGraph: {
-    title: "SyncForge | Software, Design e Vídeo sob medida",
+    title: "SyncForge | Software sob medida em Manaus",
     description:
-      "Soluções digitais sob medida em software, design e produção audiovisual.",
+      "Sistemas web, CRM, ERP, PDV, OS, WMS, integrações e landing pages para empresas em Manaus.",
     url: siteUrl,
     siteName: "SyncForge",
     type: "website",
@@ -100,15 +101,15 @@ export const metadata: Metadata = {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "SyncForge - Software, Design e Vídeo sob medida",
+        alt: "SyncForge - Software sob medida em Manaus",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "SyncForge | Software, Design e Vídeo sob medida",
+    title: "SyncForge | Software sob medida em Manaus",
     description:
-      "Soluções digitais sob medida em software, design e produção audiovisual.",
+      "Sistemas web, CRM, ERP, PDV, OS, WMS, integrações e landing pages para empresas em Manaus.",
     images: ["/twitter-image"],
   },
 };

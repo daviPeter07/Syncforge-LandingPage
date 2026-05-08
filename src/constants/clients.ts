@@ -14,7 +14,7 @@ export const TESTIMONIALS: Testimonial[] = [
     role: "Diretora de Marketing",
     company: "Norte Digital",
     message:
-      "O time de design e vídeo elevou nossa marca a outro patamar. Resultados em poucas semanas.",
+      "A landing page ficou clara, rápida e conectada ao nosso fluxo comercial. Os contatos ficaram muito mais organizados.",
     avatar: "/avatars/avatar-2.jpg",
   },
   {
@@ -30,7 +30,7 @@ export const TESTIMONIALS: Testimonial[] = [
     role: "Founder",
     company: "Bloom Studio",
     message:
-      "Identidade visual impecável. Cada peça parece feita por quem realmente entende do negócio.",
+      "O sistema de agendamentos reduziu retrabalho e deixou a rotina da equipe muito mais previsível.",
     avatar: "/avatars/avatar-4.jpg",
   },
   {
@@ -43,10 +43,10 @@ export const TESTIMONIALS: Testimonial[] = [
   },
   {
     name: "Juliana Reis",
-    role: "Creator",
-    company: "JR Channel",
+    role: "Gerente de Operações",
+    company: "JR Services",
     message:
-      "Edições criativas que aumentaram retenção e CTR. Recomendo de olhos fechados.",
+      "As integrações automatizaram tarefas repetitivas e deram mais visibilidade para a operação.",
     avatar: "/avatars/avatar-6.jpg",
   },
 ];
@@ -57,7 +57,7 @@ export const CLIENT_LOGOS: ClientLogo[] = [
   { name: "Casa do Sabor", category: "Restaurante" },
   { name: "Bloom Studio", category: "Beleza" },
   { name: "Logix Cargo", category: "Logística" },
-  { name: "JR Channel", category: "Creator" },
+  { name: "JR Services", category: "Serviços" },
   { name: "Atlas Moda", category: "Varejo" },
   { name: "Pulse Fit", category: "Saúde" },
   { name: "Orion Lab", category: "Educação" },

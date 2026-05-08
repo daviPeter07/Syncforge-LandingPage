@@ -1,6 +1,6 @@
 "use client";
 
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 
 const items = [
   {
@@ -16,7 +16,7 @@ const items = [
   {
     icon: MapPin,
     label: "Localização",
-    value: "Brasil",
+    value: "Manaus, AM - Brasil",
   },
 ];
 

@@ -4,8 +4,8 @@ import { VelocityScroll } from "@/components/magicui/scroll-based-velocity";
 
 const PHRASES = [
   "Software sob medida",
-  "Vídeo que vende",
-  "Marcas inesquecíveis",
+  "CRM e ERP",
+  "PDV e OS",
   "Sem caixa-preta",
   "Entrega no prazo",
   "Operação que aguenta",
@@ -26,7 +26,7 @@ export function ManifestoStrip() {
         numRows={1}
         className="font-sans text-3xl font-semibold tracking-[-0.02em] text-foreground/80 sm:text-5xl md:text-6xl"
       >
-        {PHRASES.join("  ·  ") + "  ·  "}
+        {`${PHRASES.join("  ·  ")}  ·  `}
       </VelocityScroll>
 
       <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-background to-transparent" />

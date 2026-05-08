@@ -16,7 +16,7 @@ export function Team() {
               acontecer
             </>
           }
-          description="Conheça o time por trás da SyncForge. Desenvolvedores, designers e criadores de vídeo trabalhando juntos para entregar soluções digitais de qualidade."
+          description="Conheça o time por trás da SyncForge. Desenvolvedores trabalhando para entregar sistemas web, integrações e soluções digitais de gestão com qualidade."
         />
 
         <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">

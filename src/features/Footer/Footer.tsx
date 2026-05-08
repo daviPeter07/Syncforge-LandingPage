@@ -113,7 +113,7 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-2.5 text-muted-foreground">
                 <MapPin className="size-4 text-[#4d8cff]" />
-                Brasil
+                Manaus, AM - Brasil
               </li>
             </ul>
           </div>

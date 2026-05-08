@@ -60,7 +60,7 @@ export default function OpenGraphImage() {
               maxWidth: 880,
             }}
           >
-            Software, Design e Video sob medida
+            Software sob medida em Manaus
           </div>
         </div>
 
@@ -71,7 +71,7 @@ export default function OpenGraphImage() {
             color: "#b8c2e0",
           }}
         >
-          CRM - ERP - PDV - Landing Pages - Producao Audiovisual
+          CRM - ERP - PDV - OS - WMS - Landing Pages
         </div>
       </div>
     </div>,

@@ -5,7 +5,7 @@ export const FAQ_ITEMS: FaqItem[] = [
     category: "Geral",
     question: "Quais serviços a SyncForge oferece?",
     answer:
-      "Atualmente trabalhamos com desenvolvimento de software sob medida, landing pages, sistemas web e soluções digitais para negócios. Também estamos estruturando novas frentes como design, marketing e edição de vídeo para atender empresas de forma mais completa.",
+      "Trabalhamos com desenvolvimento de software sob medida, landing pages, sistemas web e soluções digitais de gestão para negócios, incluindo CRM, ERP, PDV, ordens de serviço, WMS, financeiro, dashboards e integrações entre plataformas.",
   },
   {
     category: "Geral",

@@ -22,18 +22,18 @@ export function HeroTerminal() {
       </AnimatedSpan>
 
       <AnimatedSpan delay={2900} className="text-[#4d8cff]">
-        <span>✔ Conectando design system + identidade visual.</span>
+        <span>✔ Mapeando fluxos, permissões e relatórios.</span>
       </AnimatedSpan>
 
       <AnimatedSpan delay={3600} className="text-[#4d8cff]">
-        <span>✔ Pipeline de vídeo configurado.</span>
+        <span>✔ Preparando integrações e automações.</span>
       </AnimatedSpan>
 
       <AnimatedSpan delay={4300} className="text-muted-foreground">
         <span>ℹ Atualizando dependências:</span>
         <span className="pl-2">- next, react, tailwind</span>
-        <span className="pl-2">- design tokens</span>
-        <span className="pl-2">- motion graphics</span>
+        <span className="pl-2">- APIs e banco de dados</span>
+        <span className="pl-2">- dashboards e módulos de gestão</span>
       </AnimatedSpan>
 
       <AnimatedSpan delay={5400} className="text-muted-foreground">
@@ -45,7 +45,7 @@ export function HeroTerminal() {
         duration={30}
         className="text-muted-foreground"
       >
-        Pronto para sincronizar sua marca, software e conteúdo.
+        Pronto para sincronizar processos, dados e operação.
       </TypingAnimation>
     </Terminal>
   );

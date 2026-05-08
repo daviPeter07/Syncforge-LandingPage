@@ -16,8 +16,8 @@ export const PROCESS_NOTIFICATIONS: NotificationItem[] = [
     time: "2min",
   },
   {
-    name: "Design system criado",
-    description: "Componentes reutilizáveis publicados",
+    name: "Protótipo técnico criado",
+    description: "Fluxos principais validados",
     icon: "✺",
     color: "#0e3eb8",
     time: "5min",

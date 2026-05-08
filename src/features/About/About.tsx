@@ -1,6 +1,6 @@
 "use client";
 
-import { FileCheck, GitBranch, Headphones, Shapes, Wallet } from "lucide-react";
+import { FileCheck, GitBranch, Headphones, Wallet } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
 
