@@ -11,7 +11,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
       { type: "website", url: "https://davi-peterson.vercel.app" },
     ],
   },
-  {
+/*   {
     name: "William Breno",
     role: "Desenvolvedor WEB",
     bio: "Cria soluções digitais modernas com foco em performance e experiência",
@@ -23,7 +23,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
       },
       { type: "github", url: "https://github.com/willsx69" },
     ],
-  },
+  }, */
   {
     name: "Gabriel Moreira",
     role: "Desenvolvedor",
@@ -44,7 +44,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
       },
     ],
   },
-  {
+/*   {
     name: "Ronaldy Baia",
     role: "Gestor de projetos ",
     bio: "Planeja, executa e monitora projetos, garantindo que os objetivos e meta sejam atingidos no prazo",
@@ -55,5 +55,5 @@ export const TEAM_MEMBERS: TeamMember[] = [
         url: "https://www.linkedin.com/in/ronaldy-souza",
       },
     ],
-  },
+  }, */
 ];
