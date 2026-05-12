@@ -19,7 +19,7 @@ export function Team() {
           description="Conheça o time por trás da SyncForge. Desenvolvedores trabalhando para entregar sistemas web, integrações e soluções digitais de gestão com qualidade."
         />
 
-        <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-16 flex flex-wrap justify-center gap-6">
           {TEAM_MEMBERS.map((m, i) => (
             <TeamCard key={m.name} member={m} index={i} />
           ))}
