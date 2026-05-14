@@ -6,7 +6,7 @@ import type {
   UpdateBlogPostInput,
 } from "@/types/blog";
 import {
-  estimateReadTime,
+  computeReadingTime,
   generateSlug,
   generateSummary,
   mapRow,
@@ -59,7 +59,7 @@ export function createPost(input: CreateBlogPostInput): BlogPost {
   const id = randomUUID();
   const slug = generateSlug(input.title);
   const summary = generateSummary(input.content_md);
-  const readTime = estimateReadTime(input.content_md);
+  const readTime = computeReadingTime(input.content_md);
 
   db.prepare(
     `INSERT INTO blog_posts (id, slug, title, content_md, summary, cover_image, read_time, author_name, author_role, author_photo, published)
@@ -100,7 +100,7 @@ export function updatePost(
     ? generateSummary(input.content_md)
     : (existing.summary as string);
   const readTime = input.content_md
-    ? estimateReadTime(input.content_md)
+    ? computeReadingTime(input.content_md)
     : (existing.read_time as number);
 
   db.prepare(

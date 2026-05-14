@@ -1,5 +1,5 @@
 export {
-  estimateReadTime,
+  computeReadingTime,
   generateSlug,
   generateSummary,
   mapRow,

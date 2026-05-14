@@ -15,9 +15,11 @@ function stripMarkdown(md: string): string {
     .trim();
 }
 
-function estimateReadTime(contentMd: string): number {
-  const wordCount = contentMd.split(/\s+/).length;
-  return Math.max(1, Math.ceil(wordCount / 200));
+function computeReadingTime(content: string): number {
+  if (!content || typeof content !== "string") return 1;
+  const chars = content.trim().length;
+  const minutes = Math.ceil(chars / 1000);
+  return Math.max(1, minutes);
 }
 
 function generateSummary(contentMd: string, maxLength = 280): string {
@@ -181,7 +183,7 @@ function seed() {
       const id = randomUUID();
       const slug = generateSlug(post.title);
       const summary = generateSummary(post.content_md);
-      const readTime = estimateReadTime(post.content_md);
+      const readTime = computeReadingTime(post.content_md);
 
       try {
         insert.run(

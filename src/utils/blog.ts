@@ -10,10 +10,12 @@ export const stripMarkdown = (md: string): string => {
     .trim();
 };
 
-export const estimateReadTime = (contentMd: string): number => {
-  const wordCount = contentMd.split(/\s+/).length;
-  return Math.max(1, Math.ceil(wordCount / 200));
-};
+export function computeReadingTime(content: string): number {
+  if (!content || typeof content !== "string") return 1;
+  const chars = content.trim().length;
+  const minutes = Math.ceil(chars / 1000);
+  return Math.max(1, minutes);
+}
 
 export const generateSummary = (contentMd: string, maxLength = 280): string => {
   const plain = stripMarkdown(contentMd);
