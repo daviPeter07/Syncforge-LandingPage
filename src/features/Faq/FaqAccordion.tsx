@@ -3,7 +3,7 @@
 import { Minus, Plus } from "lucide-react";
 import { useState } from "react";
 import type { FaqItem } from "@/types/faq";
-import { cn } from "@/lib/utils";
+import { cn } from "@/utils";
 
 interface FaqAccordionProps {
   items: FaqItem[];

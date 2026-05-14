@@ -1,5 +1,5 @@
 import type { NotificationItem } from "@/types/notification";
-import { cn } from "@/lib/utils";
+import { cn } from "@/utils";
 
 interface NotificationCardProps {
   data: NotificationItem;

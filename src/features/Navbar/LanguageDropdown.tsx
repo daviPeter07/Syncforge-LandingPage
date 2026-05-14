@@ -16,7 +16,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { DISABLED_LANGUAGES } from "@/constants/navbar";
-import { cn } from "@/lib/utils";
+import { cn } from "@/utils";
 
 function LanguageBadge({ code }: { code: string }) {
   return (

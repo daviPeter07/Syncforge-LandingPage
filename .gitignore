@@ -34,6 +34,11 @@ yarn-error.log*
 .env*
 !.env.example
 
+# sqlite
+data/*.db
+data/*.db-wal
+data/*.db-shm
+
 # vercel
 .vercel
 

@@ -1,6 +1,6 @@
 import { Quote } from "lucide-react";
 import type { Testimonial } from "@/types/clients";
-import { cn } from "@/lib/utils";
+import { cn } from "@/utils";
 
 interface TestimonialCardProps {
   data: Testimonial;

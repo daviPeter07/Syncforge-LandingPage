@@ -6,7 +6,7 @@ import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
 import { FAQ_ITEMS } from "@/constants/faq";
 import { useSmoothScroll } from "@/hooks/use-smooth-scroll";
-import { cn } from "@/lib/utils";
+import { cn } from "@/utils";
 import { FaqAccordion } from "./FaqAccordion";
 
 export function Faq() {

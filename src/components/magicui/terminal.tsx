@@ -2,7 +2,7 @@
 
 import { motion, type MotionProps } from "motion/react";
 import { type ElementType, useEffect, useState } from "react";
-import { cn } from "@/lib/utils";
+import { cn } from "@/utils";
 
 interface TerminalProps {
   children: React.ReactNode;

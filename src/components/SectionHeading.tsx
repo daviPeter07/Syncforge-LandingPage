@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import { Reveal } from "@/components/Reveal";
-import { cn } from "@/lib/utils";
+import { cn } from "@/utils";
 
 interface SectionHeadingProps {
   eyebrow?: string;
