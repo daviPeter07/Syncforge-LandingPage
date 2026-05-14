@@ -39,6 +39,9 @@ data/*.db
 data/*.db-wal
 data/*.db-shm
 
+# uploads (imagens enviadas no blog)
+public/uploads/blog/*
+
 # vercel
 .vercel
 
