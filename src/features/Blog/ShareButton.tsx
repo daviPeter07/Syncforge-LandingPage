@@ -21,7 +21,11 @@ export function ShareButton({ postId }: ShareButtonProps) {
   const [open, setOpen] = useState(false);
   const [copied, setCopied] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
-  const url = `${globalThis.location?.origin ?? ""}/blog/${postId}`;
+  const [url] = useState(() =>
+    typeof window !== "undefined"
+      ? `${window.location.origin}/blog/${postId}`
+      : "",
+  );
 
   useEffect(() => {
     if (!open) return;
@@ -39,7 +43,10 @@ export function ShareButton({ postId }: ShareButtonProps) {
         </Button>
       </DialogTrigger>
 
-      <DialogContent className="sm:max-w-lg bg-card" aria-describedby="share-dialog-desc">
+      <DialogContent
+        className="sm:max-w-lg bg-card"
+        aria-describedby="share-dialog-desc"
+      >
         <DialogHeader>
           <DialogTitle>Compartilhar link</DialogTitle>
           <p id="share-dialog-desc" className="text-sm text-muted-foreground">

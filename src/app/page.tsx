@@ -31,6 +31,10 @@ const Results = dynamic(
 const Faq = dynamic(() => import("@/features/Faq").then((mod) => mod.Faq), {
   ssr: true,
 });
+const BlogStrip = dynamic(
+  () => import("@/features/BlogStrip").then((mod) => mod.BlogStrip),
+  { ssr: true },
+);
 const Contact = dynamic(
   () => import("@/features/Contact").then((mod) => mod.Contact),
   { ssr: true },
@@ -57,6 +61,7 @@ export default function HomePage() {
         <Process />
         <Team />
         <Results />
+        <BlogStrip />
         <Faq />
         <Contact />
       </main>

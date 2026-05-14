@@ -30,7 +30,6 @@ async function fetchPosts(): Promise<BlogPost[]> {
 
 export function AdminBlogList() {
   const token = getToken();
-  const postsPromise = useMemo(() => fetchPosts(), []);
   const router = useRouter();
 
   if (!token) {
@@ -46,12 +45,13 @@ export function AdminBlogList() {
         </div>
       }
     >
-      <ListContent postsPromise={postsPromise} />
+      <ListContent />
     </Suspense>
   );
 }
 
-function ListContent({ postsPromise }: { postsPromise: Promise<BlogPost[]> }) {
+function ListContent() {
+  const postsPromise = useMemo(() => fetchPosts(), []);
   const posts = use(postsPromise);
   const router = useRouter();
 

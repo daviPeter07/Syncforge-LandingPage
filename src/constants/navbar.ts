@@ -3,6 +3,7 @@ import type { DisabledLanguage, NavItem } from "@/types/navbar";
 export const NAV_ITEMS: NavItem[] = [
   { label: "INÍCIO", href: "#inicio" },
   { label: "SERVIÇOS", href: "#servicos" },
+  { label: "BLOG", href: "/blog" },
   { label: "EQUIPE", href: "#equipe" },
   { label: "AJUDA", href: "#ajuda" },
   { label: "CONTATO", href: "#contato" },
