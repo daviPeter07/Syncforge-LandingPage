@@ -2,7 +2,7 @@
 
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { NAV_ITEMS } from "@/constants/navbar";
@@ -11,15 +11,22 @@ import { useSmoothScroll } from "@/hooks/use-smooth-scroll";
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const { scrollToId } = useSmoothScroll();
-  const router = useRouter();
+  const pathname = usePathname();
+  const isHome = pathname === "/";
 
   const handleClick = (href: string) => {
     setIsOpen(false);
-    if (href.startsWith("/")) {
-      router.push(href);
-    } else {
-      scrollToId(href);
+
+    if (href.startsWith("#")) {
+      if (isHome) {
+        scrollToId(href);
+      } else {
+        window.location.href = `/${href}`;
+      }
+      return;
     }
+
+    window.location.href = href;
   };
 
   return (

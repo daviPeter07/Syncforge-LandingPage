@@ -17,7 +17,7 @@ export function BlogStrip() {
           </span>
 
           <h2 className="mt-4 text-balance text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
-            Últimos do blog
+            Posts recentes
           </h2>
 
           <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
