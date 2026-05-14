@@ -1,11 +1,15 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { NextResponse } from "next/server";
+import { requireAdmin } from "@/lib/auth";
 
 export const runtime = "nodejs";
 
 export async function POST(request: Request) {
   try {
+    const authError = requireAdmin(request);
+    if (authError) return authError;
+
     const formData = await request.formData();
     const file = formData.get("file");
 

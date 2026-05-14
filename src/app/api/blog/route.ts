@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { requireAdmin } from "@/lib/auth";
 import { createPost, getAllPosts, getAllPostsAdmin } from "@/lib/blog";
 import type { CreateBlogPostInput } from "@/types/blog";
 
@@ -7,9 +8,14 @@ export const runtime = "nodejs";
 export async function GET(request: Request) {
   try {
     const { searchParams } = new URL(request.url);
-    const admin = searchParams.get("admin") === "true";
+    const isAdmin = searchParams.get("admin") === "true";
 
-    const posts = admin ? await getAllPostsAdmin() : await getAllPosts();
+    if (isAdmin) {
+      const authError = requireAdmin(request);
+      if (authError) return authError;
+    }
+
+    const posts = isAdmin ? getAllPostsAdmin() : getAllPosts();
 
     return NextResponse.json(posts);
   } catch (error) {
@@ -23,6 +29,9 @@ export async function GET(request: Request) {
 
 export async function POST(request: Request) {
   try {
+    const authError = requireAdmin(request);
+    if (authError) return authError;
+
     const body = extractCreateBody(await request.json());
     const validation = validateCreateBody(body);
 
@@ -33,7 +42,7 @@ export async function POST(request: Request) {
       );
     }
 
-    const post = await createPost(validation.payload);
+    const post = createPost(validation.payload);
 
     return NextResponse.json(post, { status: 201 });
   } catch (error) {

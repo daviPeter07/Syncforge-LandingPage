@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { requireAdmin } from "@/lib/auth";
 import {
   deletePost,
   getPostById,
@@ -16,9 +17,14 @@ export async function GET(
   try {
     const { id } = await params;
     const { searchParams } = new URL(request.url);
-    const admin = searchParams.get("admin") === "true";
+    const isAdmin = searchParams.get("admin") === "true";
 
-    const post = admin ? await getPostByIdAdmin(id) : await getPostById(id);
+    if (isAdmin) {
+      const authError = requireAdmin(request);
+      if (authError) return authError;
+    }
+
+    const post = isAdmin ? getPostByIdAdmin(id) : getPostById(id);
 
     if (!post) {
       return NextResponse.json(
@@ -42,10 +48,13 @@ export async function PUT(
   { params }: { params: Promise<{ id: string }> },
 ) {
   try {
+    const authError = requireAdmin(request);
+    if (authError) return authError;
+
     const { id } = await params;
     const body = extractUpdateBody(await request.json());
 
-    const post = await updatePost(id, body);
+    const post = updatePost(id, body);
 
     if (!post) {
       return NextResponse.json(
@@ -65,12 +74,15 @@ export async function PUT(
 }
 
 export async function DELETE(
-  _request: Request,
+  request: Request,
   { params }: { params: Promise<{ id: string }> },
 ) {
   try {
+    const authError = requireAdmin(request);
+    if (authError) return authError;
+
     const { id } = await params;
-    const deleted = await deletePost(id);
+    const deleted = deletePost(id);
 
     if (!deleted) {
       return NextResponse.json(

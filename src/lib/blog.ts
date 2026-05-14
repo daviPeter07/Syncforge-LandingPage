@@ -1,16 +1,16 @@
 import { randomUUID } from "node:crypto";
 import { getDb } from "@/lib/db";
+import type {
+  BlogPost,
+  CreateBlogPostInput,
+  UpdateBlogPostInput,
+} from "@/types/blog";
 import {
   estimateReadTime,
   generateSlug,
   generateSummary,
   mapRow,
 } from "@/utils/blog";
-import type {
-  BlogPost,
-  CreateBlogPostInput,
-  UpdateBlogPostInput,
-} from "@/types/blog";
 
 export function getAllPosts(): BlogPost[] {
   const db = getDb();
