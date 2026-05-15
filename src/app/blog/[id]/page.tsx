@@ -8,6 +8,8 @@ import { Navbar } from "@/features/Navbar";
 import { getPostById } from "@/lib/blog";
 import { getSiteUrl } from "@/lib/seo";
 
+export const dynamic = "force-dynamic";
+
 const siteUrl = getSiteUrl();
 
 interface PageProps {

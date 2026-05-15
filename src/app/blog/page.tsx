@@ -7,6 +7,8 @@ import { Navbar } from "@/features/Navbar";
 import { getAllPosts } from "@/lib/blog";
 import { getSiteUrl } from "@/lib/seo";
 
+export const dynamic = "force-dynamic";
+
 const siteUrl = getSiteUrl();
 
 export const metadata: Metadata = {

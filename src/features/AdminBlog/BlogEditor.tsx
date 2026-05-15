@@ -5,6 +5,10 @@ import { ImageIcon, Loader2, Save } from "lucide-react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useCallback, useState } from "react";
+import Markdown from "react-markdown";
+import rehypeHighlight from "rehype-highlight";
+import rehypeRaw from "rehype-raw";
+import remarkGfm from "remark-gfm";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
@@ -199,9 +203,9 @@ export function BlogEditor({ post }: BlogEditorProps) {
             />
           </div>
 
-          <div className="space-y-2">
-            <div className="flex items-center justify-between">
-              <Label>Conteúdo (Markdown)</Label>
+            <div className="space-y-2">
+              <div className="flex items-center justify-between">
+                <Label>Conteúdo (Markdown)</Label>
               <Button
                 variant="outline"
                 size="sm"
@@ -222,13 +226,34 @@ export function BlogEditor({ post }: BlogEditorProps) {
                 />
               </Button>
             </div>
+            <p className="text-xs text-muted-foreground">
+              Dica: use Markdown como <code># Título</code>, <code>## Subtítulo</code>,
+              <code> **negrito**</code> e <code>- lista</code>.
+            </p>
             <div onPaste={handlePaste}>
               <MDEditor
                 value={contentMd}
                 onChange={(val) => setContentMd(val ?? "")}
-                preview="live"
+                preview="edit"
                 height={500}
               />
+            </div>
+
+            <div className="rounded-xl border border-border bg-card p-4">
+              <h3 className="mb-4 text-sm font-medium text-foreground">
+                Preview real (layout do blog)
+              </h3>
+
+              <div className="mx-auto w-full max-w-[70ch]">
+                <div className="prose dark:prose-invert max-w-none break-words [overflow-wrap:anywhere] prose-headings:text-foreground prose-headings:font-semibold prose-headings:tracking-tight prose-headings:text-balance prose-h1:mt-8 prose-h1:text-4xl prose-h1:leading-tight prose-h2:mt-8 prose-h2:text-3xl prose-h3:text-2xl prose-p:my-5 prose-p:text-foreground prose-p:leading-8 prose-p:text-justify prose-p:[hyphens:auto] prose-a:text-[#4d8cff] prose-a:no-underline hover:prose-a:underline prose-strong:text-foreground prose-code:text-foreground prose-code:bg-muted prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded-md prose-code:text-sm prose-pre:bg-muted prose-pre:border prose-pre:border-border prose-pre:overflow-x-auto prose-img:my-8 prose-img:rounded-xl prose-img:ring-1 prose-img:ring-foreground/10 prose-img:mx-auto prose-img:max-h-[32rem] prose-img:h-auto prose-img:w-full prose-img:object-contain prose-blockquote:border-l-[#4d8cff] prose-blockquote:text-muted-foreground prose-li:text-foreground prose-li:text-justify prose-li:leading-8 prose-li:[hyphens:auto] prose-hr:border-border">
+                  <Markdown
+                    remarkPlugins={[remarkGfm]}
+                    rehypePlugins={[rehypeRaw, rehypeHighlight]}
+                  >
+                    {contentMd || "_Comece a escrever para ver a prévia..._"}
+                  </Markdown>
+                </div>
+              </div>
             </div>
           </div>
         </div>

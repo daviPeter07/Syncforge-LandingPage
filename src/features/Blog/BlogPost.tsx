@@ -78,7 +78,9 @@ export function BlogPost({ post }: BlogPostProps) {
         </div>
       )}
 
-      <BlogContent content={post.content_md} />
+      <div className="mx-auto w-full max-w-[70ch]">
+        <BlogContent content={post.content_md} />
+      </div>
 
       <footer className="mt-12 flex items-center justify-between border-t border-border pt-6">
         <Link
