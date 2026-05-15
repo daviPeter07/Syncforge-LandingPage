@@ -24,7 +24,7 @@ export async function GET(
       if (authError) return authError;
     }
 
-    const post = isAdmin ? getPostByIdAdmin(id) : getPostById(id);
+    const post = isAdmin ? await getPostByIdAdmin(id) : await getPostById(id);
 
     if (!post) {
       return NextResponse.json(
@@ -54,7 +54,7 @@ export async function PUT(
     const { id } = await params;
     const body = extractUpdateBody(await request.json());
 
-    const post = updatePost(id, body);
+    const post = await updatePost(id, body);
 
     if (!post) {
       return NextResponse.json(
@@ -82,7 +82,7 @@ export async function DELETE(
     if (authError) return authError;
 
     const { id } = await params;
-    const deleted = deletePost(id);
+    const deleted = await deletePost(id);
 
     if (!deleted) {
       return NextResponse.json(

@@ -15,7 +15,7 @@ export async function GET(request: Request) {
       if (authError) return authError;
     }
 
-    const posts = isAdmin ? getAllPostsAdmin() : getAllPosts();
+    const posts = isAdmin ? await getAllPostsAdmin() : await getAllPosts();
 
     return NextResponse.json(posts);
   } catch (error) {
@@ -42,7 +42,7 @@ export async function POST(request: Request) {
       );
     }
 
-    const post = createPost(validation.payload);
+    const post = await createPost(validation.payload);
 
     return NextResponse.json(post, { status: 201 });
   } catch (error) {

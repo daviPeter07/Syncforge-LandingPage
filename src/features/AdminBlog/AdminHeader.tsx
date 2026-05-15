@@ -10,7 +10,6 @@ export function AdminHeader() {
 
   function handleLogout() {
     localStorage.removeItem("blog_token");
-    document.cookie = "blog_auth=; path=/; max-age=0";
     router.push("/admin");
   }
 

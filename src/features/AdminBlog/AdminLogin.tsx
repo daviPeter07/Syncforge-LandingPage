@@ -31,7 +31,6 @@ export function AdminLogin() {
       }
 
       localStorage.setItem("blog_token", trimmed);
-      document.cookie = "blog_auth=true; path=/; max-age=86400";
       router.push("/admin/blog");
     } catch {
       setError(true);

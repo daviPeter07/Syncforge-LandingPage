@@ -10,7 +10,7 @@ import {
   Trash2,
 } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { Suspense, use, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import type { BlogPost } from "@/types/blog";
 
@@ -31,28 +31,35 @@ async function fetchPosts(): Promise<BlogPost[]> {
 export function AdminBlogList() {
   const token = getToken();
   const router = useRouter();
+  const [posts, setPosts] = useState<BlogPost[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    if (!token) return;
+
+    fetchPosts()
+      .then((data) => setPosts(Array.isArray(data) ? data : []))
+      .catch(() => alert("Erro ao carregar posts"))
+      .finally(() => setLoading(false));
+  }, [token]);
 
   if (!token) {
     router.replace("/admin");
     return null;
   }
 
-  return (
-    <Suspense
-      fallback={
-        <div className="flex items-center justify-center py-20">
-          <Loader2 className="size-6 animate-spin text-muted-foreground" />
-        </div>
-      }
-    >
-      <ListContent />
-    </Suspense>
-  );
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center py-20">
+        <Loader2 className="size-6 animate-spin text-muted-foreground" />
+      </div>
+    );
+  }
+
+  return <ListContent posts={posts} />;
 }
 
-function ListContent() {
-  const postsPromise = useMemo(() => fetchPosts(), []);
-  const posts = use(postsPromise);
+function ListContent({ posts }: { posts: BlogPost[] }) {
   const router = useRouter();
 
   return (
@@ -84,7 +91,7 @@ function ListContent() {
               </tr>
             </thead>
             <tbody className="divide-y divide-border">
-              {posts.map((post) => (
+              {Array.isArray(posts) && posts.map((post) => (
                 <tr
                   key={post.id}
                   className="transition-colors hover:bg-muted/30"
