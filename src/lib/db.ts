@@ -1,16 +1,24 @@
 import type { Client } from "@libsql/client";
-import { createClient } from "@libsql/client";
 
 let db: Client | null = null;
 let initPromise: Promise<void> | null = null;
 
+async function createDbClient(): Promise<Client> {
+  const url = process.env.TURSO_DATABASE_URL || "file:data/blog.db";
+  const authToken = process.env.TURSO_AUTH_TOKEN;
+
+  if (url.startsWith("file:") || url.startsWith(":memory:")) {
+    const { createClient } = await import("@libsql/client");
+    return createClient({ url, authToken }) as unknown as Client;
+  }
+
+  const { createClient } = await import("@tursodatabase/serverless/compat");
+  return createClient({ url, authToken }) as Client;
+}
+
 async function getDb(): Promise<Client> {
   if (!db) {
-    db = createClient({
-      url: process.env.TURSO_DATABASE_URL || "file:data/blog.db",
-      authToken: process.env.TURSO_AUTH_TOKEN,
-    });
-
+    db = await createDbClient();
     initPromise = initSchema();
     await initPromise;
   } else if (initPromise) {

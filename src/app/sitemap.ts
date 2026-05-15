@@ -4,7 +4,13 @@ import { getSiteUrl } from "@/lib/seo";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const siteUrl = getSiteUrl();
-  const slugs = await getAllSlugs();
+  let slugs: Awaited<ReturnType<typeof getAllSlugs>> = [];
+
+  try {
+    slugs = await getAllSlugs();
+  } catch {
+    console.warn("Failed to fetch blog slugs for sitemap");
+  }
 
   const blogEntries: MetadataRoute.Sitemap = slugs.map((post) => ({
     url: `${siteUrl}/blog/${post.id}`,
