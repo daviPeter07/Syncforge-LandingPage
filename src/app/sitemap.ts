@@ -2,9 +2,9 @@ import type { MetadataRoute } from "next";
 import { getAllSlugs } from "@/lib/blog";
 import { getSiteUrl } from "@/lib/seo";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const siteUrl = getSiteUrl();
-  const slugs = getAllSlugs();
+  const slugs = await getAllSlugs();
 
   const blogEntries: MetadataRoute.Sitemap = slugs.map((post) => ({
     url: `${siteUrl}/blog/${post.id}`,

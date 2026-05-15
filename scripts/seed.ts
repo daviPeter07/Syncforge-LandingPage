@@ -1,9 +1,9 @@
+import { createClient } from "@libsql/client";
 import { randomUUID } from "node:crypto";
 import { join } from "node:path";
-import Database from "better-sqlite3";
 
-const dbPath = process.env.DB_PATH || join(process.cwd(), "data", "blog.db");
-const db = new Database(dbPath);
+const dbUrl = process.env.TURSO_DATABASE_URL || `file:${join(process.cwd(), "data", "blog.db")}`;
+const db = createClient({ url: dbUrl, authToken: process.env.TURSO_AUTH_TOKEN });
 
 function stripMarkdown(md: string): string {
   return md
@@ -59,11 +59,9 @@ const posts = [
 Soluções genéricas nem sempre atendem às necessidades específicas do seu negócio. Um CRM personalizado se adapta aos seus processos, não o contrário.
 
 Quer saber mais? [Entre em contato](https://syncforge-business.vercel.app/#contato).`,
-    cover_image: null,
     author_name: "Davi Peterson",
-    author_role: "Founder e Desenvolvedor",
+    author_role: "Fundador e Desenvolvedor",
     author_photo: "/team/davi-peterson.jpg",
-    published: true,
   },
   {
     title: "IA Generativa no Desenvolvimento de Software",
@@ -96,11 +94,9 @@ function calculateDiscount(price: number, tier: string): number {
   return price * (1 - (discounts[tier] ?? 0));
 }
 \`\`\``,
-    cover_image: null,
     author_name: "Davi Peterson",
-    author_role: "Founder e Desenvolvedor",
+    author_role: "Fundador e Desenvolvedor",
     author_photo: "/team/davi-peterson.jpg",
-    published: true,
   },
   {
     title: "Landing Page vs Site Institucional: Qual escolher?",
@@ -140,16 +136,14 @@ Na SyncForge, criamos soluções híbridas: um site institucional com landing pa
 | Custo | Menor | Maior |
 
 > Precisa de ajuda para decidir? [Fale conosco](https://syncforge-business.vercel.app/#contato)`,
-    cover_image: null,
     author_name: "Davi Peterson",
-    author_role: "Founder e Desenvolvedor",
+    author_role: "Fundador e Desenvolvedor",
     author_photo: "/team/davi-peterson.jpg",
-    published: true,
   },
 ];
 
-function seed() {
-  db.exec(`
+async function seed() {
+  await db.execute(`
     CREATE TABLE IF NOT EXISTS blog_posts (
       id TEXT PRIMARY KEY,
       slug TEXT UNIQUE NOT NULL,
@@ -164,50 +158,41 @@ function seed() {
       published INTEGER NOT NULL DEFAULT 0,
       created_at TEXT NOT NULL DEFAULT (datetime('now')),
       updated_at TEXT NOT NULL DEFAULT (datetime('now'))
-    );
-
-    CREATE INDEX IF NOT EXISTS idx_blog_posts_slug ON blog_posts(slug);
-    CREATE INDEX IF NOT EXISTS idx_blog_posts_published ON blog_posts(published);
-    CREATE INDEX IF NOT EXISTS idx_blog_posts_created_at ON blog_posts(created_at);
+    )
   `);
 
   console.log("🌱 Iniciando seed...");
 
-  const insert = db.prepare(`
-    INSERT INTO blog_posts (id, slug, title, content_md, summary, cover_image, read_time, author_name, author_role, author_photo, published)
-    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-  `);
+  for (const post of posts) {
+    const id = randomUUID();
+    const slug = generateSlug(post.title);
+    const summary = generateSummary(post.content_md);
+    const readTime = computeReadingTime(post.content_md);
 
-  const insertMany = db.transaction(() => {
-    for (const post of posts) {
-      const id = randomUUID();
-      const slug = generateSlug(post.title);
-      const summary = generateSummary(post.content_md);
-      const readTime = computeReadingTime(post.content_md);
-
-      try {
-        insert.run(
+    try {
+      await db.execute({
+        sql: `INSERT INTO blog_posts (id, slug, title, content_md, summary, cover_image, read_time, author_name, author_role, author_photo, published)
+              VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+        args: [
           id,
           slug,
           post.title,
           post.content_md,
           summary,
-          post.cover_image,
+          null,
           readTime,
           post.author_name,
           post.author_role,
           post.author_photo,
-          post.published ? 1 : 0,
-        );
-        console.log(`  ✅ ${post.title}`);
-      } catch {
-        console.log(`  ⏭️  ${post.title} (já existe)`);
-      }
+          1,
+        ],
+      });
+      console.log(`  ✅ ${post.title}`);
+    } catch (error) {
+      console.log(`  ⏭️  ${post.title} (já existe ou erro)`);
     }
-  });
+  }
 
-  insertMany();
-  db.close();
   console.log("🌱 Seed concluído!");
 }
 

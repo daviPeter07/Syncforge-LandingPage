@@ -8,7 +8,7 @@ interface PageProps {
 
 export default async function EditPostPage({ params }: PageProps) {
   const { id } = await params;
-  const post = getPostByIdAdmin(id);
+  const post = await getPostByIdAdmin(id);
 
   if (!post) notFound();
 

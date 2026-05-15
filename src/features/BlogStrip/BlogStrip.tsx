@@ -2,8 +2,8 @@ import { ArrowRight, Calendar, Clock } from "lucide-react";
 import Link from "next/link";
 import { getAllPosts } from "@/lib/blog";
 
-export function BlogStrip() {
-  const posts = getAllPosts().slice(0, 3);
+export async function BlogStrip() {
+  const posts = (await getAllPosts()).slice(0, 3);
 
   if (posts.length === 0) return null;
 
