@@ -1,17 +1,24 @@
 "use client";
 
 import { Mail, MapPin, Phone } from "lucide-react";
+import {
+  CONTACT_EMAIL,
+  CONTACT_EMAIL_HREF,
+  CONTACT_WHATSAPP_HREF,
+} from "@/constants/contact";
 
 const items = [
   {
     icon: Mail,
     label: "Email",
-    value: "contato.syncforge@gmail.com",
+    value: CONTACT_EMAIL,
+    href: CONTACT_EMAIL_HREF,
   },
   {
     icon: Phone,
     label: "Telefone",
     value: "+55 (92) 99258-4985",
+    href: CONTACT_WHATSAPP_HREF,
   },
   {
     icon: MapPin,
@@ -44,7 +51,18 @@ export function ContactInfo() {
               </div>
               <div>
                 <p className="font-semibold text-foreground">{item.label}</p>
-                <p className="text-muted-foreground">{item.value}</p>
+                {item.href ? (
+                  <a
+                    href={item.href}
+                    target={item.label === "Telefone" ? "_blank" : undefined}
+                    rel={item.label === "Telefone" ? "noopener noreferrer" : undefined}
+                    className="text-muted-foreground transition-colors hover:text-foreground"
+                  >
+                    {item.value}
+                  </a>
+                ) : (
+                  <p className="text-muted-foreground">{item.value}</p>
+                )}
               </div>
             </li>
           );

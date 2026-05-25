@@ -1,8 +1,20 @@
 "use client";
 
-import { ArrowUpRight, Mail, MapPin, Phone } from "lucide-react";
+import {
+  ArrowUpRight,
+  Mail,
+  MapPin,
+  Phone,
+} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { InstagramIcon } from "@/components/icons/InstagramIcon";
+import { WhatsappIcon } from "@/components/icons/WhatsappIcon";
+import {
+  CONTACT_EMAIL,
+  CONTACT_EMAIL_HREF,
+  CONTACT_WHATSAPP_HREF,
+} from "@/constants/contact";
 import { useSmoothScroll } from "@/hooks/use-smooth-scroll";
 
 const SECTIONS = {
@@ -95,16 +107,18 @@ export function Footer() {
               <li className="flex items-center gap-2.5 text-muted-foreground">
                 <Mail className="size-4 text-[#4d8cff]" />
                 <a
-                  href="mailto:contato.syncforge@gmail.com"
+                  href={CONTACT_EMAIL_HREF}
                   className="transition-colors hover:text-foreground"
                 >
-                  contato.syncforge@gmail.com
+                  {CONTACT_EMAIL}
                 </a>
               </li>
               <li className="flex items-center gap-2.5 text-muted-foreground">
                 <Phone className="size-4 text-[#4d8cff]" />
                 <a
-                  href="tel:+5592992584985"
+                  href={CONTACT_WHATSAPP_HREF}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="transition-colors hover:text-foreground"
                 >
                   +55 (92) 99258-4985
@@ -115,6 +129,7 @@ export function Footer() {
                 Manaus, AM - Brasil
               </li>
             </ul>
+
           </div>
 
           {/* Links: Navegar */}
@@ -184,6 +199,42 @@ export function Footer() {
             © {new Date().getFullYear()} SyncForge. Todos os direitos
             reservados. CNPJ 64.616.637/0001-90.
           </p>
+
+          <div className="md:text-right">
+            <p className="text-sm font-semibold text-foreground">
+              Fale com a SyncForge
+            </p>
+            <p className="mt-1 text-xs text-muted-foreground">
+              Instagram, WhatsApp e e-mail em um clique.
+            </p>
+            <div className="mt-3 flex items-center gap-2.5 md:justify-end">
+              <a
+                href={CONTACT_EMAIL_HREF}
+                aria-label="Email da SyncForge"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-[#4d8cff]/35 bg-background/70 text-muted-foreground transition-colors hover:border-[#4d8cff] hover:bg-[#0a3499]/20 hover:text-foreground"
+              >
+                <Mail className="size-4" />
+              </a>
+              <a
+                href={CONTACT_WHATSAPP_HREF}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp da SyncForge"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-[#4d8cff]/35 bg-background/70 text-muted-foreground transition-colors hover:border-[#4d8cff] hover:bg-[#0a3499]/20 hover:text-foreground"
+              >
+                <WhatsappIcon className="size-4" />
+              </a>
+              <a
+                href="https://www.instagram.com/syncforge.company/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram da SyncForge"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-[#4d8cff]/35 bg-background/70 text-muted-foreground transition-colors hover:border-[#4d8cff] hover:bg-[#0a3499]/20 hover:text-foreground"
+              >
+                <InstagramIcon className="size-4" />
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 
