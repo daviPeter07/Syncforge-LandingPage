@@ -21,7 +21,7 @@ export function TestimonialCard({ data }: TestimonialCardProps) {
           width={40}
           height={40}
           alt={data.name}
-          src={`https://avatar.vercel.sh/${encodeURIComponent(data.name)}?size=80`}
+          src={data.avatar}
         />
         <div className="min-w-0">
           <figcaption className="truncate text-sm font-semibold">

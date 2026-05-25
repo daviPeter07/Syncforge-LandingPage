@@ -61,6 +61,7 @@ export default function HomePage() {
         <Process />
         <Team />
         <Results />
+        <Clients />
         <BlogStrip />
         <Faq />
         <Contact />

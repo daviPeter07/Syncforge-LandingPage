@@ -1,7 +1,7 @@
 "use client";
 
-import { AvatarCircles } from "@/components/magicui/avatar-circles";
 import { Marquee } from "@/components/magicui/marquee";
+import { AvatarCircles } from "@/components/magicui/avatar-circles";
 import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
 import { AVATAR_URLS, TESTIMONIALS } from "@/constants/clients";
@@ -18,18 +18,18 @@ export function Clients() {
           eyebrow="Clientes"
           title={
             <>
-              Marcas que <span className="text-[#4d8cff]">forjam</span> com a
-              gente
+              Marcas que <span className="text-[#4d8cff]">crescem</span> com a
+              SyncForge
             </>
           }
-          description="De startups a creators, empresas de diferentes tamanhos confiam na SyncForge para acelerar suas operações e marca."
+          description="De negócios locais a produtos digitais, ajudamos empresas a organizar operações e fortalecer sua presença online com soluções práticas."
         />
 
         <Reveal delay={0.2}>
           <div className="mt-12 flex flex-col items-center gap-3">
-            <AvatarCircles avatarUrls={AVATAR_URLS} numPeople={55} />
+            <AvatarCircles avatarUrls={AVATAR_URLS} numPeople={5} />
             <p className="text-xs tracking-wide text-muted-foreground">
-              Mais de 60 clientes atendidos com excelência
+              5 empresas com depoimentos reais
             </p>
           </div>
         </Reveal>

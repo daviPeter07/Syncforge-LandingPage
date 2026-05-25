@@ -2,72 +2,51 @@ import type { ClientLogo, Testimonial } from "@/types/clients";
 
 export const TESTIMONIALS: Testimonial[] = [
   {
-    name: "Lucas Ferreira",
+    name: "Rony Peterson",
     role: "CEO",
-    company: "Vörtex Tech",
+    company: "Dg Computer",
     message:
-      "A SyncForge entregou nosso ERP customizado em tempo recorde. A operação ficou muito mais previsível.",
-    avatar: "/avatars/avatar-1.jpg",
+      "A gente tinha muita coisa no improviso. Depois que organizamos os processos, ficou bem mais facil atender os clientes e tocar a operacao sem correria.",
+    avatar: "/company/dg-logo.jpg",
   },
   {
-    name: "Ana Beatriz",
-    role: "Diretora de Marketing",
-    company: "Norte Digital",
+    name: "Viviane Conde",
+    role: "Consultora de beleza",
+    company: "Atendimento independente",
     message:
-      "A landing page ficou clara, rápida e conectada ao nosso fluxo comercial. Os contatos ficaram muito mais organizados.",
-    avatar: "/avatars/avatar-2.jpg",
+      "Hoje eu consigo atender com mais calma e passar mais confianca para as clientes. Minha presenca digital ficou mais profissional e coerente com meu trabalho.",
+    avatar: "/company/viviane.png",
   },
   {
-    name: "Carlos Mendes",
-    role: "Sócio",
-    company: "Casa do Sabor",
+    name: "Gabriel Gadelha",
+    role: "Desenvolvedor",
+    company: "Spaay",
     message:
-      "Sistema PDV intuitivo e suporte ágil. Nunca mais tivemos retrabalho com pedidos.",
-    avatar: "/avatars/avatar-3.jpg",
+      "As entregas do Spaay ficaram bem mais rapidas e com menos retrabalho. Foi um processo tecnico, mas leve de tocar no dia a dia.",
+    avatar: "/company/gadelha.png",
   },
   {
-    name: "Patrícia Souza",
-    role: "Founder",
-    company: "Bloom Studio",
+    name: "Gabriel Moreira",
+    role: "CEO",
+    company: "Spaay",
     message:
-      "O sistema de agendamentos reduziu retrabalho e deixou a rotina da equipe muito mais previsível.",
-    avatar: "/avatars/avatar-4.jpg",
+      "Conseguimos tirar ideias do papel e transformar em funcionalidades que realmente fizeram diferenca para o produto e para os usuarios.",
+    avatar: "/company/gabriel-CEO.png",
   },
   {
-    name: "Eduardo Rocha",
-    role: "Gerente de TI",
-    company: "Logix Cargo",
+    name: "Alice Quely",
+    role: "Designer autonomo",
+    company: "Trabalho autoral",
     message:
-      "Implantação do WMS sem dor de cabeça. Equipe muito técnica e parceira de verdade.",
-    avatar: "/avatars/avatar-5.jpg",
+      "O que mais gostei foi a clareza em cada etapa e o cuidado com os detalhes. Meu trabalho ficou mais consistente e valorizado.",
+    avatar: "/company/alice.png",
   },
-  {
-    name: "Juliana Reis",
-    role: "Gerente de Operações",
-    company: "JR Services",
-    message:
-      "As integrações automatizaram tarefas repetitivas e deram mais visibilidade para a operação.",
-    avatar: "/avatars/avatar-6.jpg",
-  },
-];
-
-export const CLIENT_LOGOS: ClientLogo[] = [
-  { name: "Vörtex Tech", category: "Tecnologia" },
-  { name: "Norte Digital", category: "Marketing" },
-  { name: "Casa do Sabor", category: "Restaurante" },
-  { name: "Bloom Studio", category: "Beleza" },
-  { name: "Logix Cargo", category: "Logística" },
-  { name: "JR Services", category: "Serviços" },
-  { name: "Atlas Moda", category: "Varejo" },
-  { name: "Pulse Fit", category: "Saúde" },
-  { name: "Orion Lab", category: "Educação" },
-  { name: "Helix Pay", category: "Fintech" },
 ];
 
 export const AVATAR_URLS: string[] = [
-  "https://avatar.vercel.sh/cliente-1?size=80",
-  "https://avatar.vercel.sh/cliente-2?size=80",
-  "https://avatar.vercel.sh/cliente-3?size=80",
-  "https://avatar.vercel.sh/cliente-4?size=80",
-  "https://avatar.vercel.sh/cliente-5?size=80",
+  "/company/dg-logo.jpg",
+  "/company/viviane.png",
+  "/company/gadelha.png",
+  "/company/gabriel-CEO.png",
+  "/company/alice.png",
 ];
