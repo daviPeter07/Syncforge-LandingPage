@@ -107,7 +107,10 @@ export const metadata: Metadata = {
     "Amazonas",
   ],
   openGraph: {
-    title: "SyncForge | Software sob medida em Manaus",
+    title: {
+      default: "SyncForge | Software sob medida em Manaus",
+      template: "%s | SyncForge",
+    },
     description:
       "Sistemas web, CRM, ERP, PDV, OS, WMS, automações e landing pages para empresas em Manaus.",
     url: siteUrl,
@@ -125,7 +128,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "SyncForge | Software sob medida em Manaus",
+    title: {
+      default: "SyncForge | Software sob medida em Manaus",
+      template: "%s | SyncForge",
+    },
     description:
       "Sistemas web, CRM, ERP, PDV, OS, WMS, automações e landing pages para empresas em Manaus.",
     images: ["/twitter-image"],

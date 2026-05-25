@@ -2,6 +2,7 @@
 
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { ThemeToggle } from "@/components/ThemeToggle";
@@ -32,25 +33,27 @@ export function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border/40 bg-background/70 backdrop-blur-xl">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <button
-          type="button"
-          onClick={() => handleClick("#inicio")}
-          className="flex items-center gap-2"
+        <Link
+          href="#inicio"
+          onClick={(e) => {
+            e.preventDefault();
+            handleClick("#inicio");
+          }}
+          className="flex items-center"
           aria-label="Ir para o início"
         >
-          <div className="relative h-10 w-10">
-            <Image
-              src={"/syncforge.png"}
-              alt="SyncForge"
-              fill
-              className="object-contain"
-              priority
-            />
-          </div>
+          <Image
+            src="/syncforge.png"
+            alt="SyncForge"
+            width={180}
+            height={56}
+            className="h-10 w-auto object-contain"
+            priority
+          />
           <span className="text-base font-semibold tracking-[-0.02em] text-foreground">
             SyncForge
           </span>
-        </button>
+        </Link>
 
         <div className="hidden flex-1 items-center justify-center gap-1 px-10 lg:flex">
           {NAV_ITEMS.map((item) => (

@@ -71,17 +71,16 @@ export function Footer() {
                 e.preventDefault();
                 scrollToId("#inicio");
               }}
-              className="flex items-center gap-2.5"
+              className="flex items-center"
             >
-              <div className="relative h-10 w-10">
-                <Image
-                  src="/syncforge.png"
-                  alt="SyncForge"
-                  fill
-                  className="object-contain"
-                />
-              </div>
-              <span className="text-lg font-semibold tracking-[-0.02em]">
+              <Image
+                src="/syncforge.png"
+                alt="SyncForge"
+                width={180}
+                height={56}
+                className="h-10 w-auto object-contain"
+              />
+              <span className="text-base font-semibold tracking-[-0.02em] text-foreground">
                 SyncForge
               </span>
             </Link>
