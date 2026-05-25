@@ -27,9 +27,9 @@ export function Clients() {
 
         <Reveal delay={0.2}>
           <div className="mt-12 flex flex-col items-center gap-3">
-            <AvatarCircles avatarUrls={AVATAR_URLS} numPeople={5} />
+            <AvatarCircles avatarUrls={AVATAR_URLS} numPeople={100} />
             <p className="text-xs tracking-wide text-muted-foreground">
-              5 empresas com depoimentos reais
+              100 empresas atuando conosco
             </p>
           </div>
         </Reveal>

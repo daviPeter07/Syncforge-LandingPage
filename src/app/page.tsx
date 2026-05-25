@@ -28,10 +28,6 @@ const Team = nextDynamic(
     ssr: true,
   },
 );
-const Results = nextDynamic(
-  () => import("@/features/Results").then((mod) => mod.Results),
-  { ssr: true },
-);
 const BlogStrip = nextDynamic(
   () => import("@/features/BlogStrip").then((mod) => mod.BlogStrip),
   { ssr: true },
@@ -60,7 +56,6 @@ export default function HomePage() {
         <Services />
         <Process />
         <Team />
-        <Results />
         <Clients />
         <BlogStrip />
         <Faq />

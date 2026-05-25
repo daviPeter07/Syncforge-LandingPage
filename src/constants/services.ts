@@ -51,20 +51,20 @@ export const SERVICES: ServiceCategory[] = [
           "Gerencie produtos, entradas, saídas, movimentações e armazenagem para reduzir falhas e manter o estoque sempre mais confiável.",
       },
       {
-        name: "Integrações",
-        description: "Faça seus sistemas trabalharem juntos.",
+        name: "Automações",
+        description: "Atenda mais rapido com bots e fluxos inteligentes.",
         expandedDescription:
-          "Conectamos plataformas, APIs e ferramentas para automatizar processos, evitar retrabalho e melhorar o fluxo de informações da empresa.",
+          "Criamos automacoes para Telegram, WhatsApp e outros canais para responder clientes, qualificar leads, confirmar pedidos e executar tarefas repetitivas sem depender de atendimento manual o tempo todo.",
       },
     ],
     details: {
       longDescription:
-        "Construímos sistemas web sob medida, começando pelo entendimento da operação e seguindo até a entrega em produção. A ideia é transformar processos manuais em fluxos claros, com tela enxuta, integração entre áreas e uma experiência que faça sentido para quem usa o sistema todos os dias.",
+        "Construimos sistemas web sob medida, com foco em resultado pratico: menos retrabalho, atendimento mais rapido e operacao mais organizada. Alem do sistema principal, implementamos automacoes e bots para WhatsApp, Telegram e outros canais para transformar tarefas repetitivas em fluxos inteligentes que ajudam seu time a vender e atender melhor.",
       deliverables: [
         "Levantamento de requisitos e prototipação",
         "Sistema responsivo (desktop e mobile)",
         "Painel administrativo completo",
-        "Integrações (NFe, gateways, APIs)",
+        "Automacoes e bots (WhatsApp, Telegram e APIs)",
         "Documentação técnica e treinamento",
         "Suporte e evolução contínua",
       ],

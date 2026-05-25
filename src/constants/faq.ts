@@ -5,7 +5,7 @@ export const FAQ_ITEMS: FaqItem[] = [
     category: "Geral",
     question: "Quais serviços a SyncForge oferece?",
     answer:
-      "Trabalhamos com desenvolvimento de software sob medida, landing pages, sistemas web e soluções digitais de gestão para negócios, incluindo CRM, ERP, PDV, ordens de serviço, WMS, financeiro, dashboards e integrações entre plataformas.",
+      "Trabalhamos com desenvolvimento de software sob medida, landing pages, sistemas web e soluções digitais de gestão para negócios, incluindo CRM, ERP, PDV, ordens de serviço, WMS, financeiro, dashboards e automações com bots em canais como WhatsApp e Telegram.",
   },
   {
     category: "Geral",
@@ -35,13 +35,13 @@ export const FAQ_ITEMS: FaqItem[] = [
     category: "Software",
     question: "Que tipos de sistemas vocês desenvolvem?",
     answer:
-      "Desenvolvemos sistemas web sob medida, como CRM, PDV, ERP, sistemas financeiros, ordens de serviço, controle de estoque, dashboards, painéis administrativos e integrações entre plataformas.",
+      "Desenvolvemos sistemas web sob medida, como CRM, PDV, ERP, sistemas financeiros, ordens de serviço, controle de estoque, dashboards, painéis administrativos e automações para atendimento, vendas e operacao.",
   },
   {
     category: "Software",
     question: "O sistema pode começar simples e evoluir depois?",
     answer:
-      "Sim. Em muitos casos, recomendamos começar com uma primeira versão mais objetiva, focada no essencial. Depois, o sistema pode receber novas telas, relatórios, integrações, automações e melhorias conforme o negócio crescer.",
+      "Sim. Em muitos casos, recomendamos começar com uma primeira versão mais objetiva, focada no essencial. Depois, o sistema pode receber novas telas, relatorios, automacoes, bots e melhorias conforme o negocio crescer.",
   },
   {
     category: "Suporte",

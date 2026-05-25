@@ -60,7 +60,12 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: "SyncForge | Software sob medida em Manaus",
   description:
-    "A SyncForge desenvolve software sob medida em Manaus: CRM, ERP, PDV, OS, WMS, sistemas web, integrações e landing pages para empresas.",
+    "A SyncForge desenvolve software sob medida em Manaus: CRM, ERP, PDV, OS, WMS, sistemas web, automações com bots e landing pages para empresas.",
+  icons: {
+    icon: "/syncforge.png",
+    shortcut: "/syncforge.png",
+    apple: "/syncforge.png",
+  },
   alternates: {
     canonical: "/",
   },
@@ -78,20 +83,33 @@ export const metadata: Metadata = {
   keywords: [
     "SyncForge",
     "Software sob medida",
+    "Desenvolvimento de software em Manaus",
+    "Empresa de software Manaus",
+    "Sistema sob medida",
+    "Sistema para empresas",
     "CRM",
     "ERP",
     "PDV",
     "OS",
     "WMS",
     "Sistemas web",
-    "Integrações",
+    "Automações",
+    "Bots para WhatsApp",
+    "Bots para Telegram",
+    "Automação de atendimento",
+    "Automação comercial",
+    "Landing page profissional",
+    "Transformação digital",
+    "Desenvolvimento web",
+    "Suporte de software",
     "Landing page",
     "Manaus",
+    "Amazonas",
   ],
   openGraph: {
     title: "SyncForge | Software sob medida em Manaus",
     description:
-      "Sistemas web, CRM, ERP, PDV, OS, WMS, integrações e landing pages para empresas em Manaus.",
+      "Sistemas web, CRM, ERP, PDV, OS, WMS, automações e landing pages para empresas em Manaus.",
     url: siteUrl,
     siteName: "SyncForge",
     type: "website",
@@ -109,7 +127,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "SyncForge | Software sob medida em Manaus",
     description:
-      "Sistemas web, CRM, ERP, PDV, OS, WMS, integrações e landing pages para empresas em Manaus.",
+      "Sistemas web, CRM, ERP, PDV, OS, WMS, automações e landing pages para empresas em Manaus.",
     images: ["/twitter-image"],
   },
 };
