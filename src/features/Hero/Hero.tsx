@@ -3,7 +3,6 @@
 import { Sparkles } from "lucide-react";
 import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";
 import { TypingAnimation } from "@/components/magicui/typing-animation";
-import CountUp from "@/components/reactbits/count-up";
 import { Reveal } from "@/components/Reveal";
 import { useSmoothScroll } from "@/hooks/use-smooth-scroll";
 import { HeroTerminal } from "./HeroTerminal";
@@ -30,7 +29,7 @@ export function Hero() {
           <Reveal delay={0.1}>
             <h1 className="mt-6 text-balance text-4xl font-semibold tracking-[-0.03em] sm:text-5xl lg:text-[3.6rem] lg:leading-[1.05]">
               Sistemas e soluções digitais para negócios que precisam{" "}
-              <span className="bg-gradient-to-r from-[#18181b] via-[#4d8cff] to-[#4d8cff] bg-clip-text text-transparent dark:from-white dark:via-[#9ec0ff]">
+              <span className="bg-linear-to-r from-[#18181b] via-[#4d8cff] to-[#4d8cff] bg-clip-text text-transparent dark:from-white dark:via-[#9ec0ff]">
                 sair do improviso
               </span>
               .
@@ -56,7 +55,9 @@ export function Hero() {
 
               <button
                 type="button"
-                onClick={() => scrollToId("#servicos")}
+                onClick={() => {
+                  window.location.href = "/services";
+                }}
                 className="text-sm font-semibold tracking-[0.04em] text-muted-foreground transition-colors hover:text-foreground"
               >
                 Ver serviços →

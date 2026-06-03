@@ -1,27 +1,17 @@
-import type { LucideIcon } from "lucide-react";
+import { LucideIcon } from "lucide-react";
+
+export type ServiceCategory =
+  | "landing-page"
+  | "pdv"
+  | "crm"
+  | "automacao"
+  | "financeiro"
+  | "erp";
 
 export interface ServiceItem {
-  name: string;
-  description: string;
-  expandedDescription: string;
-}
-
-export interface ServiceCategoryDetails {
-  /** Descrição mais longa exibida quando o card é expandido. */
-  longDescription: string;
-  /** O que entregamos (lista de bullet points). */
-  deliverables: string[];
-  /** Tempo médio de entrega — string já formatada para exibição. */
-  averageTime: string;
-  /** A partir de — string já formatada. */
-  startingPrice?: string;
-}
-
-export interface ServiceCategory {
-  id: string;
+  category: ServiceCategory;
   title: string;
-  subtitle: string;
+  description: string;
+  tags: string[];
   icon: LucideIcon;
-  items: ServiceItem[];
-  details: ServiceCategoryDetails;
 }
