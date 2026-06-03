@@ -1,6 +1,5 @@
 import { ImagePlaceholder } from "@/components/image-placeholder";
 import type { ServiceItem } from "@/types/services";
-import { cn } from "@/utils";
 
 export function ServiceCard({ service }: { service: ServiceItem }) {
   return (
@@ -19,7 +18,7 @@ export function ServiceCard({ service }: { service: ServiceItem }) {
           {service.tags.map((tag) => (
             <span
               key={tag}
-              className="rounded-full border border-[#4d8cff]/18 bg-[#0b2c80]/35 px-3 py-1 text-xs font-medium text-[#8eb6ff]"
+              className="rounded-full border border-[#4d8cff]/20 bg-[#4d8cff]/8 px-3 py-1 text-xs font-medium text-[#4d8cff]"
             >
               {tag}
             </span>
@@ -29,5 +28,3 @@ export function ServiceCard({ service }: { service: ServiceItem }) {
     </article>
   );
 }
-
-
