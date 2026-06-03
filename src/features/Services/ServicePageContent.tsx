@@ -1,14 +1,15 @@
 "use client";
 
+import { useState } from "react";
 import { BackToTop } from "@/components/BackToTop";
-import SelectFilter from "./SelectFilter";
-import { ServiceCardGrid } from "./ServiceGrid";
-import { Footer } from "../Footer";
-import { Navbar } from "../Navbar";
+import FloatingCTABanner from "@/components/FloatingCTABanner";
 import { SiteBackground } from "@/components/SiteBackground";
 import { SERVICES } from "@/constants/services";
-import { useState } from "react";
-import { ServiceCategory } from "@/types/services";
+import type { ServiceCategory } from "@/types/services";
+import { Footer } from "../Footer";
+import { Navbar } from "../Navbar";
+import SelectFilter from "./SelectFilter";
+import { ServiceCardGrid } from "./ServiceGrid";
 
 export default function ServicePageContent() {
   const [selectedCategory, setSelectedCategory] = useState<
@@ -53,6 +54,7 @@ export default function ServicePageContent() {
       </main>
 
       <Footer />
+      <FloatingCTABanner />
       <BackToTop />
     </>
   );
