@@ -1,75 +1,73 @@
-import { Code2 } from "lucide-react";
-import type { ServiceCategory } from "@/types/services";
+import { ServiceCategory, ServiceItem } from "@/types/services";
+import {
+  Bot,
+  BriefcaseBusiness,
+  CreditCard,
+  LineChart,
+  MonitorCog,
+  Package2,
+} from "lucide-react";
 
-export const SERVICES: ServiceCategory[] = [
+export const CATEGORY_OPTIONS: Array<{
+  value: ServiceCategory | "all";
+  label: string;
+}> = [
+  { value: "all", label: "Todas as categorias" },
+  { value: "landing-page", label: "Landing Page" },
+  { value: "pdv", label: "PDV" },
+  { value: "crm", label: "CRM" },
+  { value: "automacao", label: "Automação" },
+  { value: "financeiro", label: "Financeiro" },
+  { value: "erp", label: "ERP" },
+];
+
+export const SERVICES: ServiceItem[] = [
   {
-    id: "software",
-    title: "Software",
-    subtitle: "Sistemas sob medida para a sua operação",
-    icon: Code2,
-    items: [
-      {
-        name: "Landing Page",
-        description: "Transforme visitantes em contatos e clientes.",
-        expandedDescription:
-          "Criamos páginas focadas em apresentar sua oferta com clareza e conduzir o visitante para uma ação, como solicitar orçamento, chamar no WhatsApp ou comprar.",
-      },
-      {
-        name: "CRM",
-        description: "Controle seus clientes e oportunidades em um só lugar.",
-        expandedDescription:
-          "Organize contatos, negociações, histórico de atendimento e próximos passos para vender com mais consistência e acompanhar cada oportunidade de perto.",
-      },
-      {
-        name: "PDV",
-        description: "Venda com mais agilidade e controle.",
-        expandedDescription:
-          "Tenha um sistema para registrar vendas, controlar caixa, aplicar formas de pagamento e acompanhar a rotina do atendimento presencial com mais eficiência.",
-      },
-      {
-        name: "Financeiro",
-        description: "Enxergue melhor o dinheiro da sua empresa.",
-        expandedDescription:
-          "Acompanhe entradas, saídas, contas, fluxo de caixa e resultados para tomar decisões com mais segurança e menos achismo.",
-      },
-      {
-        name: "ERP",
-        description: "Centralize a gestão da sua empresa.",
-        expandedDescription:
-          "Reúna setores, processos e informações em uma única plataforma, conectando vendas, estoque, financeiro, clientes e relatórios.",
-      },
-      {
-        name: "OS",
-        description: "Organize atendimentos e serviços do início ao fim.",
-        expandedDescription:
-          "Registre ordens de serviço, acompanhe etapas, responsáveis, prazos e histórico dos atendimentos com mais controle e profissionalismo.",
-      },
-      {
-        name: "WMS",
-        description: "Tenha mais precisão no controle de estoque.",
-        expandedDescription:
-          "Gerencie produtos, entradas, saídas, movimentações e armazenagem para reduzir falhas e manter o estoque sempre mais confiável.",
-      },
-      {
-        name: "Automações",
-        description: "Atenda mais rapido com bots e fluxos inteligentes.",
-        expandedDescription:
-          "Criamos automacoes para Telegram, WhatsApp e outros canais para responder clientes, qualificar leads, confirmar pedidos e executar tarefas repetitivas sem depender de atendimento manual o tempo todo.",
-      },
-    ],
-    details: {
-      longDescription:
-        "Construimos sistemas web sob medida, com foco em resultado pratico: menos retrabalho, atendimento mais rapido e operacao mais organizada. Alem do sistema principal, implementamos automacoes e bots para WhatsApp, Telegram e outros canais para transformar tarefas repetitivas em fluxos inteligentes que ajudam seu time a vender e atender melhor.",
-      deliverables: [
-        "Levantamento de requisitos e prototipação",
-        "Sistema responsivo (desktop e mobile)",
-        "Painel administrativo completo",
-        "Automacoes e bots (WhatsApp, Telegram e APIs)",
-        "Documentação técnica e treinamento",
-        "Suporte e evolução contínua",
-      ],
-      averageTime: "4 a 12 semanas",
-      startingPrice: "Sob orçamento",
-    },
+    category: "landing-page",
+    title: "Landing Page",
+    description:
+      "Páginas estratégicas que apresentam seu negócio ou produto e convertem visitantes em mais contatos e clientes.",
+    tags: ["Mais conversões", "Design moderno", "Foco em resultado"],
+    icon: MonitorCog,
+  },
+  {
+    category: "pdv",
+    title: "PDV",
+    description:
+      "Sistema de ponto de venda completo para gerenciar suas vendas, estoques e clientes de forma simples.",
+    tags: ["Vendas rápidas", "Controle de estoque", "Relatórios"],
+    icon: CreditCard,
+  },
+  {
+    category: "crm",
+    title: "CRM",
+    description:
+      "Gerencie seus clientes e oportunidades em um só lugar e aumente seu relacionamento e suas vendas.",
+    tags: ["Mais organização", "Relacionamento", "Acompanhamento"],
+    icon: BriefcaseBusiness,
+  },
+  {
+    category: "automacao",
+    title: "Automação",
+    description:
+      "Automatize tarefas e processos do seu negócio e ganhe tempo para focar no que realmente importa.",
+    tags: ["Mais produtividade", "Fluxos inteligentes", "Menos retrabalho"],
+    icon: Bot,
+  },
+  {
+    category: "financeiro",
+    title: "Financeiro",
+    description:
+      "Tenha controle total das finanças do seu negócio com relatórios claros, previsões e visão atualizada.",
+    tags: ["Controle financeiro", "Fluxo de caixa", "Relatórios"],
+    icon: LineChart,
+  },
+  {
+    category: "erp",
+    title: "ERP",
+    description:
+      "Centralize todas as áreas do seu negócio em um sistema integrado e eficiente para operar com mais clareza.",
+    tags: ["Gestão completa", "Integração", "Mais eficiência"],
+    icon: Package2,
   },
 ];

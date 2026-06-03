@@ -1,13 +1,9 @@
 "use client";
 
-import {
-  ArrowUpRight,
-  Mail,
-  MapPin,
-  Phone,
-} from "lucide-react";
+import { ArrowUpRight, Mail, MapPin, Phone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { InstagramIcon } from "@/components/icons/InstagramIcon";
 import { WhatsappIcon } from "@/components/icons/WhatsappIcon";
 import {
@@ -21,7 +17,7 @@ const SECTIONS = {
   navegar: [
     { label: "Início", href: "#inicio" },
     { label: "Sobre", href: "#sobre" },
-    { label: "Serviços", href: "#servicos" },
+    { label: "Serviços", href: "/services" },
     { label: "Como trabalhamos", href: "#como-trabalhamos" },
   ],
   empresa: [
@@ -31,22 +27,37 @@ const SECTIONS = {
     { label: "Contato", href: "#contato" },
   ],
   servicos: [
-    { label: "Software sob medida", href: "#servicos" },
-    { label: "Landing pages", href: "#servicos" },
-    { label: "Sistemas web", href: "#servicos" },
-    { label: "Integrações", href: "#servicos" },
+    { label: "Landing page", href: "/services" },
+    { label: "PDV", href: "/services" },
+    { label: "CRM", href: "/services" },
+    { label: "ERP e financeiro", href: "/services" },
   ],
 };
 
 export function Footer() {
   const { scrollToId } = useSmoothScroll();
+  const pathname = usePathname();
+  const isHome = pathname === "/";
+
+  const handleNavigation = (href: string) => {
+    if (href.startsWith("#")) {
+      if (isHome) {
+        scrollToId(href);
+      } else {
+        window.location.href = `/${href}`;
+      }
+      return;
+    }
+
+    window.location.href = href;
+  };
 
   return (
     <footer className="relative overflow-hidden border-t border-border/40 bg-background">
       {/* Glow azul decorativo - Atenuado no light mode para leitura limpa */}
       <div
         aria-hidden
-        className="pointer-events-none absolute -top-40 left-1/2 h-[420px] w-[1100px] -translate-x-1/2 rounded-full bg-[#4d8cff]/10 dark:bg-[#0a3499]/20 blur-[140px]"
+        className="pointer-events-none absolute -top-40 left-1/2 h-105 w-275 -translate-x-1/2 rounded-full bg-[#4d8cff]/10 dark:bg-[#0a3499]/20 blur-[140px]"
       />
 
       <div className="relative mx-auto max-w-7xl px-6 pt-20 pb-10 sm:px-8">
@@ -65,7 +76,7 @@ export function Footer() {
 
           <button
             type="button"
-            onClick={() => scrollToId("#contato")}
+            onClick={() => handleNavigation("#contato")}
             className="group inline-flex items-center gap-2 rounded-full border border-[#4d8cff]/40 bg-[#4d8cff]/10 px-6 py-3.5 text-sm font-semibold text-foreground transition-all hover:border-[#4d8cff] hover:bg-[#4d8cff] hover:text-[#00072d]"
           >
             Solicitar orçamento
@@ -81,7 +92,7 @@ export function Footer() {
               href="#inicio"
               onClick={(e) => {
                 e.preventDefault();
-                scrollToId("#inicio");
+                handleNavigation("#inicio");
               }}
               className="flex items-center"
             >
@@ -129,7 +140,6 @@ export function Footer() {
                 Manaus, AM - Brasil
               </li>
             </ul>
-
           </div>
 
           {/* Links: Navegar */}
@@ -142,7 +152,7 @@ export function Footer() {
                 <li key={item.label}>
                   <button
                     type="button"
-                    onClick={() => scrollToId(item.href)}
+                    onClick={() => handleNavigation(item.href)}
                     className="text-muted-foreground transition-colors hover:text-foreground"
                   >
                     {item.label}
@@ -162,7 +172,7 @@ export function Footer() {
                 <li key={item.label}>
                   <button
                     type="button"
-                    onClick={() => scrollToId(item.href)}
+                    onClick={() => handleNavigation(item.href)}
                     className="text-muted-foreground transition-colors hover:text-foreground"
                   >
                     {item.label}
@@ -182,7 +192,7 @@ export function Footer() {
                 <li key={item.label}>
                   <button
                     type="button"
-                    onClick={() => scrollToId(item.href)}
+                    onClick={() => handleNavigation(item.href)}
                     className="text-muted-foreground transition-colors hover:text-foreground"
                   >
                     {item.label}
