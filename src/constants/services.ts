@@ -12,13 +12,13 @@ export const CATEGORY_OPTIONS: Array<{
   value: ServiceCategory | "all";
   label: string;
 }> = [
-  { value: "all", label: "Todas as categorias" },
-  { value: "landing-page", label: "Landing Page" },
-  { value: "pdv", label: "PDV" },
-  { value: "crm", label: "CRM" },
-  { value: "automacao", label: "Automação" },
-  { value: "financeiro", label: "Financeiro" },
-  { value: "erp", label: "ERP" },
+  { value: "all", label: "Todas as soluções" },
+  { value: "landing-page", label: "Vender mais online" },
+  { value: "pdv", label: "Controlar vendas e estoque" },
+  { value: "crm", label: "Organizar clientes" },
+  { value: "automacao", label: "Automatizar tarefas" },
+  { value: "financeiro", label: "Controlar financeiro" },
+  { value: "erp", label: "Integrar a empresa" },
 ];
 
 export const SERVICES: ServiceItem[] = [
@@ -26,48 +26,48 @@ export const SERVICES: ServiceItem[] = [
     category: "landing-page",
     title: "Landing Page",
     description:
-      "Páginas estratégicas que apresentam seu negócio ou produto e convertem visitantes em mais contatos e clientes.",
-    tags: ["Mais conversões", "Design moderno", "Foco em resultado"],
+      "Página profissional para apresentar sua empresa, gerar confiança e transformar visitantes em contatos pelo WhatsApp.",
+    tags: ["Vender online", "Captar clientes", "Mais credibilidade"],
     icon: MonitorCog,
   },
   {
     category: "pdv",
     title: "PDV",
     description:
-      "Sistema de ponto de venda completo para gerenciar suas vendas, estoques e clientes de forma simples.",
-    tags: ["Vendas rápidas", "Controle de estoque", "Relatórios"],
+      "Sistema para registrar vendas, controlar produtos, acompanhar estoque e deixar a rotina da sua loja mais organizada.",
+    tags: ["Controlar vendas", "Organizar estoque", "Atender melhor"],
     icon: CreditCard,
   },
   {
     category: "crm",
     title: "CRM",
     description:
-      "Gerencie seus clientes e oportunidades em um só lugar e aumente seu relacionamento e suas vendas.",
-    tags: ["Mais organização", "Relacionamento", "Acompanhamento"],
+      "Organize seus clientes, acompanhe oportunidades e tenha mais clareza sobre quem precisa ser atendido ou chamado novamente.",
+    tags: ["Organizar clientes", "Acompanhar contatos", "Vender melhor"],
     icon: BriefcaseBusiness,
   },
   {
     category: "automacao",
     title: "Automação",
     description:
-      "Automatize tarefas e processos do seu negócio e ganhe tempo para focar no que realmente importa.",
-    tags: ["Mais produtividade", "Fluxos inteligentes", "Menos retrabalho"],
+      "Automatize tarefas repetitivas, reduza retrabalho e ganhe tempo para focar no crescimento do seu negócio.",
+    tags: ["Automatizar tarefas", "Reduzir retrabalho", "Ganhar tempo"],
     icon: Bot,
   },
   {
     category: "financeiro",
-    title: "Financeiro",
+    title: "Gestão Financeira",
     description:
-      "Tenha controle total das finanças do seu negócio com relatórios claros, previsões e visão atualizada.",
-    tags: ["Controle financeiro", "Fluxo de caixa", "Relatórios"],
+      "Controle entradas, saídas, cobranças e indicadores para tomar decisões com mais segurança no dia a dia.",
+    tags: ["Controlar financeiro", "Acompanhar caixa", "Decidir melhor"],
     icon: LineChart,
   },
   {
     category: "erp",
-    title: "ERP",
+    title: "ERP Sob Medida",
     description:
-      "Centralize todas as áreas do seu negócio em um sistema integrado e eficiente para operar com mais clareza.",
-    tags: ["Gestão completa", "Integração", "Mais eficiência"],
+      "Sistema completo para integrar setores, centralizar informações e controlar melhor a operação da sua empresa.",
+    tags: ["Integrar setores", "Centralizar dados", "Gerenciar melhor"],
     icon: Package2,
   },
 ];
