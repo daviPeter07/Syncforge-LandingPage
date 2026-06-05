@@ -25,7 +25,7 @@ export const SERVICES: ServiceItem[] = [
   {
     id: "landing-page",
     category: "landing-page",
-    title: "Landing Page",
+    title: "Página Institucional",
     description:
       "Página profissional para apresentar sua empresa, gerar confiança e transformar visitantes em contatos pelo WhatsApp.",
     tags: ["Vender online", "Captar clientes", "Mais credibilidade"],

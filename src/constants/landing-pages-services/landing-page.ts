@@ -2,12 +2,12 @@ import type { ServiceLandingPageContent } from "@/types/services";
 
 export const landingPageServiceContent: ServiceLandingPageContent = {
   id: "landing-page",
-  seoTitle: "Landing pages sob medida para captar mais oportunidades",
+  seoTitle: "Paginas institucionais sob medida para captar mais oportunidades",
   seoDescription:
-    "Criamos landing pages com copy, estrutura e visual pensados para transformar visitas em contatos qualificados para o seu negócio.",
+    "Criamos páginas institucionais com copy, estrutura e visual pensados para transformar visitas em contatos qualificados para o seu negócio.",
   hero: {
-    eyebrow: "Landing page",
-    title: "Landing pages pensadas para transformar visitas em conversas reais",
+    eyebrow: "Pagina institucional",
+    title: "Paginas institucionais pensadas para transformar visitas em conversas reais",
     description:
       "Desenhamos páginas focadas em clareza, autoridade e conversão para campanhas, lançamentos, serviços e captação pelo WhatsApp.",
     highlights: [
@@ -17,15 +17,15 @@ export const landingPageServiceContent: ServiceLandingPageContent = {
     ],
   },
   why: {
-    eyebrow: "Por que uma landing page?",
+    eyebrow: "Por que uma pagina institucional?",
     title: "Porque a primeira impressao digital decide se o cliente fecha ou fecha a aba",
     description:
-      "Uma landing page nao e sobre tecnologia. E sobre fazer o visitante sentir que esta no lugar certo.",
+      "Uma pagina institucional nao e sobre tecnologia. E sobre fazer o visitante sentir que esta no lugar certo.",
     items: [
       {
         title: "Seu cliente nao le paginas genericas",
         description:
-          "Uma landing page bem construida passa credibilidade e mostra que voce leva seu negocio a serio antes mesmo da conversa. O design e a primeira prova social do seu trabalho.",
+          "Uma pagina institucional bem construida passa credibilidade e mostra que voce leva seu negocio a serio antes mesmo da conversa. O design e a primeira prova social do seu trabalho.",
       },
       {
         title: "Primeira impressao que vende",
@@ -35,21 +35,21 @@ export const landingPageServiceContent: ServiceLandingPageContent = {
       {
         title: "Menos explicacao, mais resultado",
         description:
-          "Quando a oferta esta clara, o visitante decide mais rapido. Uma landing page bem feita transforma curiosidade em acao sem depender de Follow-ups interminaveis.",
+          "Quando a oferta esta clara, o visitante decide mais rapido. Uma pagina institucional bem feita transforma curiosidade em acao sem depender de Follow-ups interminaveis.",
       },
     ],
   },
   showcase: {
     eyebrow: "Demonstrações",
     title:
-      "Projetos demonstrativos para visualizar como uma landing page pode vender melhor",
+      "Projetos demonstrativos para visualizar como uma pagina institucional pode vender melhor",
     description:
       "Em vez de uma página genérica, a ideia é desenhar a estrutura conforme a oferta, o público e a ação que o visitante precisa tomar.",
     note: "Os exemplos abaixo sao demonstrativos para mostrar formatos de projeto, narrativa e posicionamento visual que podem ser criados para cada cliente.",
     projects: [
       {
         segment: "Clinica estetica",
-        title: "Landing page para campanha de avaliacao e agendamento rapido",
+        title: "Pagina institucional para campanha de avaliacao e agendamento rapido",
         company: "Clinica Vitta Prime",
         client: "Mariana Alves",
         href: "#",
@@ -83,7 +83,7 @@ export const landingPageServiceContent: ServiceLandingPageContent = {
       {
         segment: "Produto digital",
         title:
-          "Landing page para pre-lancamento com narrativa orientada a conversao",
+          "Pagina institucional para pre-lancamento com narrativa orientada a conversao",
         company: "NexoFit Academy",
         client: "Lucas Martins",
         href: "#",
@@ -101,7 +101,7 @@ export const landingPageServiceContent: ServiceLandingPageContent = {
   },
   pricing: {
     eyebrow: "Investimento",
-    title: "Faixas para tirar a landing page do papel e continuar evoluindo",
+    title: "Faixas para tirar a pagina institucional do papel e continuar evoluindo",
     description:
       "Usamos faixas para orientar a conversa comercial. O valor final depende de copy, volume de seções, integrações e necessidades da campanha.",
     implementationLabel: "Implementação",
@@ -112,7 +112,7 @@ export const landingPageServiceContent: ServiceLandingPageContent = {
       {
         name: "Essencial",
         description:
-          "Para validar uma oferta com uma landing page objetiva e pronta para captar contatos.",
+          "Para validar uma oferta com uma pagina institucional objetiva e pronta para captar contatos.",
         ctaLabel: "Solicitar proposta",
         features: [
           "Estrutura comercial com CTA principal",
@@ -181,19 +181,19 @@ export const landingPageServiceContent: ServiceLandingPageContent = {
           prefix: "A partir de",
           amount: "R$ 600",
           suffix: "conforme operação",
-          note: "Recomendado para empresas que tratam landing pages como canal contínuo de aquisição e otimização.",
+          note: "Recomendado para empresas que tratam paginas institucionais como canal contínuo de aquisição e otimização.",
         },
       },
     ],
   },
   faq: {
     eyebrow: "FAQ",
-    title: "O que costuma ser mais importante antes de criar uma landing page",
+    title: "O que costuma ser mais importante antes de criar uma pagina institucional",
     description:
       "Estas são algumas dúvidas comuns de quem quer anunciar, apresentar um serviço ou profissionalizar a presença digital.",
     items: [
       {
-        question: "A landing page serve só para tráfego pago?",
+        question: "A pagina institucional serve só para tráfego pago?",
         answer:
           "Não. Ela também funciona para apresentação comercial, links em bio, campanhas orgânicas e materiais de prospecção.",
       },
@@ -219,8 +219,8 @@ export const landingPageServiceContent: ServiceLandingPageContent = {
     title:
       "Se sua oferta precisa de uma página que explique melhor e converta mais, vamos desenhar isso juntos",
     description:
-      "Conte o cenário da sua campanha, do seu serviço ou do seu lançamento e montamos uma direção clara para a landing page.",
-    primaryLabel: "Falar sobre landing page",
+      "Conte o cenário da sua campanha, do seu serviço ou do seu lançamento e montamos uma direção clara para a pagina institucional.",
+    primaryLabel: "Falar sobre pagina institucional",
     secondaryLabel: "Ver todos os serviços",
     note: "Podemos começar com uma página simples e evoluir depois com novos blocos, testes e integrações.",
   },
