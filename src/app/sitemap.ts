@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { getServiceLandingPageLinks } from "@/constants/landing-pages-services/routes";
 import { getAllSlugs } from "@/lib/blog";
 import { getSiteUrl } from "@/lib/seo";
 
@@ -19,6 +20,21 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.8,
   }));
 
+  const serviceEntries: MetadataRoute.Sitemap = [
+    {
+      url: `${siteUrl}/services`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    ...getServiceLandingPageLinks().map((service) => ({
+      url: `${siteUrl}${service.href}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    })),
+  ];
+
   return [
     {
       url: siteUrl,
@@ -26,6 +42,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "weekly",
       priority: 1,
     },
+    ...serviceEntries,
     ...blogEntries,
   ];
 }

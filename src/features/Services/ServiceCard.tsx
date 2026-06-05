@@ -1,4 +1,6 @@
+import Link from "next/link";
 import { ImagePlaceholder } from "@/components/image-placeholder";
+import { Button } from "@/components/ui/button";
 import type { ServiceItem } from "@/types/services";
 
 export function ServiceCard({ service }: { service: ServiceItem }) {
@@ -23,6 +25,16 @@ export function ServiceCard({ service }: { service: ServiceItem }) {
               {tag}
             </span>
           ))}
+        </div>
+
+        <div className="mt-6 flex items-center justify-between gap-3 border-t border-white/8 pt-4">
+          <span className="text-xs font-medium tracking-[0.14em] text-muted-foreground uppercase">
+            Solução sob medida
+          </span>
+
+          <Button asChild size="sm" className="rounded-full p-4">
+            <Link href={`/services/${service.id}`}>Ver detalhes</Link>
+          </Button>
         </div>
       </div>
     </article>

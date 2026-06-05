@@ -3,7 +3,7 @@
 import { ArrowUpRight, Mail, MapPin, Phone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { InstagramIcon } from "@/components/icons/InstagramIcon";
 import { WhatsappIcon } from "@/components/icons/WhatsappIcon";
 import {
@@ -11,7 +11,13 @@ import {
   CONTACT_EMAIL_HREF,
   CONTACT_WHATSAPP_HREF,
 } from "@/constants/contact";
+import { getServiceLandingPageLinks } from "@/constants/landing-pages-services/routes";
 import { useSmoothScroll } from "@/hooks/use-smooth-scroll";
+
+const SERVICE_LINKS = [
+  { label: "Todos os servicos", href: "/services" },
+  ...getServiceLandingPageLinks().map(({ label, href }) => ({ label, href })),
+];
 
 const SECTIONS = {
   navegar: [
@@ -22,21 +28,50 @@ const SECTIONS = {
   ],
   empresa: [
     { label: "Equipe", href: "#equipe" },
-    { label: "Primeiros passos", href: "#resultados" },
+    { label: "Primeiros passos", href: "#como-trabalhamos" },
     { label: "Ajuda / FAQ", href: "#ajuda" },
     { label: "Contato", href: "#contato" },
   ],
-  servicos: [
-    { label: "Landing page", href: "/services" },
-    { label: "PDV", href: "/services" },
-    { label: "CRM", href: "/services" },
-    { label: "ERP e financeiro", href: "/services" },
-  ],
+  servicos: [...SERVICE_LINKS],
 };
+
+interface FooterNavigationItemProps {
+  href: string;
+  label: string;
+  onNavigate: (href: string) => void;
+}
+
+function FooterNavigationItem({
+  href,
+  label,
+  onNavigate,
+}: FooterNavigationItemProps) {
+  const className =
+    "text-muted-foreground transition-colors hover:text-foreground";
+
+  if (href.startsWith("#")) {
+    return (
+      <button
+        type="button"
+        onClick={() => onNavigate(href)}
+        className={className}
+      >
+        {label}
+      </button>
+    );
+  }
+
+  return (
+    <Link href={href} className={className}>
+      {label}
+    </Link>
+  );
+}
 
 export function Footer() {
   const { scrollToId } = useSmoothScroll();
   const pathname = usePathname();
+  const router = useRouter();
   const isHome = pathname === "/";
 
   const handleNavigation = (href: string) => {
@@ -44,12 +79,12 @@ export function Footer() {
       if (isHome) {
         scrollToId(href);
       } else {
-        window.location.href = `/${href}`;
+        router.push(`/${href}`);
       }
       return;
     }
 
-    window.location.href = href;
+    router.push(href);
   };
 
   return (
@@ -150,13 +185,11 @@ export function Footer() {
             <ul className="mt-5 space-y-3 text-sm">
               {SECTIONS.navegar.map((item) => (
                 <li key={item.label}>
-                  <button
-                    type="button"
-                    onClick={() => handleNavigation(item.href)}
-                    className="text-muted-foreground transition-colors hover:text-foreground"
-                  >
-                    {item.label}
-                  </button>
+                  <FooterNavigationItem
+                    href={item.href}
+                    label={item.label}
+                    onNavigate={handleNavigation}
+                  />
                 </li>
               ))}
             </ul>
@@ -170,13 +203,11 @@ export function Footer() {
             <ul className="mt-5 space-y-3 text-sm">
               {SECTIONS.empresa.map((item) => (
                 <li key={item.label}>
-                  <button
-                    type="button"
-                    onClick={() => handleNavigation(item.href)}
-                    className="text-muted-foreground transition-colors hover:text-foreground"
-                  >
-                    {item.label}
-                  </button>
+                  <FooterNavigationItem
+                    href={item.href}
+                    label={item.label}
+                    onNavigate={handleNavigation}
+                  />
                 </li>
               ))}
             </ul>
@@ -190,13 +221,11 @@ export function Footer() {
             <ul className="mt-5 space-y-3 text-sm">
               {SECTIONS.servicos.map((item) => (
                 <li key={item.label}>
-                  <button
-                    type="button"
-                    onClick={() => handleNavigation(item.href)}
-                    className="text-muted-foreground transition-colors hover:text-foreground"
-                  >
-                    {item.label}
-                  </button>
+                  <FooterNavigationItem
+                    href={item.href}
+                    label={item.label}
+                    onNavigate={handleNavigation}
+                  />
                 </li>
               ))}
             </ul>

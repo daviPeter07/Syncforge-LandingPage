@@ -1,0 +1,95 @@
+import type { ServiceLandingPageContent } from "@/types/services";
+
+export const financeiroServiceContent: ServiceLandingPageContent = {
+  id: "financeiro",
+  seoTitle:
+    "Gestão financeira sob medida para acompanhar entradas, saídas e indicadores",
+  seoDescription:
+    "Criamos soluções financeiras para organizar caixa, cobranças, compromissos e leitura de indicadores com mais segurança.",
+  hero: {
+    eyebrow: "Financeiro",
+    title:
+      "Gestão financeira sob medida para enxergar melhor o caixa e decidir com menos incerteza",
+    description:
+      "Estruturamos sistemas para acompanhar entradas, saídas, vencimentos, cobranças e indicadores de forma mais clara para a operação.",
+    highlights: [
+      "Leitura mais limpa do fluxo financeiro",
+      "Controle melhor de cobranças e compromissos",
+      "Base mais segura para tomada de decisão",
+    ],
+  },
+  showcase: {
+    eyebrow: "Demonstrações",
+    title:
+      "O que um sistema financeiro precisa mostrar para não virar só mais um cadastro",
+    description:
+      "A rotina financeira exige visão de caixa, prazos e pendências, mas também precisa transformar dados em leitura útil para decisão.",
+    mockupTitle: "Painel de caixa e compromissos",
+    mockupDescription:
+      "Simulamos uma visão com indicadores de movimentação, vencimentos próximos e pontos de atenção do período.",
+    mockupSteps: [
+      "Entradas e saídas organizadas",
+      "Compromissos com vencimento visível",
+      "Indicadores resumidos para gestão",
+    ],
+    items: [
+      {
+        label: "Rotina",
+        title: "Menos dependência de controles paralelos",
+        description:
+          "Centralizar registros reduz o vai e volta entre planilhas, conversas e anotações dispersas pela operação.",
+      },
+      {
+        label: "Previsão",
+        title: "Mais clareza para olhar caixa e pendências",
+        description:
+          "Quando o fluxo financeiro fica visível, a gestão consegue antecipar riscos e tomar decisão com mais segurança.",
+      },
+      {
+        label: "Crescimento",
+        title: "Estrutura para relatórios e integrações futuras",
+        description:
+          "A base pode evoluir para relatórios gerenciais, conciliação, automações e conexão com outros módulos da empresa.",
+      },
+    ],
+  },
+  faq: {
+    eyebrow: "FAQ",
+    title:
+      "Pontos que normalmente surgem antes de estruturar um financeiro próprio",
+    description:
+      "Essas perguntas ajudam a entender onde um sistema dedicado pode gerar mais previsibilidade para a empresa.",
+    items: [
+      {
+        question: "Isso substitui planilhas completamente?",
+        answer:
+          "O objetivo é justamente reduzir a dependência de controles paralelos e concentrar a operação em um fluxo mais confiável e rastreável.",
+      },
+      {
+        question: "Vocês conseguem adaptar à rotina atual de cobrança?",
+        answer:
+          "Sim. O sistema precisa respeitar a forma como a empresa opera hoje e organizar isso de maneira mais clara para a equipe.",
+      },
+      {
+        question: "É possível enxergar indicadores simples para gestão?",
+        answer:
+          "Sim. Podemos estruturar visões resumidas para acompanhar caixa, pendências, períodos e outros sinais importantes para decisão.",
+      },
+      {
+        question: "Dá para integrar depois com outros módulos?",
+        answer:
+          "Dá. A solução pode evoluir junto com a empresa e se conectar a vendas, ERP, CRM ou automações operacionais.",
+      },
+    ],
+  },
+  cta: {
+    eyebrow: "Próximo passo",
+    title:
+      "Se o financeiro ainda depende de muitos controles espalhados, podemos organizar isso em uma operação mais clara",
+    description:
+      "Mostre como sua equipe controla caixa, cobranças e vencimentos hoje para desenharmos um fluxo mais confiável.",
+    primaryLabel: "Falar sobre financeiro",
+    secondaryLabel: "Ver todos os serviços",
+    note: "Podemos começar pelo núcleo do controle financeiro e evoluir a solução com indicadores e integrações depois.",
+  },
+};

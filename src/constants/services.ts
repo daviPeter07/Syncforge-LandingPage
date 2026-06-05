@@ -1,4 +1,3 @@
-import { ServiceCategory, ServiceItem } from "@/types/services";
 import {
   Bot,
   BriefcaseBusiness,
@@ -7,6 +6,7 @@ import {
   MonitorCog,
   Package2,
 } from "lucide-react";
+import type { ServiceCategory, ServiceId, ServiceItem } from "@/types/services";
 
 export const CATEGORY_OPTIONS: Array<{
   value: ServiceCategory | "all";
@@ -23,6 +23,7 @@ export const CATEGORY_OPTIONS: Array<{
 
 export const SERVICES: ServiceItem[] = [
   {
+    id: "landing-page",
     category: "landing-page",
     title: "Landing Page",
     description:
@@ -31,6 +32,7 @@ export const SERVICES: ServiceItem[] = [
     icon: MonitorCog,
   },
   {
+    id: "pdv",
     category: "pdv",
     title: "PDV",
     description:
@@ -39,6 +41,7 @@ export const SERVICES: ServiceItem[] = [
     icon: CreditCard,
   },
   {
+    id: "crm",
     category: "crm",
     title: "CRM",
     description:
@@ -47,6 +50,7 @@ export const SERVICES: ServiceItem[] = [
     icon: BriefcaseBusiness,
   },
   {
+    id: "automacao",
     category: "automacao",
     title: "Automação",
     description:
@@ -55,6 +59,7 @@ export const SERVICES: ServiceItem[] = [
     icon: Bot,
   },
   {
+    id: "financeiro",
     category: "financeiro",
     title: "Gestão Financeira",
     description:
@@ -63,6 +68,7 @@ export const SERVICES: ServiceItem[] = [
     icon: LineChart,
   },
   {
+    id: "erp",
     category: "erp",
     title: "ERP Sob Medida",
     description:
@@ -71,3 +77,13 @@ export const SERVICES: ServiceItem[] = [
     icon: Package2,
   },
 ];
+
+export function getServiceById(id: ServiceId): ServiceItem {
+  const service = SERVICES.find((item) => item.id === id);
+
+  if (!service) {
+    throw new Error(`Service not found for id: ${id}`);
+  }
+
+  return service;
+}

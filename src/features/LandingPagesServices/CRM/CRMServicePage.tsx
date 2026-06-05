@@ -1,0 +1,19 @@
+import type { ServiceLandingPageEntry } from "@/types/services";
+import { ServiceLandingLayout } from "../shared/ServiceLandingLayout";
+import { CRMCta } from "./CRMCta";
+import { CRMFaq } from "./CRMFaq";
+import { CRMHero } from "./CRMHero";
+import { CRMShowcase } from "./CRMShowcase";
+
+interface CRMServicePageProps extends ServiceLandingPageEntry {}
+
+export function CRMServicePage({ service, content }: CRMServicePageProps) {
+  return (
+    <ServiceLandingLayout>
+      <CRMHero service={service} content={content.hero} />
+      <CRMShowcase service={service} content={content.showcase} />
+      <CRMFaq content={content.faq} />
+      <CRMCta content={content.cta} />
+    </ServiceLandingLayout>
+  );
+}
