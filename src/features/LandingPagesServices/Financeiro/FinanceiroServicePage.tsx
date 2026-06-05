@@ -3,6 +3,7 @@ import { ServiceLandingLayout } from "../shared/ServiceLandingLayout";
 import { FinanceiroCta } from "./FinanceiroCta";
 import { FinanceiroFaq } from "./FinanceiroFaq";
 import { FinanceiroHero } from "./FinanceiroHero";
+import { FinanceiroPricing } from "./FinanceiroPricing";
 import { FinanceiroShowcase } from "./FinanceiroShowcase";
 
 interface FinanceiroServicePageProps extends ServiceLandingPageEntry {}
@@ -15,6 +16,7 @@ export function FinanceiroServicePage({
     <ServiceLandingLayout>
       <FinanceiroHero service={service} content={content.hero} />
       <FinanceiroShowcase service={service} content={content.showcase} />
+      <FinanceiroPricing content={content.pricing} />
       <FinanceiroFaq content={content.faq} />
       <FinanceiroCta content={content.cta} />
     </ServiceLandingLayout>

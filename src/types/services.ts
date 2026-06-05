@@ -54,6 +54,36 @@ export interface ServiceLandingFaqContent {
   items: ServiceLandingFaqItem[];
 }
 
+export type ServiceLandingPricingMode = "implementation" | "retainer";
+
+export interface ServiceLandingPricingAmount {
+  prefix?: string;
+  amount: string;
+  suffix: string;
+  note?: string;
+}
+
+export interface ServiceLandingPricingPlan {
+  name: string;
+  description: string;
+  badge?: string;
+  featured?: boolean;
+  ctaLabel: string;
+  features: string[];
+  implementation: ServiceLandingPricingAmount;
+  retainer: ServiceLandingPricingAmount;
+}
+
+export interface ServiceLandingPricingContent {
+  eyebrow: string;
+  title: string;
+  description: string;
+  implementationLabel: string;
+  retainerLabel: string;
+  disclaimer?: string;
+  plans: ServiceLandingPricingPlan[];
+}
+
 export interface ServiceLandingCtaContent {
   eyebrow: string;
   title: string;
@@ -69,6 +99,7 @@ export interface ServiceLandingPageContent {
   seoDescription: string;
   hero: ServiceLandingHeroContent;
   showcase: ServiceLandingShowcaseContent;
+  pricing: ServiceLandingPricingContent;
   faq: ServiceLandingFaqContent;
   cta: ServiceLandingCtaContent;
 }

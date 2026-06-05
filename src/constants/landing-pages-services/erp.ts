@@ -51,6 +51,93 @@ export const erpServiceContent: ServiceLandingPageContent = {
       },
     ],
   },
+  pricing: {
+    eyebrow: "Investimento",
+    title: "Faixas para integrar setores e começar um ERP por etapas seguras",
+    description:
+      "ERPs variam muito conforme módulos, integrações, número de áreas e profundidade das regras da operação. Por isso trabalhamos por faixas.",
+    implementationLabel: "Implementação",
+    retainerLabel: "Evolução mensal",
+    disclaimer:
+      "Projetos com muitos módulos, times, permissões ou integração com sistemas legados podem exigir planejamento mais amplo por fases.",
+    plans: [
+      {
+        name: "Núcleo inicial",
+        description:
+          "Para integrar os primeiros pontos críticos da operação e criar uma base sólida para expansão.",
+        ctaLabel: "Solicitar proposta",
+        features: [
+          "Mapeamento do núcleo operacional prioritário",
+          "Estrutura inicial de dados e fluxos",
+          "Integração entre áreas mais críticas",
+          "Base preparada para novos módulos",
+        ],
+        implementation: {
+          prefix: "A partir de",
+          amount: "R$ 90.000",
+          suffix: "por projeto",
+          note: "Boa porta de entrada para empresas que precisam sair do remendo entre setores e centralizar informações.",
+        },
+        retainer: {
+          prefix: "A partir de",
+          amount: "R$ 5.000",
+          suffix: "por mês",
+          note: "Permite continuar a evolução do ERP com novos módulos, refinamentos e ajustes de processo.",
+        },
+      },
+      {
+        name: "Integração operacional",
+        description:
+          "Para negócios que já precisam conectar mais frentes, mais regras e maior leitura gerencial da operação.",
+        badge: "Mais procurado",
+        featured: true,
+        ctaLabel: "Quero esse formato",
+        features: [
+          "Mais módulos ou frentes conectadas",
+          "Fluxos intersetoriais com mais profundidade",
+          "Visões de gestão e rastreabilidade melhores",
+          "Base técnica pronta para crescer por fases",
+          "Organização mais forte da operação como produto",
+        ],
+        implementation: {
+          prefix: "A partir de",
+          amount: "R$ 150.000",
+          suffix: "por projeto",
+          note: "Indicado quando a empresa já sente impacto real da desconexão entre setores e precisa integrar com mais consistência.",
+        },
+        retainer: {
+          prefix: "A partir de",
+          amount: "R$ 8.500",
+          suffix: "por mês",
+          note: "Ideal para seguir expandindo o ERP com governança, novos módulos e evolução operacional contínua.",
+        },
+      },
+      {
+        name: "Sob medida",
+        description:
+          "Para empresas com operação ampla, legado complexo ou necessidade de planejamento técnico mais detalhado.",
+        ctaLabel: "Falar sobre escopo",
+        features: [
+          "Descoberta aprofundada por área e processo",
+          "Desenho por módulos e fases de implantação",
+          "Integrações e dependências mapeadas",
+          "Estratégia de evolução de médio prazo",
+        ],
+        implementation: {
+          prefix: "A partir de",
+          amount: "R$ 220.000",
+          suffix: "conforme operação",
+          note: "Quando o ERP precisa acomodar múltiplas frentes, legados e uma arquitetura mais estratégica de crescimento.",
+        },
+        retainer: {
+          prefix: "A partir de",
+          amount: "R$ 12.000",
+          suffix: "conforme operação",
+          note: "Recomendado para operações que tratam o ERP como infraestrutura viva da empresa e querem evolução contínua.",
+        },
+      },
+    ],
+  },
   faq: {
     eyebrow: "FAQ",
     title: "Dúvidas comuns antes de pensar em um ERP sob medida",

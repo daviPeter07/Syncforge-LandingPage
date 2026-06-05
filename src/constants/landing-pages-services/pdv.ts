@@ -52,6 +52,93 @@ export const pdvServiceContent: ServiceLandingPageContent = {
       },
     ],
   },
+  pricing: {
+    eyebrow: "Investimento",
+    title: "Faixas para estruturar um PDV mais aderente ao ritmo da operação",
+    description:
+      "O investimento depende da complexidade do caixa, do catálogo, do estoque e dos módulos que precisam nascer junto com a operação.",
+    implementationLabel: "Implementação",
+    retainerLabel: "Evolução mensal",
+    disclaimer:
+      "Projetos com múltiplos perfis de acesso, impressões, integrações ou relatórios específicos podem alterar a faixa final.",
+    plans: [
+      {
+        name: "Base operacional",
+        description:
+          "Para estruturar o fluxo principal de venda, consulta e controle essencial da loja.",
+        ctaLabel: "Solicitar proposta",
+        features: [
+          "Fluxo principal de atendimento e venda",
+          "Cadastro de produtos e visão inicial de estoque",
+          "Interface pensada para o balcão",
+          "Base pronta para crescer depois",
+        ],
+        implementation: {
+          prefix: "A partir de",
+          amount: "R$ 25.000",
+          suffix: "por projeto",
+          note: "Faz sentido para operações que querem sair de processos improvisados e ganhar controle no essencial.",
+        },
+        retainer: {
+          prefix: "A partir de",
+          amount: "R$ 1.500",
+          suffix: "por mês",
+          note: "Permite evoluir telas, ajustes operacionais e pequenas melhorias com previsibilidade.",
+        },
+      },
+      {
+        name: "Operação completa",
+        description:
+          "Para lojas que precisam de um PDV mais robusto, com mais regras de negócio e visão de gestão.",
+        badge: "Mais procurado",
+        featured: true,
+        ctaLabel: "Quero esse formato",
+        features: [
+          "Fluxos comerciais e operacionais mais completos",
+          "Regras de estoque e fechamento mais claras",
+          "Relatórios e visões resumidas para gestão",
+          "Perfis de uso para equipe",
+          "Estrutura pensada para expansão",
+        ],
+        implementation: {
+          prefix: "A partir de",
+          amount: "R$ 45.000",
+          suffix: "por projeto",
+          note: "Indicado para operações com mais volume, mais equipe ou necessidade de maior rastreabilidade.",
+        },
+        retainer: {
+          prefix: "A partir de",
+          amount: "R$ 2.900",
+          suffix: "por mês",
+          note: "Ideal quando o sistema precisa evoluir com frequência junto da operação comercial.",
+        },
+      },
+      {
+        name: "Sob medida",
+        description:
+          "Para cenários com múltiplas unidades, integrações ou exigências muito particulares da operação.",
+        ctaLabel: "Falar sobre escopo",
+        features: [
+          "Mapeamento detalhado do processo comercial",
+          "Possibilidade de módulos e integrações extras",
+          "Adaptação às rotinas da empresa",
+          "Planejamento por fases quando necessário",
+        ],
+        implementation: {
+          prefix: "A partir de",
+          amount: "R$ 70.000",
+          suffix: "conforme operação",
+          note: "Quando o PDV precisa conversar com mais áreas, mais unidades ou mais regras além do fluxo padrão.",
+        },
+        retainer: {
+          prefix: "A partir de",
+          amount: "R$ 4.500",
+          suffix: "conforme operação",
+          note: "Recomendado para operações que evoluem constantemente e exigem acompanhamento próximo do produto.",
+        },
+      },
+    ],
+  },
   faq: {
     eyebrow: "FAQ",
     title: "Dúvidas comuns antes de estruturar um PDV próprio",

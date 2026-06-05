@@ -52,6 +52,94 @@ export const automacaoServiceContent: ServiceLandingPageContent = {
       },
     ],
   },
+  pricing: {
+    eyebrow: "Investimento",
+    title:
+      "Faixas para começar a automatizar o que mais consome tempo da equipe",
+    description:
+      "A faixa muda conforme a quantidade de etapas do fluxo, regras de decisão, integrações e pontos de exceção da rotina.",
+    implementationLabel: "Implementação",
+    retainerLabel: "Evolução mensal",
+    disclaimer:
+      "Fluxos com múltiplos sistemas, regras condicionais complexas ou várias áreas envolvidas podem pedir um escopo maior.",
+    plans: [
+      {
+        name: "Automação inicial",
+        description:
+          "Para substituir tarefas repetitivas e criar um primeiro fluxo automatizado com ganho rápido.",
+        ctaLabel: "Solicitar proposta",
+        features: [
+          "Mapeamento do fluxo atual",
+          "Automação de uma frente prioritária",
+          "Rastreabilidade básica do processo",
+          "Entrega orientada ao ganho operacional",
+        ],
+        implementation: {
+          prefix: "A partir de",
+          amount: "R$ 4.000",
+          suffix: "por projeto",
+          note: "Ótima faixa para reduzir retrabalho em um ponto crítico antes de expandir para outras rotinas.",
+        },
+        retainer: {
+          prefix: "A partir de",
+          amount: "R$ 490",
+          suffix: "por mês",
+          note: "Cobre ajustes, refinamentos e pequenas evoluções no fluxo já automatizado.",
+        },
+      },
+      {
+        name: "Fluxo orquestrado",
+        description:
+          "Para automatizações com mais etapas, decisões e necessidade de acompanhar a operação com mais clareza.",
+        badge: "Mais procurado",
+        featured: true,
+        ctaLabel: "Quero esse formato",
+        features: [
+          "Mais regras de decisão dentro do fluxo",
+          "Integração de etapas críticas da rotina",
+          "Checkpoints de visibilidade e controle",
+          "Redução maior de tarefas manuais",
+          "Base pronta para novas automações",
+        ],
+        implementation: {
+          prefix: "A partir de",
+          amount: "R$ 12.000",
+          suffix: "por projeto",
+          note: "Indicado para operações que já sabem onde estão os gargalos e precisam de uma automação mais estratégica.",
+        },
+        retainer: {
+          prefix: "A partir de",
+          amount: "R$ 1.200",
+          suffix: "por mês",
+          note: "Mantém a esteira evoluindo com novos gatilhos, regras e ajustes conforme a operação aprende.",
+        },
+      },
+      {
+        name: "Sob medida",
+        description:
+          "Para operações com múltiplos sistemas, exceções frequentes ou necessidade de automação em várias frentes.",
+        ctaLabel: "Falar sobre escopo",
+        features: [
+          "Desenho aprofundado do processo",
+          "Escopo personalizado por área ou fluxo",
+          "Integrações e governança conforme cenário",
+          "Planejamento para expansão em fases",
+        ],
+        implementation: {
+          prefix: "A partir de",
+          amount: "R$ 20.000",
+          suffix: "conforme processo",
+          note: "Quando o objetivo é reduzir dependência operacional em fluxos mais amplos e interdependentes.",
+        },
+        retainer: {
+          prefix: "A partir de",
+          amount: "R$ 2.500",
+          suffix: "conforme processo",
+          note: "Faz sentido para operações que precisam lapidar continuamente as automações conforme o negócio cresce.",
+        },
+      },
+    ],
+  },
   faq: {
     eyebrow: "FAQ",
     title: "Perguntas frequentes antes de investir em automação",

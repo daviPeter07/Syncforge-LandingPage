@@ -3,6 +3,7 @@ import { ServiceLandingLayout } from "../shared/ServiceLandingLayout";
 import { AutomacaoCta } from "./AutomacaoCta";
 import { AutomacaoFaq } from "./AutomacaoFaq";
 import { AutomacaoHero } from "./AutomacaoHero";
+import { AutomacaoPricing } from "./AutomacaoPricing";
 import { AutomacaoShowcase } from "./AutomacaoShowcase";
 
 interface AutomacaoServicePageProps extends ServiceLandingPageEntry {}
@@ -15,6 +16,7 @@ export function AutomacaoServicePage({
     <ServiceLandingLayout>
       <AutomacaoHero service={service} content={content.hero} />
       <AutomacaoShowcase service={service} content={content.showcase} />
+      <AutomacaoPricing content={content.pricing} />
       <AutomacaoFaq content={content.faq} />
       <AutomacaoCta content={content.cta} />
     </ServiceLandingLayout>

@@ -51,6 +51,93 @@ export const crmServiceContent: ServiceLandingPageContent = {
       },
     ],
   },
+  pricing: {
+    eyebrow: "Investimento",
+    title: "Faixas para organizar relacionamento, funil e histórico comercial",
+    description:
+      "O valor varia conforme número de etapas do funil, nível de histórico desejado, relatórios e rotinas que precisam ser acompanhadas.",
+    implementationLabel: "Implementação",
+    retainerLabel: "Evolução mensal",
+    disclaimer:
+      "Integrações, automações e necessidades mais profundas de acompanhamento podem alterar o escopo da proposta.",
+    plans: [
+      {
+        name: "Relacionamento essencial",
+        description:
+          "Para centralizar contatos e criar um fluxo comercial mais organizado desde o básico.",
+        ctaLabel: "Solicitar proposta",
+        features: [
+          "Cadastro e histórico centralizado de contatos",
+          "Etapas iniciais do funil comercial",
+          "Próximas ações visíveis para a equipe",
+          "Base organizada para sair da planilha",
+        ],
+        implementation: {
+          prefix: "A partir de",
+          amount: "R$ 45.000",
+          suffix: "por projeto",
+          note: "Bom ponto de partida para equipes pequenas que precisam parar de perder contexto e retorno.",
+        },
+        retainer: {
+          prefix: "A partir de",
+          amount: "R$ 2.500",
+          suffix: "por mês",
+          note: "Cobre refinamentos de processo, campos, visões e melhorias incrementais do CRM.",
+        },
+      },
+      {
+        name: "Pipeline comercial",
+        description:
+          "Para times que precisam de mais leitura do funil, acompanhamento e clareza sobre o andamento das oportunidades.",
+        badge: "Mais procurado",
+        featured: true,
+        ctaLabel: "Quero esse formato",
+        features: [
+          "Pipeline com mais profundidade por etapa",
+          "Histórico mais completo do relacionamento",
+          "Visões gerenciais e priorização de oportunidades",
+          "Estrutura para pós-venda e reativação",
+          "Base preparada para integrações futuras",
+        ],
+        implementation: {
+          prefix: "A partir de",
+          amount: "R$ 75.000",
+          suffix: "por projeto",
+          note: "Indicado quando o comercial já precisa de mais previsibilidade, rastreabilidade e visão gerencial.",
+        },
+        retainer: {
+          prefix: "A partir de",
+          amount: "R$ 4.500",
+          suffix: "por mês",
+          note: "Permite evoluir funis, relatórios, campos e novas necessidades do processo sem recomeçar do zero.",
+        },
+      },
+      {
+        name: "Sob medida",
+        description:
+          "Para operações com múltiplas equipes, pós-venda estruturado ou processos comerciais fora do padrão.",
+        ctaLabel: "Falar sobre escopo",
+        features: [
+          "Modelagem sob medida do fluxo comercial",
+          "Ajuste fino para regras do seu negócio",
+          "Possibilidade de integrações e automações",
+          "Planejamento de implantação por fases",
+        ],
+        implementation: {
+          prefix: "A partir de",
+          amount: "R$ 120.000",
+          suffix: "conforme operação",
+          note: "Quando o relacionamento com clientes exige múltiplas jornadas, áreas ou regras específicas.",
+        },
+        retainer: {
+          prefix: "A partir de",
+          amount: "R$ 7.500",
+          suffix: "conforme operação",
+          note: "Ideal para times que tratam CRM como produto vivo dentro da operação comercial.",
+        },
+      },
+    ],
+  },
   faq: {
     eyebrow: "FAQ",
     title: "O que costuma surgir antes de criar um CRM próprio",

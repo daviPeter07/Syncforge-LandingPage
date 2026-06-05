@@ -3,6 +3,7 @@ import { ServiceLandingLayout } from "../shared/ServiceLandingLayout";
 import { CRMCta } from "./CRMCta";
 import { CRMFaq } from "./CRMFaq";
 import { CRMHero } from "./CRMHero";
+import { CRMPricing } from "./CRMPricing";
 import { CRMShowcase } from "./CRMShowcase";
 
 interface CRMServicePageProps extends ServiceLandingPageEntry {}
@@ -12,6 +13,7 @@ export function CRMServicePage({ service, content }: CRMServicePageProps) {
     <ServiceLandingLayout>
       <CRMHero service={service} content={content.hero} />
       <CRMShowcase service={service} content={content.showcase} />
+      <CRMPricing content={content.pricing} />
       <CRMFaq content={content.faq} />
       <CRMCta content={content.cta} />
     </ServiceLandingLayout>
