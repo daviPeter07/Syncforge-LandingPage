@@ -32,6 +32,7 @@ export const financeiroServiceContent: ServiceLandingPageContent = {
           "Sistema para acompanhar vencimentos, caixa e cobrancas com mais previsibilidade",
         company: "Prime Office Soluções",
         client: "Gustavo Mello",
+        href: "#",
         summary:
           "Projeto demonstrativo para empresa que precisava consolidar caixa, compromissos e cobrancas em uma rotina menos pulverizada.",
         scope: [
@@ -48,6 +49,7 @@ export const financeiroServiceContent: ServiceLandingPageContent = {
           "Painel financeiro com leitura resumida para acompanhar pendencias e periodos criticos",
         company: "Grupo Duna Eventos",
         client: "Natália Farias",
+        href: "#",
         summary:
           "Uma demonstracao voltada a quem precisa sair do operacional puro e ganhar uma camada gerencial mais clara sobre o financeiro.",
         scope: [
@@ -64,6 +66,7 @@ export const financeiroServiceContent: ServiceLandingPageContent = {
           "Base financeira preparada para crescer com relatorios, automacoes e conexoes futuras",
         company: "Verde Norte Distribuição",
         client: "Leonardo Pires",
+        href: "#",
         summary:
           "Exemplo pensado para empresas que querem comecar organizando o financeiro agora, mas sem bloquear a evolucao da operacao depois.",
         scope: [

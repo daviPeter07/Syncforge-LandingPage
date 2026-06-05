@@ -12,7 +12,8 @@ export function Team() {
           eyebrow="Equipe"
           title={
             <>
-              Quem está por trás da <span className="text-[#4d8cff]">SyncForge</span>
+              Quem está por trás da{" "}
+              <span className="text-[#4d8cff]">SyncForge</span>
             </>
           }
           description="Conheça quem está à frente da SyncForge, cuidando da visão, das decisões e da transformação das ideias em algo que realmente funciona."

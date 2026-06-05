@@ -31,6 +31,7 @@ export const automacaoServiceContent: ServiceLandingPageContent = {
           "Automacao para triagem de demandas e distribuicao de tarefas entre equipes",
         company: "Orbita Suporte Empresarial",
         client: "Renata Vasconcelos",
+        href: "#",
         summary:
           "Projeto demonstrativo para empresa que precisava parar de repassar demandas manualmente entre setores e perder contexto no caminho.",
         scope: [
@@ -47,6 +48,7 @@ export const automacaoServiceContent: ServiceLandingPageContent = {
           "Fluxo automatico para qualificacao inicial e avancos entre etapas do processo",
         company: "Ponte Leads & Growth",
         client: "Bruno Tavares",
+        href: "#",
         summary:
           "Um recorte de automacao pensado para reduzir tarefas repetitivas entre entrada de lead, resposta inicial e organizacao do pipeline.",
         scope: [
@@ -63,6 +65,7 @@ export const automacaoServiceContent: ServiceLandingPageContent = {
           "Automacao com acompanhamento de excecoes e validacoes em etapas criticas",
         company: "Duna Operações Integradas",
         client: "Felipe Rocha",
+        href: "#",
         summary:
           "Exemplo de automacao mais cuidadosa, desenhada para empresas que precisam reduzir trabalho manual sem abrir mao de checkpoints humanos.",
         scope: [

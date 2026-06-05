@@ -34,6 +34,7 @@ export interface ServiceLandingShowcaseProject {
   summary: string;
   scope: string[];
   outcome: string;
+  href?: string;
 }
 
 export interface ServiceLandingShowcaseContent {

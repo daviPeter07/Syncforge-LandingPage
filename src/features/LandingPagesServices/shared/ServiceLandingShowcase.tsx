@@ -28,13 +28,13 @@ export function ServiceLandingShowcase({
           </Reveal>
         ) : null}
 
-        <div className="mt-14 grid gap-6 xl:grid-cols-3">
+        <div className="mt-14 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
           {content.projects.map((project, index) => (
             <Reveal
               key={`${project.company}-${project.title}`}
               delay={0.08 * (index + 1)}
             >
-              <ServiceProjectCard project={project} featured={index === 1} />
+              <ServiceProjectCard project={project} />
             </Reveal>
           ))}
         </div>

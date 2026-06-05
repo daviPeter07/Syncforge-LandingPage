@@ -31,6 +31,7 @@ export const crmServiceContent: ServiceLandingPageContent = {
           "CRM com pipeline consultivo e historico centralizado por oportunidade",
         company: "Clareza Consultoria",
         client: "Patricia Souza",
+        href: "#",
         summary:
           "Projeto demonstrativo para um comercial que precisava acompanhar negociacoes mais longas, registrar contexto e organizar proximo passo sem depender de memoria.",
         scope: [
@@ -47,6 +48,7 @@ export const crmServiceContent: ServiceLandingPageContent = {
           "Sistema para organizar contatos quentes, retornos e prioridades da equipe",
         company: "Vértice Soluções Comerciais",
         client: "Diego Nascimento",
+        href: "#",
         summary:
           "Uma demonstracao pensada para times que recebem muitos contatos e precisam decidir rapido quem precisa de atencao agora.",
         scope: [
@@ -63,6 +65,7 @@ export const crmServiceContent: ServiceLandingPageContent = {
           "CRM para acompanhamento continuo, renovacoes e reativacao de carteira",
         company: "Nexo Beneficios Corporativos",
         client: "Juliana Prado",
+        href: "#",
         summary:
           "Exemplo de CRM que vai alem da venda inicial e ajuda a empresa a manter relacionamento, registrar atendimento e recuperar contas mornas.",
         scope: [

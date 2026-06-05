@@ -1,6 +1,6 @@
 "use client";
 
-import { Send, Loader2, Check } from "lucide-react";
+import { Check, Loader2, Send } from "lucide-react";
 import { useContactForm } from "@/hooks/use-contact-form";
 
 export function ContactForm() {

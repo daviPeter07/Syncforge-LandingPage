@@ -1,7 +1,7 @@
 "use client";
 
-import { Marquee } from "@/components/magicui/marquee";
 import { AvatarCircles } from "@/components/magicui/avatar-circles";
+import { Marquee } from "@/components/magicui/marquee";
 import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
 import { AVATAR_URLS, TESTIMONIALS } from "@/constants/clients";

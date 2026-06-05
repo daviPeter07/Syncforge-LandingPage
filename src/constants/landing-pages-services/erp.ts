@@ -31,6 +31,7 @@ export const erpServiceContent: ServiceLandingPageContent = {
           "ERP para conectar comercial, producao e financeiro em uma mesma base",
         company: "Metalworks Amazonas",
         client: "Sergio Paiva",
+        href: "#",
         summary:
           "Projeto demonstrativo para empresa em crescimento que ja sentia o impacto de setores operando com planilhas e controles desconectados.",
         scope: [
@@ -47,6 +48,7 @@ export const erpServiceContent: ServiceLandingPageContent = {
           "Sistema para integrar estoque, pedidos e rotina administrativa em etapas mais claras",
         company: "Norte Log Distribuição",
         client: "Ricardo Azevedo",
+        href: "#",
         summary:
           "Uma demonstracao de ERP construida para empresas que precisam deixar mais clara a passagem de bastao entre operacao comercial e backoffice.",
         scope: [
@@ -63,6 +65,7 @@ export const erpServiceContent: ServiceLandingPageContent = {
           "Base modular de ERP para crescer por fases sem perder governanca da operacao",
         company: "Vértice Infra & Serviços",
         client: "Camila Porto",
+        href: "#",
         summary:
           "Exemplo de ERP desenhado como infraestrutura de medio prazo, com possibilidade de crescer em modulos sem reinventar a base a cada etapa.",
         scope: [

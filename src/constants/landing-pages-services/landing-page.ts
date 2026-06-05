@@ -29,6 +29,7 @@ export const landingPageServiceContent: ServiceLandingPageContent = {
         title: "Landing page para campanha de avaliacao e agendamento rapido",
         company: "Clinica Vitta Prime",
         client: "Mariana Alves",
+        href: "#",
         summary:
           "Uma pagina pensada para captar pacientes vindos de anuncios e conduzir o contato direto para o WhatsApp com mais confianca.",
         scope: [
@@ -45,6 +46,7 @@ export const landingPageServiceContent: ServiceLandingPageContent = {
           "Pagina de captacao para empreendimento com foco em leads qualificados",
         company: "Atlas Engenharia Urbana",
         client: "Rafael Monteiro",
+        href: "#",
         summary:
           "Um projeto visualmente mais premium para apresentar o empreendimento, destacar diferenciais e aumentar o valor percebido da oferta.",
         scope: [
@@ -61,6 +63,7 @@ export const landingPageServiceContent: ServiceLandingPageContent = {
           "Landing page para pre-lancamento com narrativa orientada a conversao",
         company: "NexoFit Academy",
         client: "Lucas Martins",
+        href: "#",
         summary:
           "Uma pagina com copy mais ritmada, blocos de objecao e chamadas estrategicas para transformar curiosidade em lista de espera e venda.",
         scope: [

@@ -31,6 +31,7 @@ export const pdvServiceContent: ServiceLandingPageContent = {
           "PDV com consulta rapida de produtos e fechamento mais limpo no caixa",
         company: "Mercado Aurora",
         client: "Carlos Henrique",
+        href: "#",
         summary:
           "Projeto pensado para uma operacao que precisava vender mais rapido no balcao e reduzir confusao entre itens, estoque e fechamento diario.",
         scope: [
@@ -47,6 +48,7 @@ export const pdvServiceContent: ServiceLandingPageContent = {
           "Sistema para operacao com catalogo maior e necessidade de rastrear melhor a venda",
         company: "Casa do Norte Ramos",
         client: "Fernanda Lima",
+        href: "#",
         summary:
           "Uma proposta para loja com maior variedade de itens, onde a equipe precisava consultar, registrar e conferir com mais consistencia.",
         scope: [
@@ -63,6 +65,7 @@ export const pdvServiceContent: ServiceLandingPageContent = {
           "PDV orientado a atendimento rapido e integracao futura com outras rotinas da casa",
         company: "Bistro Porto 81",
         client: "Aline Duarte",
+        href: "#",
         summary:
           "Demonstracao de um PDV pensado para ambiente com giro mais alto, onde agilidade de operacao pesa tanto quanto controle.",
         scope: [
