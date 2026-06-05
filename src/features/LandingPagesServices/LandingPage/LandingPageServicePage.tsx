@@ -16,9 +16,12 @@ export function LandingPageServicePage({
     <ServiceLandingLayout>
       <LandingPageHero service={service} content={content.hero} />
       <LandingPageShowcase service={service} content={content.showcase} />
-      <LandingPagePricing content={content.pricing} />
+      <LandingPagePricing
+        serviceTitle={service.title}
+        content={content.pricing}
+      />
       <LandingPageFaq content={content.faq} />
-      <LandingPageCta content={content.cta} />
+      <LandingPageCta serviceTitle={service.title} content={content.cta} />
     </ServiceLandingLayout>
   );
 }

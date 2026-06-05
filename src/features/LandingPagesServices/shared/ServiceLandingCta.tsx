@@ -2,14 +2,22 @@ import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
 import { Button } from "@/components/ui/button";
-import { CONTACT_WHATSAPP_HREF } from "@/constants/contact";
+import { buildWhatsAppHref } from "@/constants/contact";
 import type { ServiceLandingCtaContent } from "@/types/services";
 
 interface ServiceLandingCtaProps {
+  serviceTitle: string;
   content: ServiceLandingCtaContent;
 }
 
-export function ServiceLandingCta({ content }: ServiceLandingCtaProps) {
+export function ServiceLandingCta({
+  serviceTitle,
+  content,
+}: ServiceLandingCtaProps) {
+  const whatsappHref = buildWhatsAppHref(
+    `Ola, vim pela pagina de ${serviceTitle} da SyncForge e quero conversar sobre essa solucao.`,
+  );
+
   return (
     <section className="relative px-6 pt-8 pb-4 sm:pb-8">
       <div className="mx-auto max-w-7xl">
@@ -41,7 +49,7 @@ export function ServiceLandingCta({ content }: ServiceLandingCtaProps) {
               <div className="flex flex-col gap-3 lg:min-w-[240px]">
                 <Button asChild className="h-11 rounded-full p-6">
                   <a
-                    href={CONTACT_WHATSAPP_HREF}
+                    href={whatsappHref}
                     target="_blank"
                     rel="noopener noreferrer"
                   >

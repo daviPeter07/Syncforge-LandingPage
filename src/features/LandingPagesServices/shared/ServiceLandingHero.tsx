@@ -2,7 +2,7 @@ import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
 import { Button } from "@/components/ui/button";
-import { CONTACT_WHATSAPP_HREF } from "@/constants/contact";
+import { buildWhatsAppHref } from "@/constants/contact";
 import type { ServiceItem, ServiceLandingHeroContent } from "@/types/services";
 
 interface ServiceLandingHeroProps {
@@ -14,6 +14,10 @@ export function ServiceLandingHero({
   service,
   content,
 }: ServiceLandingHeroProps) {
+  const whatsappHref = buildWhatsAppHref(
+    `Ola, vim pela pagina de ${service.title} da SyncForge e quero falar sobre esse servico.`,
+  );
+
   return (
     <section className="relative px-6 pt-10 pb-20 sm:pt-14 sm:pb-24 lg:pt-18 lg:pb-28">
       <div className="mx-auto max-w-7xl">
@@ -65,7 +69,7 @@ export function ServiceLandingHero({
               <div className="mt-10 flex flex-wrap gap-3">
                 <Button asChild className="rounded-full px-5">
                   <a
-                    href={CONTACT_WHATSAPP_HREF}
+                    href={whatsappHref}
                     target="_blank"
                     rel="noopener noreferrer"
                   >

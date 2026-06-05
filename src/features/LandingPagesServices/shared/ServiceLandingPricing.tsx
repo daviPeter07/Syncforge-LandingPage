@@ -14,7 +14,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { CONTACT_WHATSAPP_HREF } from "@/constants/contact";
+import { buildWhatsAppHref } from "@/constants/contact";
 import type {
   ServiceLandingPricingContent,
   ServiceLandingPricingMode,
@@ -23,17 +23,23 @@ import type {
 import { cn } from "@/utils";
 
 interface ServiceLandingPricingProps {
+  serviceTitle: string;
   content: ServiceLandingPricingContent;
 }
 
 function ServiceLandingPricingCard({
+  serviceTitle,
   plan,
   mode,
 }: {
+  serviceTitle: string;
   plan: ServiceLandingPricingPlan;
   mode: ServiceLandingPricingMode;
 }) {
   const price = mode === "implementation" ? plan.implementation : plan.retainer;
+  const message = buildWhatsAppHref(
+    `Ola, vim pela pagina de ${serviceTitle} da SyncForge e quero falar sobre a opcao ${plan.name} (${price.amount} ${price.suffix}).`,
+  );
 
   return (
     <Card
@@ -170,11 +176,7 @@ function ServiceLandingPricingCard({
               "border-white/10 bg-background/20 hover:bg-[#4d8cff]/10 hover:text-foreground",
           )}
         >
-          <a
-            href={CONTACT_WHATSAPP_HREF}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href={message} target="_blank" rel="noopener noreferrer">
             {plan.ctaLabel}
           </a>
         </Button>
@@ -183,12 +185,19 @@ function ServiceLandingPricingCard({
   );
 }
 
-export function ServiceLandingPricing({ content }: ServiceLandingPricingProps) {
+export function ServiceLandingPricing({
+  serviceTitle,
+  content,
+}: ServiceLandingPricingProps) {
   const renderGrid = (mode: ServiceLandingPricingMode) => (
     <div className="mt-10 grid gap-6 xl:grid-cols-3">
       {content.plans.map((plan, index) => (
         <Reveal key={`${mode}-${plan.name}`} delay={0.08 * (index + 1)}>
-          <ServiceLandingPricingCard plan={plan} mode={mode} />
+          <ServiceLandingPricingCard
+            serviceTitle={serviceTitle}
+            plan={plan}
+            mode={mode}
+          />
         </Reveal>
       ))}
     </div>

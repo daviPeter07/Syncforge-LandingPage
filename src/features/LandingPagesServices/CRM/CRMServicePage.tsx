@@ -13,9 +13,9 @@ export function CRMServicePage({ service, content }: CRMServicePageProps) {
     <ServiceLandingLayout>
       <CRMHero service={service} content={content.hero} />
       <CRMShowcase service={service} content={content.showcase} />
-      <CRMPricing content={content.pricing} />
+      <CRMPricing serviceTitle={service.title} content={content.pricing} />
       <CRMFaq content={content.faq} />
-      <CRMCta content={content.cta} />
+      <CRMCta serviceTitle={service.title} content={content.cta} />
     </ServiceLandingLayout>
   );
 }

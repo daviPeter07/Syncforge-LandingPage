@@ -13,9 +13,9 @@ export function ERPServicePage({ service, content }: ERPServicePageProps) {
     <ServiceLandingLayout>
       <ERPHero service={service} content={content.hero} />
       <ERPShowcase service={service} content={content.showcase} />
-      <ERPPricing content={content.pricing} />
+      <ERPPricing serviceTitle={service.title} content={content.pricing} />
       <ERPFaq content={content.faq} />
-      <ERPCta content={content.cta} />
+      <ERPCta serviceTitle={service.title} content={content.cta} />
     </ServiceLandingLayout>
   );
 }

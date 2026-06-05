@@ -16,9 +16,12 @@ export function AutomacaoServicePage({
     <ServiceLandingLayout>
       <AutomacaoHero service={service} content={content.hero} />
       <AutomacaoShowcase service={service} content={content.showcase} />
-      <AutomacaoPricing content={content.pricing} />
+      <AutomacaoPricing
+        serviceTitle={service.title}
+        content={content.pricing}
+      />
       <AutomacaoFaq content={content.faq} />
-      <AutomacaoCta content={content.cta} />
+      <AutomacaoCta serviceTitle={service.title} content={content.cta} />
     </ServiceLandingLayout>
   );
 }

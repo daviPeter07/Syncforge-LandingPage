@@ -16,9 +16,12 @@ export function FinanceiroServicePage({
     <ServiceLandingLayout>
       <FinanceiroHero service={service} content={content.hero} />
       <FinanceiroShowcase service={service} content={content.showcase} />
-      <FinanceiroPricing content={content.pricing} />
+      <FinanceiroPricing
+        serviceTitle={service.title}
+        content={content.pricing}
+      />
       <FinanceiroFaq content={content.faq} />
-      <FinanceiroCta content={content.cta} />
+      <FinanceiroCta serviceTitle={service.title} content={content.cta} />
     </ServiceLandingLayout>
   );
 }
