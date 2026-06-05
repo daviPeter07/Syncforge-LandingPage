@@ -1,17 +1,10 @@
-import type {
-  ServiceItem,
-  ServiceLandingShowcaseContent,
-} from "@/types/services";
+import type { ServiceLandingShowcaseContent } from "@/types/services";
 import { ServiceLandingShowcase } from "../shared/ServiceLandingShowcase";
 
 interface AutomacaoShowcaseProps {
-  service: ServiceItem;
   content: ServiceLandingShowcaseContent;
 }
 
-export function AutomacaoShowcase({
-  service,
-  content,
-}: AutomacaoShowcaseProps) {
-  return <ServiceLandingShowcase service={service} content={content} />;
+export function AutomacaoShowcase({ content }: AutomacaoShowcaseProps) {
+  return <ServiceLandingShowcase content={content} />;
 }

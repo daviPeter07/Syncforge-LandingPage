@@ -20,35 +20,58 @@ export const automacaoServiceContent: ServiceLandingPageContent = {
   showcase: {
     eyebrow: "Demonstrações",
     title:
-      "Como uma automação bem pensada melhora a rotina sem virar um processo confuso",
+      "Projetos demonstrativos de automacao para reduzir tarefas manuais e ruído operacional",
     description:
-      "O ganho real aparece quando o fluxo é simples de entender, fácil de acompanhar e alinhado às exceções do negócio.",
-    mockupTitle: "Esteira automatizada de tarefas",
-    mockupDescription:
-      "Criamos um mockup que mostra gatilhos, processamento e checkpoints para visualizar melhor o antes e depois da operação.",
-    mockupSteps: [
-      "Entrada automatizada de dados",
-      "Regras e decisões do fluxo",
-      "Saída com rastreabilidade da ação",
-    ],
-    items: [
+      "O foco nao e criar automacao por moda, mas mostrar fluxos que cortam retrabalho e mantem visibilidade do que esta acontecendo.",
+    note: "Os exemplos abaixo sao demonstrativos para ilustrar como automacoes sob medida podem se encaixar em operacoes diferentes.",
+    projects: [
       {
-        label: "Mapeamento",
-        title: "Entender o processo antes de automatizar",
-        description:
-          "Automação boa nasce de um fluxo claro. Por isso mapeamos o que realmente precisa ser preservado, reduzido ou removido.",
+        segment: "Atendimento interno",
+        title:
+          "Automacao para triagem de demandas e distribuicao de tarefas entre equipes",
+        company: "Orbita Suporte Empresarial",
+        client: "Renata Vasconcelos",
+        summary:
+          "Projeto demonstrativo para empresa que precisava parar de repassar demandas manualmente entre setores e perder contexto no caminho.",
+        scope: [
+          "Entrada automatizada de demandas",
+          "Regras de distribuicao",
+          "Rastreabilidade do fluxo",
+        ],
+        outcome:
+          "Menos retrabalho no encaminhamento e mais clareza sobre quem recebeu, tratou e concluiu cada etapa.",
       },
       {
-        label: "Execução",
-        title: "Tarefas repetitivas saem da mão da equipe",
-        description:
-          "Rotinas que antes exigiam copiar, conferir e repassar informações podem virar etapas executadas automaticamente.",
+        segment: "Comercial",
+        title:
+          "Fluxo automatico para qualificacao inicial e avancos entre etapas do processo",
+        company: "Ponte Leads & Growth",
+        client: "Bruno Tavares",
+        summary:
+          "Um recorte de automacao pensado para reduzir tarefas repetitivas entre entrada de lead, resposta inicial e organizacao do pipeline.",
+        scope: [
+          "Gatilhos por origem de lead",
+          "Atualizacao automatica de etapas",
+          "Checkpoints para o time",
+        ],
+        outcome:
+          "Processo comercial menos manual e mais consistente, sem perder o controle do que avancou ou travou.",
       },
       {
-        label: "Controle",
-        title: "Visão melhor do que aconteceu no fluxo",
-        description:
-          "Além de automatizar, é importante saber onde o processo está, o que falhou e o que foi concluído com sucesso.",
+        segment: "Operacao administrativa",
+        title:
+          "Automacao com acompanhamento de excecoes e validacoes em etapas criticas",
+        company: "Duna Operações Integradas",
+        client: "Felipe Rocha",
+        summary:
+          "Exemplo de automacao mais cuidadosa, desenhada para empresas que precisam reduzir trabalho manual sem abrir mao de checkpoints humanos.",
+        scope: [
+          "Regras de excecao",
+          "Aprovacoes em pontos sensiveis",
+          "Historico de execucao do fluxo",
+        ],
+        outcome:
+          "Mais velocidade sem virar caixa-preta, mantendo governanca sobre o que foi automatizado.",
       },
     ],
   },

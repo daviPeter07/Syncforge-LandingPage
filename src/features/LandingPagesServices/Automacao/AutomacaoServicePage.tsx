@@ -15,7 +15,7 @@ export function AutomacaoServicePage({
   return (
     <ServiceLandingLayout>
       <AutomacaoHero service={service} content={content.hero} />
-      <AutomacaoShowcase service={service} content={content.showcase} />
+      <AutomacaoShowcase content={content.showcase} />
       <AutomacaoPricing
         serviceTitle={service.title}
         content={content.pricing}

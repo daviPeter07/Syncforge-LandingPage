@@ -15,7 +15,7 @@ export function FinanceiroServicePage({
   return (
     <ServiceLandingLayout>
       <FinanceiroHero service={service} content={content.hero} />
-      <FinanceiroShowcase service={service} content={content.showcase} />
+      <FinanceiroShowcase content={content.showcase} />
       <FinanceiroPricing
         serviceTitle={service.title}
         content={content.pricing}

@@ -12,7 +12,7 @@ export function PDVServicePage({ service, content }: PDVServicePageProps) {
   return (
     <ServiceLandingLayout>
       <PDVHero service={service} content={content.hero} />
-      <PDVShowcase service={service} content={content.showcase} />
+      <PDVShowcase content={content.showcase} />
       <PDVPricing serviceTitle={service.title} content={content.pricing} />
       <PDVFaq content={content.faq} />
       <PDVCta serviceTitle={service.title} content={content.cta} />

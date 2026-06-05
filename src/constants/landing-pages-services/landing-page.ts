@@ -18,35 +18,58 @@ export const landingPageServiceContent: ServiceLandingPageContent = {
   },
   showcase: {
     eyebrow: "Demonstrações",
-    title: "Como organizamos uma landing page que convence mais rápido",
+    title:
+      "Projetos demonstrativos para visualizar como uma landing page pode vender melhor",
     description:
-      "A primeira entrega já nasce com proposta visual, hierarquia de informações e blocos estratégicos para conduzir a decisão do visitante.",
-    mockupTitle: "Fluxo de apresentação comercial",
-    mockupDescription:
-      "Simulamos a jornada de quem chega pela campanha, entende a oferta e encontra o próximo passo sem fricção.",
-    mockupSteps: [
-      "Hero com promessa objetiva",
-      "Blocos com provas e diferenciais",
-      "CTA final conectado ao WhatsApp",
-    ],
-    items: [
+      "Em vez de uma página genérica, a ideia é desenhar a estrutura conforme a oferta, o público e a ação que o visitante precisa tomar.",
+    note: "Os exemplos abaixo sao demonstrativos para mostrar formatos de projeto, narrativa e posicionamento visual que podem ser criados para cada cliente.",
+    projects: [
       {
-        label: "Estratégia",
-        title: "Mensagem alinhada ao objetivo da campanha",
-        description:
-          "A página é construída para explicar rápido o valor da oferta e reduzir dúvidas antes do clique no CTA.",
+        segment: "Clinica estetica",
+        title: "Landing page para campanha de avaliacao e agendamento rapido",
+        company: "Clinica Vitta Prime",
+        client: "Mariana Alves",
+        summary:
+          "Uma pagina pensada para captar pacientes vindos de anuncios e conduzir o contato direto para o WhatsApp com mais confianca.",
+        scope: [
+          "Hero com promessa comercial",
+          "Provas visuais e depoimentos",
+          "FAQ e CTA para agendamento",
+        ],
+        outcome:
+          "Mais clareza na oferta e menos friccao entre o clique no anuncio e o primeiro contato com a clinica.",
       },
       {
-        label: "Visual",
-        title: "Interface com foco em leitura e confiança",
-        description:
-          "Organizamos contraste, ritmo e seções para valorizar sua marca sem deixar a página pesada ou genérica.",
+        segment: "Construtora",
+        title:
+          "Pagina de captacao para empreendimento com foco em leads qualificados",
+        company: "Atlas Engenharia Urbana",
+        client: "Rafael Monteiro",
+        summary:
+          "Um projeto visualmente mais premium para apresentar o empreendimento, destacar diferenciais e aumentar o valor percebido da oferta.",
+        scope: [
+          "Blocos para localizacao e diferenciais",
+          "Galeria comercial da proposta",
+          "CTA com conversa orientada",
+        ],
+        outcome:
+          "Uma experiencia mais organizada para campanhas de medio ticket, ajudando a filtrar melhor o interesse de quem chega.",
       },
       {
-        label: "Conversão",
-        title: "Chamadas claras para gerar ação",
-        description:
-          "Distribuímos CTAs ao longo da experiência para transformar interesse em contato com mais consistência.",
+        segment: "Produto digital",
+        title:
+          "Landing page para pre-lancamento com narrativa orientada a conversao",
+        company: "NexoFit Academy",
+        client: "Lucas Martins",
+        summary:
+          "Uma pagina com copy mais ritmada, blocos de objecao e chamadas estrategicas para transformar curiosidade em lista de espera e venda.",
+        scope: [
+          "Estrutura de lancamento",
+          "Copy com blocos de objecao",
+          "Captacao de leads qualificados",
+        ],
+        outcome:
+          "Melhor preparacao da campanha antes da venda, com captacao mais intencional e proposta melhor explicada.",
       },
     ],
   },

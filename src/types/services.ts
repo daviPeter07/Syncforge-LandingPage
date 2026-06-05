@@ -26,20 +26,22 @@ export interface ServiceLandingHeroContent {
   highlights: string[];
 }
 
-export interface ServiceLandingShowcaseItem {
-  label: string;
+export interface ServiceLandingShowcaseProject {
+  segment: string;
   title: string;
-  description: string;
+  company: string;
+  client: string;
+  summary: string;
+  scope: string[];
+  outcome: string;
 }
 
 export interface ServiceLandingShowcaseContent {
   eyebrow: string;
   title: string;
   description: string;
-  mockupTitle: string;
-  mockupDescription: string;
-  mockupSteps: string[];
-  items: ServiceLandingShowcaseItem[];
+  note?: string;
+  projects: ServiceLandingShowcaseProject[];
 }
 
 export interface ServiceLandingFaqItem {

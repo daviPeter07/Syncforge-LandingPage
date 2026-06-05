@@ -15,7 +15,7 @@ export function LandingPageServicePage({
   return (
     <ServiceLandingLayout>
       <LandingPageHero service={service} content={content.hero} />
-      <LandingPageShowcase service={service} content={content.showcase} />
+      <LandingPageShowcase content={content.showcase} />
       <LandingPagePricing
         serviceTitle={service.title}
         content={content.pricing}

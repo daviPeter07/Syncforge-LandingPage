@@ -19,35 +19,59 @@ export const crmServiceContent: ServiceLandingPageContent = {
   },
   showcase: {
     eyebrow: "Demonstrações",
-    title: "O que um CRM precisa mostrar para a equipe agir com mais clareza",
+    title:
+      "Projetos demonstrativos de CRM para organizar contexto, funil e relacionamento",
     description:
-      "Um bom CRM não é só cadastro. Ele precisa organizar prioridade, registrar contexto e facilitar o próximo passo do atendimento.",
-    mockupTitle: "Jornada de relacionamento comercial",
-    mockupDescription:
-      "Montamos um mockup com visão de pipeline, últimos contatos e tarefas para ajudar a equipe a não deixar oportunidades esfriarem.",
-    mockupSteps: [
-      "Pipeline por etapa do funil",
-      "Histórico de interações no mesmo lugar",
-      "Próximas ações visíveis para a equipe",
-    ],
-    items: [
+      "A proposta aqui e mostrar formatos de CRM que ajudam times comerciais a nao perder contexto, prioridade e continuidade de conversa.",
+    note: "Os exemplos abaixo sao demonstrativos e servem para ilustrar como um CRM sob medida pode ser moldado ao processo de cada negocio.",
+    projects: [
       {
-        label: "Contexto",
-        title: "Cada contato com histórico acessível",
-        description:
-          "Quando o time enxerga o que já foi tratado, fica mais fácil continuar a conversa sem repetir perguntas ou perder confiança.",
+        segment: "Consultoria B2B",
+        title:
+          "CRM com pipeline consultivo e historico centralizado por oportunidade",
+        company: "Clareza Consultoria",
+        client: "Patricia Souza",
+        summary:
+          "Projeto demonstrativo para um comercial que precisava acompanhar negociacoes mais longas, registrar contexto e organizar proximo passo sem depender de memoria.",
+        scope: [
+          "Pipeline por etapa",
+          "Historico por lead e cliente",
+          "Acoes futuras visiveis para o time",
+        ],
+        outcome:
+          "Mais continuidade de conversa e menos risco de perder oportunidade por falta de organizacao comercial.",
       },
       {
-        label: "Prioridade",
-        title: "Leads e clientes com próximo passo definido",
-        description:
-          "O CRM ajuda a transformar lembranças soltas em ações concretas, com melhor noção do que precisa de atenção agora.",
+        segment: "Escritorio comercial",
+        title:
+          "Sistema para organizar contatos quentes, retornos e prioridades da equipe",
+        company: "Vértice Soluções Comerciais",
+        client: "Diego Nascimento",
+        summary:
+          "Uma demonstracao pensada para times que recebem muitos contatos e precisam decidir rapido quem precisa de atencao agora.",
+        scope: [
+          "Fila de prioridades",
+          "Leitura de leads por etapa",
+          "Visao rapida para gestao",
+        ],
+        outcome:
+          "Melhor distribuicao de energia comercial e mais clareza sobre onde o time precisa agir primeiro.",
       },
       {
-        label: "Gestão",
-        title: "Visão melhor do andamento comercial",
-        description:
-          "A liderança ganha clareza sobre gargalos, ritmo do time e oportunidades que precisam de intervenção.",
+        segment: "Pos-venda e reativacao",
+        title:
+          "CRM para acompanhamento continuo, renovacoes e reativacao de carteira",
+        company: "Nexo Beneficios Corporativos",
+        client: "Juliana Prado",
+        summary:
+          "Exemplo de CRM que vai alem da venda inicial e ajuda a empresa a manter relacionamento, registrar atendimento e recuperar contas mornas.",
+        scope: [
+          "Jornadas apos a venda",
+          "Historico de relacionamento",
+          "Base para reativacao e renovacao",
+        ],
+        outcome:
+          "Mais visibilidade do ciclo completo do cliente, e nao apenas do momento de fechar a venda.",
       },
     ],
   },

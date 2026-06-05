@@ -19,35 +19,59 @@ export const erpServiceContent: ServiceLandingPageContent = {
   },
   showcase: {
     eyebrow: "Demonstrações",
-    title: "Como um ERP bem desenhado reduz ruído entre setores",
+    title:
+      "Projetos demonstrativos de ERP para integrar setores sem improviso entre areas",
     description:
-      "O ganho vem quando comercial, financeiro, operação e gestão passam a enxergar a mesma realidade e agir com base nela.",
-    mockupTitle: "Centro operacional integrado",
-    mockupDescription:
-      "Montamos um mockup que representa módulos conectados, visão consolidada e checkpoints para processos mais sensíveis.",
-    mockupSteps: [
-      "Dados centralizados por módulo",
-      "Fluxos conectados entre setores",
-      "Visão resumida para gestão e operação",
-    ],
-    items: [
+      "O objetivo desta secao e mostrar recortes de ERP em contextos onde a empresa ja precisa conectar operacao, gestao e dados com mais consistencia.",
+    note: "Os exemplos abaixo sao demonstrativos e ajudam a visualizar como um ERP pode nascer por modulo, por fluxo ou por fase de integracao.",
+    projects: [
       {
-        label: "Integração",
-        title: "Menos retrabalho entre áreas",
-        description:
-          "Informações deixam de circular por canais paralelos e passam a compor um fluxo único, mais confiável para todos os times.",
+        segment: "Industria leve",
+        title:
+          "ERP para conectar comercial, producao e financeiro em uma mesma base",
+        company: "Metalworks Amazonas",
+        client: "Sergio Paiva",
+        summary:
+          "Projeto demonstrativo para empresa em crescimento que ja sentia o impacto de setores operando com planilhas e controles desconectados.",
+        scope: [
+          "Fluxos entre setores criticos",
+          "Base unificada de informacoes",
+          "Visao operacional e gerencial",
+        ],
+        outcome:
+          "Menos retrabalho entre areas e mais confianca no dado que circula pela operacao.",
       },
       {
-        label: "Gestão",
-        title: "Leitura mais ampla da operação",
-        description:
-          "Com dados conectados, a empresa consegue enxergar gargalos, dependências e impactos entre setores com mais rapidez.",
+        segment: "Distribuicao",
+        title:
+          "Sistema para integrar estoque, pedidos e rotina administrativa em etapas mais claras",
+        company: "Norte Log Distribuição",
+        client: "Ricardo Azevedo",
+        summary:
+          "Uma demonstracao de ERP construida para empresas que precisam deixar mais clara a passagem de bastao entre operacao comercial e backoffice.",
+        scope: [
+          "Pedidos e acompanhamento interno",
+          "Fluxo entre estoque e administrativo",
+          "Leitura mais clara da operacao",
+        ],
+        outcome:
+          "Mais previsibilidade entre setores e menos ruido quando a empresa cresce em volume e dependencia interna.",
       },
       {
-        label: "Escala",
-        title: "Estrutura para crescer sem perder controle",
-        description:
-          "Um ERP sob medida organiza a base operacional para suportar novas rotinas, novos setores e maior volume com consistência.",
+        segment: "Servicos complexos",
+        title:
+          "Base modular de ERP para crescer por fases sem perder governanca da operacao",
+        company: "Vértice Infra & Serviços",
+        client: "Camila Porto",
+        summary:
+          "Exemplo de ERP desenhado como infraestrutura de medio prazo, com possibilidade de crescer em modulos sem reinventar a base a cada etapa.",
+        scope: [
+          "Planejamento por modulos",
+          "Integracao progressiva da empresa",
+          "Governanca de dados e processos",
+        ],
+        outcome:
+          "Uma fundacao mais segura para crescer em complexidade sem cair novamente em remendos operacionais.",
       },
     ],
   },

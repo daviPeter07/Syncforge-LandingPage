@@ -20,35 +20,58 @@ export const pdvServiceContent: ServiceLandingPageContent = {
   showcase: {
     eyebrow: "Demonstrações",
     title:
-      "O que um PDV bem desenhado precisa mostrar para a operação respirar melhor",
+      "Projetos demonstrativos de PDV para contextos reais de venda e operacao",
     description:
-      "A interface precisa diminuir cliques, ajudar a equipe a localizar produtos e deixar mais claro o que foi vendido, recebido e reposto.",
-    mockupTitle: "Painel de vendas e atendimento",
-    mockupDescription:
-      "Organizamos um mockup com consulta rápida, fechamento de venda e visão resumida da movimentação da loja.",
-    mockupSteps: [
-      "Busca rápida de produtos",
-      "Fechamento de venda sem ruído",
-      "Resumo de estoque e caixa",
-    ],
-    items: [
+      "Aqui a ideia e mostrar como o PDV pode ser adaptado ao ritmo de cada negocio, com mais clareza para venda, estoque e fechamento.",
+    note: "Os exemplos abaixo sao demonstrativos para ilustrar recortes de operacao que um sistema de PDV sob medida pode atender.",
+    projects: [
       {
-        label: "Atendimento",
-        title: "Menos atrito no momento da venda",
-        description:
-          "A operação fica mais rápida quando o sistema responde ao fluxo real do balcão e reduz dependência de gambiarras.",
+        segment: "Mercado de bairro",
+        title:
+          "PDV com consulta rapida de produtos e fechamento mais limpo no caixa",
+        company: "Mercado Aurora",
+        client: "Carlos Henrique",
+        summary:
+          "Projeto pensado para uma operacao que precisava vender mais rapido no balcao e reduzir confusao entre itens, estoque e fechamento diario.",
+        scope: [
+          "Busca agil de produtos",
+          "Fechamento de venda mais direto",
+          "Visao inicial de estoque e caixa",
+        ],
+        outcome:
+          "Menos atrito no atendimento e mais previsibilidade para quem precisa acompanhar o que entrou, saiu e faltou repor.",
       },
       {
-        label: "Controle",
-        title: "Leitura mais clara do que entrou e saiu",
-        description:
-          "Produtos, estoque e registros de venda precisam conversar para evitar retrabalho e inconsistência no fechamento.",
+        segment: "Loja especializada",
+        title:
+          "Sistema para operacao com catalogo maior e necessidade de rastrear melhor a venda",
+        company: "Casa do Norte Ramos",
+        client: "Fernanda Lima",
+        summary:
+          "Uma proposta para loja com maior variedade de itens, onde a equipe precisava consultar, registrar e conferir com mais consistencia.",
+        scope: [
+          "Catalogo mais organizado",
+          "Fluxo de atendimento por etapas",
+          "Resumo operacional para gestao",
+        ],
+        outcome:
+          "Mais clareza na operacao e menos dependencia de controles paralelos para entender a movimentacao do dia.",
       },
       {
-        label: "Crescimento",
-        title: "Base pronta para evoluir a operação",
-        description:
-          "Um PDV sob medida pode crescer com permissões, relatórios, integrações e novas rotinas comerciais.",
+        segment: "Food service",
+        title:
+          "PDV orientado a atendimento rapido e integracao futura com outras rotinas da casa",
+        company: "Bistro Porto 81",
+        client: "Aline Duarte",
+        summary:
+          "Demonstracao de um PDV pensado para ambiente com giro mais alto, onde agilidade de operacao pesa tanto quanto controle.",
+        scope: [
+          "Atendimento mais fluido",
+          "Estrutura para evolucao de relatorios",
+          "Base pronta para novas rotinas",
+        ],
+        outcome:
+          "Um sistema com cara de operacao viva, preparado para crescer sem travar a equipe no dia a dia.",
       },
     ],
   },

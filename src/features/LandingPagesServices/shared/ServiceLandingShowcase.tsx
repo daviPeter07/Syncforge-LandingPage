@@ -1,18 +1,13 @@
-import { ServiceShowcaseMockup } from "@/components/landing-pages-services/ServiceShowcaseMockup";
+import { ServiceProjectCard } from "@/components/landing-pages-services/ServiceProjectCard";
 import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
-import type {
-  ServiceItem,
-  ServiceLandingShowcaseContent,
-} from "@/types/services";
+import type { ServiceLandingShowcaseContent } from "@/types/services";
 
 interface ServiceLandingShowcaseProps {
-  service: ServiceItem;
   content: ServiceLandingShowcaseContent;
 }
 
 export function ServiceLandingShowcase({
-  service,
   content,
 }: ServiceLandingShowcaseProps) {
   return (
@@ -25,36 +20,23 @@ export function ServiceLandingShowcase({
           align="left"
         />
 
-        <div className="mt-14 grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
-          <Reveal>
-            <ServiceShowcaseMockup
-              badge={service.title}
-              title={content.mockupTitle}
-              description={content.mockupDescription}
-              steps={content.mockupSteps}
-              icon={service.icon}
-            />
+        {content.note ? (
+          <Reveal delay={0.1}>
+            <div className="mt-6 max-w-3xl rounded-[1.35rem] border border-white/8 bg-card/35 px-4 py-3 text-sm leading-7 text-muted-foreground backdrop-blur-sm sm:px-5">
+              {content.note}
+            </div>
           </Reveal>
+        ) : null}
 
-          <div className="grid gap-4">
-            {content.items.map((item, index) => (
-              <Reveal key={item.title} delay={0.08 * (index + 1)}>
-                <article className="rounded-[1.8rem] border border-white/10 bg-card/45 p-6 shadow-[0_16px_60px_rgba(0,0,0,0.22)] backdrop-blur-md">
-                  <div className="text-[10px] font-medium tracking-[0.18em] text-[#4d8cff] uppercase">
-                    {item.label}
-                  </div>
-
-                  <h3 className="mt-3 text-xl font-semibold tracking-[-0.03em] text-foreground">
-                    {item.title}
-                  </h3>
-
-                  <p className="mt-3 text-sm leading-7 text-muted-foreground sm:text-base">
-                    {item.description}
-                  </p>
-                </article>
-              </Reveal>
-            ))}
-          </div>
+        <div className="mt-14 grid gap-6 xl:grid-cols-3">
+          {content.projects.map((project, index) => (
+            <Reveal
+              key={`${project.company}-${project.title}`}
+              delay={0.08 * (index + 1)}
+            >
+              <ServiceProjectCard project={project} featured={index === 1} />
+            </Reveal>
+          ))}
         </div>
       </div>
     </section>

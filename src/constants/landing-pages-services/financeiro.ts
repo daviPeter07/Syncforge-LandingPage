@@ -21,35 +21,58 @@ export const financeiroServiceContent: ServiceLandingPageContent = {
   showcase: {
     eyebrow: "Demonstrações",
     title:
-      "O que um sistema financeiro precisa mostrar para não virar só mais um cadastro",
+      "Projetos demonstrativos de gestao financeira com mais leitura e menos controle espalhado",
     description:
-      "A rotina financeira exige visão de caixa, prazos e pendências, mas também precisa transformar dados em leitura útil para decisão.",
-    mockupTitle: "Painel de caixa e compromissos",
-    mockupDescription:
-      "Simulamos uma visão com indicadores de movimentação, vencimentos próximos e pontos de atenção do período.",
-    mockupSteps: [
-      "Entradas e saídas organizadas",
-      "Compromissos com vencimento visível",
-      "Indicadores resumidos para gestão",
-    ],
-    items: [
+      "A ideia aqui e mostrar como um sistema financeiro pode sair do papel de simples cadastro e virar apoio real para a operacao e a gestao.",
+    note: "Os exemplos abaixo sao demonstrativos para ilustrar contextos em que um sistema financeiro sob medida pode gerar mais previsibilidade.",
+    projects: [
       {
-        label: "Rotina",
-        title: "Menos dependência de controles paralelos",
-        description:
-          "Centralizar registros reduz o vai e volta entre planilhas, conversas e anotações dispersas pela operação.",
+        segment: "Servicos recorrentes",
+        title:
+          "Sistema para acompanhar vencimentos, caixa e cobrancas com mais previsibilidade",
+        company: "Prime Office Soluções",
+        client: "Gustavo Mello",
+        summary:
+          "Projeto demonstrativo para empresa que precisava consolidar caixa, compromissos e cobrancas em uma rotina menos pulverizada.",
+        scope: [
+          "Entradas e saidas organizadas",
+          "Vencimentos em destaque",
+          "Base para cobranca estruturada",
+        ],
+        outcome:
+          "Menos dependencia de planilhas paralelas e mais clareza para agir antes que o problema apareca no caixa.",
       },
       {
-        label: "Previsão",
-        title: "Mais clareza para olhar caixa e pendências",
-        description:
-          "Quando o fluxo financeiro fica visível, a gestão consegue antecipar riscos e tomar decisão com mais segurança.",
+        segment: "Gestao operacional",
+        title:
+          "Painel financeiro com leitura resumida para acompanhar pendencias e periodos criticos",
+        company: "Grupo Duna Eventos",
+        client: "Natália Farias",
+        summary:
+          "Uma demonstracao voltada a quem precisa sair do operacional puro e ganhar uma camada gerencial mais clara sobre o financeiro.",
+        scope: [
+          "Painel de indicadores resumidos",
+          "Compromissos por periodo",
+          "Visao de pendencias prioritarias",
+        ],
+        outcome:
+          "Mais seguranca para decidir e menos surpresa ao olhar o financeiro apenas quando a tensao ja chegou.",
       },
       {
-        label: "Crescimento",
-        title: "Estrutura para relatórios e integrações futuras",
-        description:
-          "A base pode evoluir para relatórios gerenciais, conciliação, automações e conexão com outros módulos da empresa.",
+        segment: "Escala e integracao",
+        title:
+          "Base financeira preparada para crescer com relatorios, automacoes e conexoes futuras",
+        company: "Verde Norte Distribuição",
+        client: "Leonardo Pires",
+        summary:
+          "Exemplo pensado para empresas que querem comecar organizando o financeiro agora, mas sem bloquear a evolucao da operacao depois.",
+        scope: [
+          "Estrutura modular de crescimento",
+          "Base para relatorios futuros",
+          "Espaco para integracoes depois",
+        ],
+        outcome:
+          "Uma fundacao mais limpa para evoluir o controle financeiro junto com o restante da empresa.",
       },
     ],
   },
