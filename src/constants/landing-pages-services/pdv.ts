@@ -17,6 +17,29 @@ export const pdvServiceContent: ServiceLandingPageContent = {
       "Rotina mais organizada para a equipe",
     ],
   },
+  why: {
+    eyebrow: "Por que um PDV sob medida?",
+    title: "Porque vender nao pode depender de um sistema que trava o atendimento",
+    description:
+      "Um PDV nao e sobre cadastrar produtos. E sobre fazer a venda acontecer sem atrito e a operacao respirar.",
+    items: [
+      {
+        title: "Sua equipe merece um sistema que nao atrapalhe",
+        description:
+          "Um PDV lento ou confuso frustra o atendimento e afasta cliente. Um sistema sob medida simplifica a venda e deixa o foco onde importa: em quem esta do outro lado do balcao.",
+      },
+      {
+        title: "Controle sem planilha paralela",
+        description:
+          "Quando o estoque, o caixa e as vendas estao no mesmo lugar, sua operacao ganha previsibilidade. Voce dorme mais tranquilo sabendo que o numero fecha.",
+      },
+      {
+        title: "Crescer sem perder o controle",
+        description:
+          "Uma operacao que escala precisa de uma base solida. O PDV certo acompanha o crescimento sem exigir retrabalho ou migracoes traumaticas.",
+      },
+    ],
+  },
   showcase: {
     eyebrow: "Demonstrações",
     title:

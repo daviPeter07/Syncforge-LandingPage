@@ -1,5 +1,6 @@
 import type { ServiceLandingPageEntry } from "@/types/services";
 import { ServiceLandingLayout } from "../shared/ServiceLandingLayout";
+import { ServiceLandingWhySection } from "../shared/ServiceLandingWhySection";
 import { FinanceiroCta } from "./FinanceiroCta";
 import { FinanceiroFaq } from "./FinanceiroFaq";
 import { FinanceiroHero } from "./FinanceiroHero";
@@ -15,6 +16,7 @@ export function FinanceiroServicePage({
   return (
     <ServiceLandingLayout>
       <FinanceiroHero service={service} content={content.hero} />
+      <ServiceLandingWhySection content={content.why} />
       <FinanceiroShowcase content={content.showcase} />
       <FinanceiroPricing
         serviceTitle={service.title}

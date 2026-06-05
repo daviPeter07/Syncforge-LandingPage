@@ -16,6 +16,29 @@ export const landingPageServiceContent: ServiceLandingPageContent = {
       "CTA claro para gerar contatos",
     ],
   },
+  why: {
+    eyebrow: "Por que uma landing page?",
+    title: "Porque a primeira impressao digital decide se o cliente fecha ou fecha a aba",
+    description:
+      "Uma landing page nao e sobre tecnologia. E sobre fazer o visitante sentir que esta no lugar certo.",
+    items: [
+      {
+        title: "Seu cliente nao le paginas genericas",
+        description:
+          "Uma landing page bem construida passa credibilidade e mostra que voce leva seu negocio a serio antes mesmo da conversa. O design e a primeira prova social do seu trabalho.",
+      },
+      {
+        title: "Primeira impressao que vende",
+        description:
+          "O primeiro contato com seu cliente e digital. Uma pagina organizada gera confianca e reduz o atrito entre o clique no anuncio e a decisao de comprar.",
+      },
+      {
+        title: "Menos explicacao, mais resultado",
+        description:
+          "Quando a oferta esta clara, o visitante decide mais rapido. Uma landing page bem feita transforma curiosidade em acao sem depender de Follow-ups interminaveis.",
+      },
+    ],
+  },
   showcase: {
     eyebrow: "Demonstrações",
     title:

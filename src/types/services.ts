@@ -87,6 +87,18 @@ export interface ServiceLandingPricingContent {
   plans: ServiceLandingPricingPlan[];
 }
 
+export interface ServiceLandingWhyItem {
+  title: string;
+  description: string;
+}
+
+export interface ServiceLandingWhyContent {
+  eyebrow: string;
+  title: string;
+  description: string;
+  items: ServiceLandingWhyItem[];
+}
+
 export interface ServiceLandingCtaContent {
   eyebrow: string;
   title: string;
@@ -101,6 +113,7 @@ export interface ServiceLandingPageContent {
   seoTitle: string;
   seoDescription: string;
   hero: ServiceLandingHeroContent;
+  why: ServiceLandingWhyContent;
   showcase: ServiceLandingShowcaseContent;
   pricing: ServiceLandingPricingContent;
   faq: ServiceLandingFaqContent;

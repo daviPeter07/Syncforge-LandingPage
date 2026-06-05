@@ -1,5 +1,6 @@
 import type { ServiceLandingPageEntry } from "@/types/services";
 import { ServiceLandingLayout } from "../shared/ServiceLandingLayout";
+import { ServiceLandingWhySection } from "../shared/ServiceLandingWhySection";
 import { LandingPageCta } from "./LandingPageCta";
 import { LandingPageFaq } from "./LandingPageFaq";
 import { LandingPageHero } from "./LandingPageHero";
@@ -15,6 +16,7 @@ export function LandingPageServicePage({
   return (
     <ServiceLandingLayout>
       <LandingPageHero service={service} content={content.hero} />
+      <ServiceLandingWhySection content={content.why} />
       <LandingPageShowcase content={content.showcase} />
       <LandingPagePricing
         serviceTitle={service.title}

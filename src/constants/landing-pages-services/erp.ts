@@ -17,6 +17,29 @@ export const erpServiceContent: ServiceLandingPageContent = {
       "Base mais sólida para crescer com controle",
     ],
   },
+  why: {
+    eyebrow: "Por que um ERP sob medida?",
+    title: "Porque empresa que cresce com setor ilhado acumula divida operacional que um dia nao paga",
+    description:
+      "ERP nao e sobre sistema grande. E sobre cada area saber o que a outra esta fazendo sem precisar de reuniao para descobrir.",
+    items: [
+      {
+        title: "Cada area sabe o que a outra esta fazendo",
+        description:
+          "Quando os setores trabalham isolados, a empresa perde tempo e contexto. Um ERP conecta as pontas e alinha a operacao sem depender de 'fulano mandou um email'.",
+      },
+      {
+        title: "Informacao centralizada, decisao descentralizada",
+        description:
+          "Com uma base unica, cada gestor enxerga o que precisa sem depender de planilhas ou de perguntar para outros setores. Autonomia com consistencia.",
+      },
+      {
+        title: "Operacao que escala sem perder qualidade",
+        description:
+          "Empresas que crescem sem integracao acumulam ruido operacional. Um ERP e a fundacao para crescer com consistencia, controle e sem retrabalho entre areas.",
+      },
+    ],
+  },
   showcase: {
     eyebrow: "Demonstrações",
     title:

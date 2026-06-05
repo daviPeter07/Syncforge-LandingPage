@@ -1,5 +1,6 @@
 import type { ServiceLandingPageEntry } from "@/types/services";
 import { ServiceLandingLayout } from "../shared/ServiceLandingLayout";
+import { ServiceLandingWhySection } from "../shared/ServiceLandingWhySection";
 import { AutomacaoCta } from "./AutomacaoCta";
 import { AutomacaoFaq } from "./AutomacaoFaq";
 import { AutomacaoHero } from "./AutomacaoHero";
@@ -15,6 +16,7 @@ export function AutomacaoServicePage({
   return (
     <ServiceLandingLayout>
       <AutomacaoHero service={service} content={content.hero} />
+      <ServiceLandingWhySection content={content.why} />
       <AutomacaoShowcase content={content.showcase} />
       <AutomacaoPricing
         serviceTitle={service.title}

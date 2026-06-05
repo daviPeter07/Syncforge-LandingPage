@@ -17,6 +17,29 @@ export const crmServiceContent: ServiceLandingPageContent = {
       "Acompanhamento mais consistente da equipe",
     ],
   },
+  why: {
+    eyebrow: "Por que um CRM sob medida?",
+    title: "Porque contexto comercial perdido e oportunidade que vai embora junto",
+    description:
+      "CRM nao e sobre preencher formulario. E sobre nao precisar perguntar 'como estava essa conversa mesmo?' no meio de uma negociacao.",
+    items: [
+      {
+        title: "Nunca perder o fio da meada",
+        description:
+          "Cada lead e cliente carrega um historico que nao pode depender de memoria. Um CRM organizado mantem o contexto vivo e evita recomecar a conversa do zero toda vez.",
+      },
+      {
+        title: "Vender com mais inteligencia",
+        description:
+          "Quando o time enxerga o funil com clareza, a prioridade fica obvia. As oportunidades deixam de morrer no esquecimento porque alguem esqueceu de retornar.",
+      },
+      {
+        title: "Relacionamento que gera resultado",
+        description:
+          "Cliente lembrado e cliente fidelizado. Um CRM bem estruturado transforma atendimento esporadico em relacionamento continuo que gera novas vendas sem precisar comecar do zero.",
+      },
+    ],
+  },
   showcase: {
     eyebrow: "Demonstrações",
     title:

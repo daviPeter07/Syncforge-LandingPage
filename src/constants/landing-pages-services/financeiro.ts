@@ -18,6 +18,29 @@ export const financeiroServiceContent: ServiceLandingPageContent = {
       "Base mais segura para tomada de decisão",
     ],
   },
+  why: {
+    eyebrow: "Por que organizar o financeiro?",
+    title: "Porque decidir no escuro e o jeito mais caro de administrar uma empresa",
+    description:
+      "Gestao financeira nao e sobre numeros. E sobre dormir sabendo que o caixa do mes que vem nao vai surpreender.",
+    items: [
+      {
+        title: "Decisao com base em dados, nao em susto",
+        description:
+          "Quando o caixa esta organizado, voce antecipa problemas em vez de correr atras do prejuizo. Controle financeiro e tranquilidade para decidir com confianca.",
+      },
+      {
+        title: "Cobranca sem constrangimento",
+        description:
+          "Um sistema financeiro bem estruturado organiza vencimentos e cobrancas com profissionalismo, mantendo o relacionamento com o cliente saudavel e previsivel.",
+      },
+      {
+        title: "Crescer com o pe no chao",
+        description:
+          "Sem visibilidade financeira, crescer e arriscado. Com os indicadores certos, a expansao acontece com seguranca e sem susto no fluxo de caixa.",
+      },
+    ],
+  },
   showcase: {
     eyebrow: "Demonstrações",
     title:

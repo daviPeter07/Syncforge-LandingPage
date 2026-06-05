@@ -17,6 +17,29 @@ export const automacaoServiceContent: ServiceLandingPageContent = {
       "Mais tempo para trabalho estratégico",
     ],
   },
+  why: {
+    eyebrow: "Por que automatizar?",
+    title: "Porque repetir tarefa que maquina faz e desperdico de talento humano",
+    description:
+      "Automacao nao e sobre substituir pessoas. E sobre parar de pedir para um cereja resolver problema de esteira.",
+    items: [
+      {
+        title: "Tempo e o recurso mais caro",
+        description:
+          "Tarefas repetitivas consomem horas que poderiam ser dedicadas a decisoes estrategicas. Automatizar e devolver tempo para o que realmente importa e gera resultado.",
+      },
+      {
+        title: "Menos erro humano, mais consistencia",
+        description:
+          "Processos manuais estao sujeitos a falhas de atencao e memoria. Fluxos automatizados mantem a qualidade e a rastreabilidade sem depender de lembrete ou planilha.",
+      },
+      {
+        title: "Escalar sem contratar na mesma proporcao",
+        description:
+          "Automacao permite que a operacao cresca sem que a equipe precise trabalhar mais. E produtividade sem sobrecarga e sem perder qualidade.",
+      },
+    ],
+  },
   showcase: {
     eyebrow: "Demonstrações",
     title:
