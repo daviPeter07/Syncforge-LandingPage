@@ -85,9 +85,7 @@ export function BlogPost({ post }: BlogPostProps) {
       )}
 
       {hasTableOfContents && (
-        <div className="mx-auto mb-8 max-w-[70ch] xl:hidden">
-          <BlogTableOfContentsDrawer items={tableOfContents} />
-        </div>
+        <BlogTableOfContentsDrawer items={tableOfContents} />
       )}
 
       <div

@@ -28,7 +28,7 @@ export function BlogTableOfContentsDrawer({
       <DrawerTrigger asChild>
         <Button
           variant="outline"
-          className="w-full justify-between rounded-2xl border-border/60 bg-background/70 px-4 py-6 text-left backdrop-blur-sm"
+          className="fixed bottom-6 left-4 z-40 h-11 rounded-full border-border/60 bg-background/85 px-4 shadow-[0_10px_30px_rgba(0,0,0,0.22)] backdrop-blur-md sm:bottom-8 sm:left-6 xl:hidden"
         >
           <span className="text-sm font-medium text-foreground">
             Neste artigo
