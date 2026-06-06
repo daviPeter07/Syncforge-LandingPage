@@ -5,6 +5,7 @@ import type { BlogPost as BlogPostType } from "@/types/blog";
 import { cn, extractTableOfContents } from "@/utils";
 import { BlogContent } from "./BlogContent";
 import { BlogTableOfContents } from "./BlogTableOfContents";
+import { BlogTableOfContentsDrawer } from "./BlogTableOfContentsDrawer";
 import { ShareButton } from "./ShareButton";
 
 interface BlogPostProps {
@@ -80,6 +81,12 @@ export function BlogPost({ post }: BlogPostProps) {
             height={675}
             className="w-full object-cover"
           />
+        </div>
+      )}
+
+      {hasTableOfContents && (
+        <div className="mx-auto mb-8 max-w-[70ch] xl:hidden">
+          <BlogTableOfContentsDrawer items={tableOfContents} />
         </div>
       )}
 
