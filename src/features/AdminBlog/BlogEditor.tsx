@@ -4,7 +4,7 @@ import MDEditor from "@uiw/react-md-editor";
 import { ImageIcon, Loader2, Save } from "lucide-react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { useCallback, useState } from "react";
+import { useCallback, useRef, useState } from "react";
 import Markdown from "react-markdown";
 import rehypeHighlight from "rehype-highlight";
 import rehypeRaw from "rehype-raw";
@@ -26,13 +26,121 @@ function getToken(): string | null {
 
 export function BlogEditor({ post }: BlogEditorProps) {
   const router = useRouter();
+  const editorContainerRef = useRef<HTMLDivElement | null>(null);
   const [title, setTitle] = useState(post?.title ?? "");
   const [contentMd, setContentMd] = useState(post?.content_md ?? "");
   const [coverImage, setCoverImage] = useState(post?.cover_image ?? "");
+  const [bodyImageAlt, setBodyImageAlt] = useState("");
   const [published, setPublished] = useState(post?.published ?? false);
   const [saving, setSaving] = useState(false);
   const [uploading, setUploading] = useState(false);
   const [uploadingBody, setUploadingBody] = useState(false);
+  const [draggingBodyImage, setDraggingBodyImage] = useState(false);
+
+  const insertBodyImageMarkdown = useCallback(
+    (url: string, altText?: string) => {
+      const safeAlt = altText?.trim() || "Imagem";
+      const markdown = `\n\n![${safeAlt}](${url})\n`;
+      const textarea = editorContainerRef.current?.querySelector("textarea");
+
+      if (
+        textarea instanceof HTMLTextAreaElement &&
+        Number.isInteger(textarea.selectionStart) &&
+        Number.isInteger(textarea.selectionEnd)
+      ) {
+        const selectionStart = textarea.selectionStart;
+        const selectionEnd = textarea.selectionEnd;
+
+        setContentMd((prev) => {
+          const next =
+            prev.slice(0, selectionStart) + markdown + prev.slice(selectionEnd);
+
+          requestAnimationFrame(() => {
+            const nextTextarea =
+              editorContainerRef.current?.querySelector("textarea");
+
+            if (!(nextTextarea instanceof HTMLTextAreaElement)) return;
+
+            const nextCursor = selectionStart + markdown.length;
+            nextTextarea.focus();
+            nextTextarea.setSelectionRange(nextCursor, nextCursor);
+          });
+
+          return next;
+        });
+
+        return;
+      }
+
+      setContentMd((prev) => `${prev}${markdown}`);
+    },
+    [],
+  );
+
+  const getFirstImageFile = useCallback(
+    (items?: DataTransferItemList | null, files?: FileList | null) => {
+      if (items) {
+        for (const item of Array.from(items)) {
+          if (!item.type.startsWith("image/")) continue;
+
+          const file = item.getAsFile();
+          if (file) return file;
+        }
+      }
+
+      if (files) {
+        for (const file of Array.from(files)) {
+          if (file.type.startsWith("image/")) return file;
+        }
+      }
+
+      return null;
+    },
+    [],
+  );
+
+  const uploadImage = useCallback(async (file: File) => {
+    const token = getToken();
+    const formData = new FormData();
+    formData.append("file", file);
+
+    const res = await fetch("/api/blog/upload", {
+      method: "POST",
+      headers: token ? { Authorization: `Bearer ${token}` } : undefined,
+      body: formData,
+    });
+
+    const data = (await res.json().catch(() => null)) as {
+      message?: string;
+      url?: string;
+    } | null;
+
+    if (!res.ok || !data?.url) {
+      throw new Error(data?.message ?? "Erro ao fazer upload da imagem.");
+    }
+
+    return data.url;
+  }, []);
+
+  const uploadBodyImageFile = useCallback(
+    async (file: File) => {
+      setUploadingBody(true);
+      try {
+        const url = await uploadImage(file);
+        insertBodyImageMarkdown(url, bodyImageAlt);
+      } catch (error) {
+        alert(
+          error instanceof Error
+            ? error.message
+            : "Erro ao fazer upload da imagem.",
+        );
+      } finally {
+        setUploadingBody(false);
+        setDraggingBodyImage(false);
+      }
+    },
+    [bodyImageAlt, insertBodyImageMarkdown, uploadImage],
+  );
 
   const handleImageUpload = useCallback(
     async (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -41,92 +149,79 @@ export function BlogEditor({ post }: BlogEditorProps) {
 
       setUploading(true);
       try {
-        const token = getToken();
-        const formData = new FormData();
-        formData.append("file", file);
-
-        const res = await fetch("/api/blog/upload", {
-          method: "POST",
-          headers: { Authorization: `Bearer ${token}` },
-          body: formData,
-        });
-
-        if (!res.ok) throw new Error();
-
-        const { url } = await res.json();
+        const url = await uploadImage(file);
         setCoverImage(url);
-      } catch {
-        alert("Erro ao fazer upload da imagem.");
+      } catch (error) {
+        alert(
+          error instanceof Error
+            ? error.message
+            : "Erro ao fazer upload da imagem.",
+        );
       } finally {
         setUploading(false);
       }
     },
-    [],
+    [uploadImage],
   );
 
-  const handlePaste = useCallback(async (e: React.ClipboardEvent) => {
-    const items = e.clipboardData?.items;
-    if (!items) return;
-
-    for (const item of Array.from(items)) {
-      if (!item.type.startsWith("image/")) continue;
+  const handlePaste = useCallback(
+    async (e: React.ClipboardEvent) => {
+      const file = getFirstImageFile(e.clipboardData?.items);
+      if (!file) return;
 
       e.preventDefault();
-      const file = item.getAsFile();
-      if (!file) continue;
-
-      setUploadingBody(true);
-      try {
-        const token = getToken();
-        const formData = new FormData();
-        formData.append("file", file);
-
-        const res = await fetch("/api/blog/upload", {
-          method: "POST",
-          headers: { Authorization: `Bearer ${token}` },
-          body: formData,
-        });
-
-        if (!res.ok) throw new Error();
-
-        const { url } = await res.json();
-        setContentMd((prev) => `${prev}\n\n![Imagem](${url})\n`);
-      } catch {
-        alert("Erro ao fazer upload da imagem.");
-      } finally {
-        setUploadingBody(false);
-      }
-    }
-  }, []);
+      await uploadBodyImageFile(file);
+    },
+    [getFirstImageFile, uploadBodyImageFile],
+  );
 
   const handleBodyImageUpload = useCallback(
     async (e: React.ChangeEvent<HTMLInputElement>) => {
       const file = e.target.files?.[0];
       if (!file) return;
 
-      setUploadingBody(true);
-      try {
-        const token = getToken();
-        const formData = new FormData();
-        formData.append("file", file);
+      await uploadBodyImageFile(file);
+      e.target.value = "";
+    },
+    [uploadBodyImageFile],
+  );
 
-        const res = await fetch("/api/blog/upload", {
-          method: "POST",
-          headers: { Authorization: `Bearer ${token}` },
-          body: formData,
-        });
+  const handleBodyDragOver = useCallback(
+    (e: React.DragEvent<HTMLDivElement>) => {
+      const hasImage = Array.from(e.dataTransfer.items ?? []).some((item) =>
+        item.type.startsWith("image/"),
+      );
 
-        if (!res.ok) throw new Error();
+      if (!hasImage) return;
 
-        const { url } = await res.json();
-        setContentMd((prev) => `${prev}\n\n![Imagem](${url})\n`);
-      } catch {
-        alert("Erro ao fazer upload da imagem.");
-      } finally {
-        setUploadingBody(false);
-      }
+      e.preventDefault();
+      e.dataTransfer.dropEffect = "copy";
+      setDraggingBodyImage(true);
     },
     [],
+  );
+
+  const handleBodyDragLeave = useCallback(
+    (e: React.DragEvent<HTMLDivElement>) => {
+      if (e.currentTarget.contains(e.relatedTarget as Node | null)) return;
+      setDraggingBodyImage(false);
+    },
+    [],
+  );
+
+  const handleBodyDrop = useCallback(
+    async (e: React.DragEvent<HTMLDivElement>) => {
+      const file = getFirstImageFile(
+        e.dataTransfer.items,
+        e.dataTransfer.files,
+      );
+      setDraggingBodyImage(false);
+      if (!file) return;
+
+      e.preventDefault();
+      await uploadBodyImageFile(file);
+    },
+    [getFirstImageFile, uploadBodyImageFile],
   );
 
   async function handleSave() {
@@ -206,39 +301,67 @@ export function BlogEditor({ post }: BlogEditorProps) {
           <div className="space-y-2">
             <div className="flex items-center justify-between">
               <Label>Conteúdo (Markdown)</Label>
-              <Button
-                variant="outline"
-                size="sm"
-                className="relative"
-                disabled={uploadingBody}
-              >
-                {uploadingBody ? (
-                  <Loader2 className="size-3.5 animate-spin" />
-                ) : (
-                  <ImageIcon className="size-3.5" />
-                )}
-                {uploadingBody ? "Enviando..." : "Inserir imagem"}
-                <input
-                  type="file"
-                  accept="image/*"
-                  className="absolute inset-0 cursor-pointer opacity-0"
-                  onChange={handleBodyImageUpload}
+              <div className="flex items-center gap-2">
+                <Input
+                  value={bodyImageAlt}
+                  onChange={(e) => setBodyImageAlt(e.target.value)}
+                  placeholder="Alt da imagem"
+                  className="h-8 w-40"
                 />
-              </Button>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="relative"
+                  disabled={uploadingBody}
+                >
+                  {uploadingBody ? (
+                    <Loader2 className="size-3.5 animate-spin" />
+                  ) : (
+                    <ImageIcon className="size-3.5" />
+                  )}
+                  {uploadingBody ? "Enviando..." : "Inserir imagem"}
+                  <input
+                    type="file"
+                    accept="image/*"
+                    className="absolute inset-0 cursor-pointer opacity-0"
+                    onChange={handleBodyImageUpload}
+                  />
+                </Button>
+              </div>
             </div>
             <p className="text-xs text-muted-foreground">
               Dica: use Markdown como <code># Título</code>,{" "}
               <code>## Subtítulo</code>,<code> **negrito**</code> e{" "}
               <code>- lista</code>.
             </p>
-            <div onPaste={handlePaste}>
+            <p className="text-xs text-muted-foreground">
+              Voce tambem pode colar ou arrastar uma imagem para dentro do
+              editor.
+            </p>
+            <section
+              ref={editorContainerRef}
+              aria-label="Editor de conteudo com suporte a imagem"
+              onPaste={handlePaste}
+              onDragOver={handleBodyDragOver}
+              onDragLeave={handleBodyDragLeave}
+              onDrop={handleBodyDrop}
+              className={
+                uploadingBody || draggingBodyImage ? "relative" : undefined
+              }
+            >
               <MDEditor
                 value={contentMd}
                 onChange={(val) => setContentMd(val ?? "")}
                 preview="edit"
                 height={500}
               />
-            </div>
+
+              {draggingBodyImage && (
+                <div className="pointer-events-none absolute inset-0 z-10 flex items-center justify-center rounded-lg border-2 border-dashed border-[#4d8cff]/60 bg-background/85 text-sm font-medium text-foreground backdrop-blur-sm">
+                  Solte a imagem para enviar ao post
+                </div>
+              )}
+            </section>
 
             <div className="rounded-xl border border-border bg-card p-4">
               <h3 className="mb-4 text-sm font-medium text-foreground">
@@ -291,6 +414,19 @@ export function BlogEditor({ post }: BlogEditorProps) {
                   />
                 </Button>
               </div>
+
+              {coverImage.trim() ? (
+                <div className="overflow-hidden rounded-xl border border-border bg-muted/20">
+                  <div className="relative aspect-[16/9] w-full">
+                    <Image
+                      src={coverImage}
+                      alt={title.trim() || "Preview da imagem de capa"}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
+              ) : null}
             </div>
           </div>
 
