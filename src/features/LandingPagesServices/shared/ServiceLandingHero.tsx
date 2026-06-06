@@ -16,7 +16,7 @@ export function ServiceLandingHero({
   content,
 }: ServiceLandingHeroProps) {
   const whatsappHref = buildWhatsAppHref(
-    `Ola, vim pela pagina de ${service.title} da SyncForge e quero falar sobre esse servico.`,
+    `Olá, vim pela página de ${service.title} da SyncForge e quero falar sobre esse serviço.`,
   );
 
   const Icon = service.icon;

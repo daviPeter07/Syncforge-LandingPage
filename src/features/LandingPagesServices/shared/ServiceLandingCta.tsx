@@ -15,7 +15,7 @@ export function ServiceLandingCta({
   content,
 }: ServiceLandingCtaProps) {
   const whatsappHref = buildWhatsAppHref(
-    `Ola, vim pela pagina de ${serviceTitle} da SyncForge e quero conversar sobre essa solucao.`,
+    `Olá, vim pela página de ${serviceTitle} da SyncForge e quero conversar sobre essa solução.`,
   );
 
   return (

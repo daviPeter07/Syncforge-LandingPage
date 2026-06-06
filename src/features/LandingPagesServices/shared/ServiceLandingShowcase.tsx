@@ -1,4 +1,3 @@
-import { Sparkles } from "lucide-react";
 import { ServiceProjectCard } from "@/components/landing-pages-services/ServiceProjectCard";
 import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";

@@ -19,24 +19,24 @@ export const crmServiceContent: ServiceLandingPageContent = {
   },
   why: {
     eyebrow: "Por que um CRM sob medida?",
-    title: "Porque contexto comercial perdido e oportunidade que vai embora junto",
+    title: "Porque contexto comercial perdido é oportunidade que vai embora junto",
     description:
-      "CRM nao e sobre preencher formulario. E sobre nao precisar perguntar 'como estava essa conversa mesmo?' no meio de uma negociacao.",
+      "CRM não é sobre preencher formulário. É sobre não precisar perguntar 'como estava essa conversa mesmo?' no meio de uma negociação.",
     items: [
       {
         title: "Nunca perder o fio da meada",
         description:
-          "Cada lead e cliente carrega um historico que nao pode depender de memoria. Um CRM organizado mantem o contexto vivo e evita recomecar a conversa do zero toda vez.",
+          "Cada lead e cliente carrega um histórico que não pode depender de memória. Um CRM organizado mantém o contexto vivo e evita recomeçar a conversa do zero toda vez.",
       },
       {
-        title: "Vender com mais inteligencia",
+        title: "Vender com mais inteligência",
         description:
-          "Quando o time enxerga o funil com clareza, a prioridade fica obvia. As oportunidades deixam de morrer no esquecimento porque alguem esqueceu de retornar.",
+          "Quando o time enxerga o funil com clareza, a prioridade fica óbvia. As oportunidades deixam de morrer no esquecimento porque alguém esqueceu de retornar.",
       },
       {
         title: "Relacionamento que gera resultado",
         description:
-          "Cliente lembrado e cliente fidelizado. Um CRM bem estruturado transforma atendimento esporadico em relacionamento continuo que gera novas vendas sem precisar comecar do zero.",
+          "Cliente lembrado é cliente fidelizado. Um CRM bem estruturado transforma atendimento esporádico em relacionamento contínuo que gera novas vendas sem precisar começar do zero.",
       },
     ],
   },
@@ -45,7 +45,7 @@ export const crmServiceContent: ServiceLandingPageContent = {
     title:
       "Projetos demonstrativos de CRM para organizar contexto, funil e relacionamento",
     description:
-      "A proposta aqui e mostrar formatos de CRM que ajudam times comerciais a nao perder contexto, prioridade e continuidade de conversa.",
+      "A proposta aqui é mostrar formatos de CRM que ajudam times comerciais a não perder contexto, prioridade e continuidade de conversa.",
   },
   pricing: {
     eyebrow: "Investimento",

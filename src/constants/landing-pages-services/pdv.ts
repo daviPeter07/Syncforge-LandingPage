@@ -19,33 +19,33 @@ export const pdvServiceContent: ServiceLandingPageContent = {
   },
   why: {
     eyebrow: "Por que um PDV sob medida?",
-    title: "Porque vender nao pode depender de um sistema que trava o atendimento",
+    title: "Porque vender não pode depender de um sistema que trava o atendimento",
     description:
-      "Um PDV nao e sobre cadastrar produtos. E sobre fazer a venda acontecer sem atrito e a operacao respirar.",
+      "Um PDV não é sobre cadastrar produtos. É sobre fazer a venda acontecer sem atrito e a operação respirar.",
     items: [
       {
-        title: "Sua equipe merece um sistema que nao atrapalhe",
+        title: "Sua equipe merece um sistema que não atrapalhe",
         description:
-          "Um PDV lento ou confuso frustra o atendimento e afasta cliente. Um sistema sob medida simplifica a venda e deixa o foco onde importa: em quem esta do outro lado do balcao.",
+          "Um PDV lento ou confuso frustra o atendimento e afasta cliente. Um sistema sob medida simplifica a venda e deixa o foco onde importa: em quem está do outro lado do balcão.",
       },
       {
         title: "Controle sem planilha paralela",
         description:
-          "Quando o estoque, o caixa e as vendas estao no mesmo lugar, sua operacao ganha previsibilidade. Voce dorme mais tranquilo sabendo que o numero fecha.",
+          "Quando o estoque, o caixa e as vendas estão no mesmo lugar, sua operação ganha previsibilidade. Você dorme mais tranquilo sabendo que o número fecha.",
       },
       {
         title: "Crescer sem perder o controle",
         description:
-          "Uma operacao que escala precisa de uma base solida. O PDV certo acompanha o crescimento sem exigir retrabalho ou migracoes traumaticas.",
+          "Uma operação que escala precisa de uma base sólida. O PDV certo acompanha o crescimento sem exigir retrabalho ou migrações traumáticas.",
       },
     ],
   },
   showcase: {
     eyebrow: "Demonstrações",
     title:
-      "Projetos demonstrativos de PDV para contextos reais de venda e operacao",
+      "Projetos demonstrativos de PDV para contextos reais de venda e operação",
     description:
-      "Aqui a ideia e mostrar como o PDV pode ser adaptado ao ritmo de cada negocio, com mais clareza para venda, estoque e fechamento.",
+      "Aqui a ideia é mostrar como o PDV pode ser adaptado ao ritmo de cada negócio, com mais clareza para venda, estoque e fechamento.",
   },
   pricing: {
     eyebrow: "Investimento",

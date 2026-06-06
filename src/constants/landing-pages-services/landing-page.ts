@@ -2,12 +2,12 @@ import type { ServiceLandingPageContent } from "@/types/services";
 
 export const landingPageServiceContent: ServiceLandingPageContent = {
   id: "landing-page",
-  seoTitle: "Paginas institucionais sob medida para captar mais oportunidades",
+  seoTitle: "Páginas institucionais sob medida para captar mais oportunidades",
   seoDescription:
     "Criamos páginas institucionais com copy, estrutura e visual pensados para transformar visitas em contatos qualificados para o seu negócio.",
   hero: {
-    eyebrow: "Pagina institucional",
-    title: "Paginas institucionais pensadas para transformar visitas em conversas reais",
+    eyebrow: "Página institucional",
+    title: "Páginas institucionais pensadas para transformar visitas em conversas reais",
     description:
       "Desenhamos páginas focadas em clareza, autoridade e conversão para campanhas, lançamentos, serviços e captação pelo WhatsApp.",
     highlights: [
@@ -17,38 +17,38 @@ export const landingPageServiceContent: ServiceLandingPageContent = {
     ],
   },
   why: {
-    eyebrow: "Por que uma pagina institucional?",
-    title: "Porque a primeira impressao digital decide se o cliente fecha ou fecha a aba",
+    eyebrow: "Por que uma página institucional?",
+    title: "Porque a primeira impressão digital decide se o cliente fecha ou fecha a aba",
     description:
-      "Uma pagina institucional nao e sobre tecnologia. E sobre fazer o visitante sentir que esta no lugar certo.",
+      "Uma página institucional não é sobre tecnologia. É sobre fazer o visitante sentir que está no lugar certo.",
     items: [
       {
-        title: "Seu cliente nao le paginas genericas",
+        title: "Seu cliente não lê páginas genéricas",
         description:
-          "Uma pagina institucional bem construida passa credibilidade e mostra que voce leva seu negocio a serio antes mesmo da conversa. O design e a primeira prova social do seu trabalho.",
+          "Uma página institucional bem construída passa credibilidade e mostra que você leva seu negócio a sério antes mesmo da conversa. O design é a primeira prova social do seu trabalho.",
       },
       {
-        title: "Primeira impressao que vende",
+        title: "Primeira impressão que vende",
         description:
-          "O primeiro contato com seu cliente e digital. Uma pagina organizada gera confianca e reduz o atrito entre o clique no anuncio e a decisao de comprar.",
+          "O primeiro contato com seu cliente é digital. Uma página organizada gera confiança e reduz o atrito entre o clique no anúncio e a decisão de comprar.",
       },
       {
-        title: "Menos explicacao, mais resultado",
+        title: "Menos explicação, mais resultado",
         description:
-          "Quando a oferta esta clara, o visitante decide mais rapido. Uma pagina institucional bem feita transforma curiosidade em acao sem depender de Follow-ups interminaveis.",
+          "Quando a oferta está clara, o visitante decide mais rápido. Uma página institucional bem feita transforma curiosidade em ação sem depender de follow-ups intermináveis.",
       },
     ],
   },
   showcase: {
     eyebrow: "Demonstrações",
     title:
-      "Projetos demonstrativos para visualizar como uma pagina institucional pode vender melhor",
+      "Projetos demonstrativos para visualizar como uma página institucional pode vender melhor",
     description:
       "Em vez de uma página genérica, a ideia é desenhar a estrutura conforme a oferta, o público e a ação que o visitante precisa tomar.",
   },
   pricing: {
     eyebrow: "Investimento",
-    title: "Faixas para tirar a pagina institucional do papel e continuar evoluindo",
+    title: "Faixas para tirar a página institucional do papel e continuar evoluindo",
     description:
       "Usamos faixas para orientar a conversa comercial. O valor final depende de copy, volume de seções, integrações e necessidades da campanha.",
     implementationLabel: "Implementação",
@@ -59,7 +59,7 @@ export const landingPageServiceContent: ServiceLandingPageContent = {
       {
         name: "Essencial",
         description:
-          "Para validar uma oferta com uma pagina institucional objetiva e pronta para captar contatos.",
+          "Para validar uma oferta com uma página institucional objetiva e pronta para captar contatos.",
         ctaLabel: "Solicitar proposta",
         features: [
           "Estrutura comercial com CTA principal",
@@ -128,19 +128,19 @@ export const landingPageServiceContent: ServiceLandingPageContent = {
           prefix: "A partir de",
           amount: "R$ 600",
           suffix: "conforme operação",
-          note: "Recomendado para empresas que tratam paginas institucionais como canal contínuo de aquisição e otimização.",
+          note: "Recomendado para empresas que tratam páginas institucionais como canal contínuo de aquisição e otimização.",
         },
       },
     ],
   },
   faq: {
     eyebrow: "FAQ",
-    title: "O que costuma ser mais importante antes de criar uma pagina institucional",
+    title: "O que costuma ser mais importante antes de criar uma página institucional",
     description:
       "Estas são algumas dúvidas comuns de quem quer anunciar, apresentar um serviço ou profissionalizar a presença digital.",
     items: [
       {
-        question: "A pagina institucional serve só para tráfego pago?",
+        question: "A página institucional serve só para tráfego pago?",
         answer:
           "Não. Ela também funciona para apresentação comercial, links em bio, campanhas orgânicas e materiais de prospecção.",
       },
@@ -166,8 +166,8 @@ export const landingPageServiceContent: ServiceLandingPageContent = {
     title:
       "Se sua oferta precisa de uma página que explique melhor e converta mais, vamos desenhar isso juntos",
     description:
-      "Conte o cenário da sua campanha, do seu serviço ou do seu lançamento e montamos uma direção clara para a pagina institucional.",
-    primaryLabel: "Falar sobre pagina institucional",
+      "Conte o cenário da sua campanha, do seu serviço ou do seu lançamento e montamos uma direção clara para a página institucional.",
+    primaryLabel: "Falar sobre página institucional",
     secondaryLabel: "Ver todos os serviços",
     note: "Podemos começar com uma página simples e evoluir depois com novos blocos, testes e integrações.",
   },

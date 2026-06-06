@@ -19,33 +19,33 @@ export const erpServiceContent: ServiceLandingPageContent = {
   },
   why: {
     eyebrow: "Por que um ERP sob medida?",
-    title: "Porque empresa que cresce com setor ilhado acumula divida operacional que um dia nao paga",
+    title: "Porque empresa que cresce com setor ilhado acumula dívida operacional que um dia não paga",
     description:
-      "ERP nao e sobre sistema grande. E sobre cada area saber o que a outra esta fazendo sem precisar de reuniao para descobrir.",
+      "ERP não é sobre sistema grande. É sobre cada área saber o que a outra está fazendo sem precisar de reunião para descobrir.",
     items: [
       {
-        title: "Cada area sabe o que a outra esta fazendo",
+        title: "Cada área sabe o que a outra está fazendo",
         description:
-          "Quando os setores trabalham isolados, a empresa perde tempo e contexto. Um ERP conecta as pontas e alinha a operacao sem depender de 'fulano mandou um email'.",
+          "Quando os setores trabalham isolados, a empresa perde tempo e contexto. Um ERP conecta as pontas e alinha a operação sem depender de 'fulano mandou um email'.",
       },
       {
-        title: "Informacao centralizada, decisao descentralizada",
+        title: "Informação centralizada, decisão descentralizada",
         description:
-          "Com uma base unica, cada gestor enxerga o que precisa sem depender de planilhas ou de perguntar para outros setores. Autonomia com consistencia.",
+          "Com uma base única, cada gestor enxerga o que precisa sem depender de planilhas ou de perguntar para outros setores. Autonomia com consistência.",
       },
       {
-        title: "Operacao que escala sem perder qualidade",
+        title: "Operação que escala sem perder qualidade",
         description:
-          "Empresas que crescem sem integracao acumulam ruido operacional. Um ERP e a fundacao para crescer com consistencia, controle e sem retrabalho entre areas.",
+          "Empresas que crescem sem integração acumulam ruído operacional. Um ERP é a fundação para crescer com consistência, controle e sem retrabalho entre áreas.",
       },
     ],
   },
   showcase: {
     eyebrow: "Demonstrações",
     title:
-      "Projetos demonstrativos de ERP para integrar setores sem improviso entre areas",
+      "Projetos demonstrativos de ERP para integrar setores sem improviso entre áreas",
     description:
-      "O objetivo desta secao e mostrar recortes de ERP em contextos onde a empresa ja precisa conectar operacao, gestao e dados com mais consistencia.",
+      "O objetivo desta seção é mostrar recortes de ERP em contextos onde a empresa já precisa conectar operação, gestão e dados com mais consistência.",
   },
   pricing: {
     eyebrow: "Investimento",

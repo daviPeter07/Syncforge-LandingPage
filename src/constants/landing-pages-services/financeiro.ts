@@ -20,33 +20,33 @@ export const financeiroServiceContent: ServiceLandingPageContent = {
   },
   why: {
     eyebrow: "Por que organizar o financeiro?",
-    title: "Porque decidir no escuro e o jeito mais caro de administrar uma empresa",
+    title: "Porque decidir no escuro é o jeito mais caro de administrar uma empresa",
     description:
-      "Gestao financeira nao e sobre numeros. E sobre dormir sabendo que o caixa do mes que vem nao vai surpreender.",
+      "Gestão financeira não é sobre números. É sobre dormir sabendo que o caixa do mês que vem não vai surpreender.",
     items: [
       {
-        title: "Decisao com base em dados, nao em susto",
+        title: "Decisão com base em dados, não em susto",
         description:
-          "Quando o caixa esta organizado, voce antecipa problemas em vez de correr atras do prejuizo. Controle financeiro e tranquilidade para decidir com confianca.",
+          "Quando o caixa está organizado, você antecipa problemas em vez de correr atrás do prejuízo. Controle financeiro é tranquilidade para decidir com confiança.",
       },
       {
-        title: "Cobranca sem constrangimento",
+        title: "Cobrança sem constrangimento",
         description:
-          "Um sistema financeiro bem estruturado organiza vencimentos e cobrancas com profissionalismo, mantendo o relacionamento com o cliente saudavel e previsivel.",
+          "Um sistema financeiro bem estruturado organiza vencimentos e cobranças com profissionalismo, mantendo o relacionamento com o cliente saudável e previsível.",
       },
       {
-        title: "Crescer com o pe no chao",
+        title: "Crescer com o pé no chão",
         description:
-          "Sem visibilidade financeira, crescer e arriscado. Com os indicadores certos, a expansao acontece com seguranca e sem susto no fluxo de caixa.",
+          "Sem visibilidade financeira, crescer é arriscado. Com os indicadores certos, a expansão acontece com segurança e sem susto no fluxo de caixa.",
       },
     ],
   },
   showcase: {
     eyebrow: "Demonstrações",
     title:
-      "Projetos demonstrativos de gestao financeira com mais leitura e menos controle espalhado",
+      "Projetos demonstrativos de gestão financeira com mais leitura e menos controle espalhado",
     description:
-      "A ideia aqui e mostrar como um sistema financeiro pode sair do papel de simples cadastro e virar apoio real para a operacao e a gestao.",
+      "A ideia aqui é mostrar como um sistema financeiro pode sair do papel de simples cadastro e virar apoio real para a operação e a gestão.",
   },
   pricing: {
     eyebrow: "Investimento",

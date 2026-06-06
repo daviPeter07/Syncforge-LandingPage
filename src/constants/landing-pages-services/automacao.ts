@@ -19,33 +19,33 @@ export const automacaoServiceContent: ServiceLandingPageContent = {
   },
   why: {
     eyebrow: "Por que automatizar?",
-    title: "Porque repetir tarefa que maquina faz e desperdico de talento humano",
+    title: "Porque repetir tarefa que máquina faz é desperdício de talento humano",
     description:
-      "Automacao nao e sobre substituir pessoas. E sobre parar de pedir para um cereja resolver problema de esteira.",
+      "Automação não é sobre substituir pessoas. É sobre parar de pedir para um cérebro resolver problema de esteira.",
     items: [
       {
-        title: "Tempo e o recurso mais caro",
+        title: "Tempo é o recurso mais caro",
         description:
-          "Tarefas repetitivas consomem horas que poderiam ser dedicadas a decisoes estrategicas. Automatizar e devolver tempo para o que realmente importa e gera resultado.",
+          "Tarefas repetitivas consomem horas que poderiam ser dedicadas a decisões estratégicas. Automatizar é devolver tempo para o que realmente importa e gera resultado.",
       },
       {
-        title: "Menos erro humano, mais consistencia",
+        title: "Menos erro humano, mais consistência",
         description:
-          "Processos manuais estao sujeitos a falhas de atencao e memoria. Fluxos automatizados mantem a qualidade e a rastreabilidade sem depender de lembrete ou planilha.",
+          "Processos manuais estão sujeitos a falhas de atenção e memória. Fluxos automatizados mantêm a qualidade e a rastreabilidade sem depender de lembrete ou planilha.",
       },
       {
-        title: "Escalar sem contratar na mesma proporcao",
+        title: "Escalar sem contratar na mesma proporção",
         description:
-          "Automacao permite que a operacao cresca sem que a equipe precise trabalhar mais. E produtividade sem sobrecarga e sem perder qualidade.",
+          "Automação permite que a operação cresça sem que a equipe precise trabalhar mais. É produtividade sem sobrecarga e sem perder qualidade.",
       },
     ],
   },
   showcase: {
     eyebrow: "Demonstrações",
     title:
-      "Projetos demonstrativos de automacao para reduzir tarefas manuais e ruído operacional",
+      "Projetos demonstrativos de automação para reduzir tarefas manuais e ruído operacional",
     description:
-      "O foco nao e criar automacao por moda, mas mostrar fluxos que cortam retrabalho e mantem visibilidade do que esta acontecendo.",
+      "O foco não é criar automação por moda, mas mostrar fluxos que cortam retrabalho e mantêm visibilidade do que está acontecendo.",
   },
   pricing: {
     eyebrow: "Investimento",

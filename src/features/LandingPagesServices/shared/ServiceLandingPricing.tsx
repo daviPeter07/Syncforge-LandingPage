@@ -38,7 +38,7 @@ function ServiceLandingPricingCard({
 }) {
   const price = mode === "implementation" ? plan.implementation : plan.retainer;
   const message = buildWhatsAppHref(
-    `Ola, vim pela pagina de ${serviceTitle} da SyncForge e quero falar sobre a opcao ${plan.name} (${price.amount} ${price.suffix}).`,
+    `Olá, vim pela página de ${serviceTitle} da SyncForge e quero falar sobre a opção ${plan.name} (${price.amount} ${price.suffix}).`,
   );
 
   return (
