@@ -45,59 +45,6 @@ export const landingPageServiceContent: ServiceLandingPageContent = {
       "Projetos demonstrativos para visualizar como uma pagina institucional pode vender melhor",
     description:
       "Em vez de uma página genérica, a ideia é desenhar a estrutura conforme a oferta, o público e a ação que o visitante precisa tomar.",
-    note: "Os exemplos abaixo sao demonstrativos para mostrar formatos de projeto, narrativa e posicionamento visual que podem ser criados para cada cliente.",
-    projects: [
-      {
-        segment: "Clinica estetica",
-        title: "Pagina institucional para campanha de avaliacao e agendamento rapido",
-        company: "Clinica Vitta Prime",
-        client: "Mariana Alves",
-        href: "#",
-        summary:
-          "Uma pagina pensada para captar pacientes vindos de anuncios e conduzir o contato direto para o WhatsApp com mais confianca.",
-        scope: [
-          "Hero com promessa comercial",
-          "Provas visuais e depoimentos",
-          "FAQ e CTA para agendamento",
-        ],
-        outcome:
-          "Mais clareza na oferta e menos friccao entre o clique no anuncio e o primeiro contato com a clinica.",
-      },
-      {
-        segment: "Construtora",
-        title:
-          "Pagina de captacao para empreendimento com foco em leads qualificados",
-        company: "Atlas Engenharia Urbana",
-        client: "Rafael Monteiro",
-        href: "#",
-        summary:
-          "Um projeto visualmente mais premium para apresentar o empreendimento, destacar diferenciais e aumentar o valor percebido da oferta.",
-        scope: [
-          "Blocos para localizacao e diferenciais",
-          "Galeria comercial da proposta",
-          "CTA com conversa orientada",
-        ],
-        outcome:
-          "Uma experiencia mais organizada para campanhas de medio ticket, ajudando a filtrar melhor o interesse de quem chega.",
-      },
-      {
-        segment: "Produto digital",
-        title:
-          "Pagina institucional para pre-lancamento com narrativa orientada a conversao",
-        company: "NexoFit Academy",
-        client: "Lucas Martins",
-        href: "#",
-        summary:
-          "Uma pagina com copy mais ritmada, blocos de objecao e chamadas estrategicas para transformar curiosidade em lista de espera e venda.",
-        scope: [
-          "Estrutura de lancamento",
-          "Copy com blocos de objecao",
-          "Captacao de leads qualificados",
-        ],
-        outcome:
-          "Melhor preparacao da campanha antes da venda, com captacao mais intencional e proposta melhor explicada.",
-      },
-    ],
   },
   pricing: {
     eyebrow: "Investimento",

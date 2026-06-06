@@ -42,7 +42,7 @@ export interface ServiceLandingShowcaseContent {
   title: string;
   description: string;
   note?: string;
-  projects: ServiceLandingShowcaseProject[];
+  projects?: ServiceLandingShowcaseProject[];
 }
 
 export interface ServiceLandingFaqItem {

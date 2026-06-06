@@ -46,60 +46,6 @@ export const crmServiceContent: ServiceLandingPageContent = {
       "Projetos demonstrativos de CRM para organizar contexto, funil e relacionamento",
     description:
       "A proposta aqui e mostrar formatos de CRM que ajudam times comerciais a nao perder contexto, prioridade e continuidade de conversa.",
-    note: "Os exemplos abaixo sao demonstrativos e servem para ilustrar como um CRM sob medida pode ser moldado ao processo de cada negocio.",
-    projects: [
-      {
-        segment: "Consultoria B2B",
-        title:
-          "CRM com pipeline consultivo e historico centralizado por oportunidade",
-        company: "Clareza Consultoria",
-        client: "Patricia Souza",
-        href: "#",
-        summary:
-          "Projeto demonstrativo para um comercial que precisava acompanhar negociacoes mais longas, registrar contexto e organizar proximo passo sem depender de memoria.",
-        scope: [
-          "Pipeline por etapa",
-          "Historico por lead e cliente",
-          "Acoes futuras visiveis para o time",
-        ],
-        outcome:
-          "Mais continuidade de conversa e menos risco de perder oportunidade por falta de organizacao comercial.",
-      },
-      {
-        segment: "Escritorio comercial",
-        title:
-          "Sistema para organizar contatos quentes, retornos e prioridades da equipe",
-        company: "Vértice Soluções Comerciais",
-        client: "Diego Nascimento",
-        href: "#",
-        summary:
-          "Uma demonstracao pensada para times que recebem muitos contatos e precisam decidir rapido quem precisa de atencao agora.",
-        scope: [
-          "Fila de prioridades",
-          "Leitura de leads por etapa",
-          "Visao rapida para gestao",
-        ],
-        outcome:
-          "Melhor distribuicao de energia comercial e mais clareza sobre onde o time precisa agir primeiro.",
-      },
-      {
-        segment: "Pos-venda e reativacao",
-        title:
-          "CRM para acompanhamento continuo, renovacoes e reativacao de carteira",
-        company: "Nexo Beneficios Corporativos",
-        client: "Juliana Prado",
-        href: "#",
-        summary:
-          "Exemplo de CRM que vai alem da venda inicial e ajuda a empresa a manter relacionamento, registrar atendimento e recuperar contas mornas.",
-        scope: [
-          "Jornadas apos a venda",
-          "Historico de relacionamento",
-          "Base para reativacao e renovacao",
-        ],
-        outcome:
-          "Mais visibilidade do ciclo completo do cliente, e nao apenas do momento de fechar a venda.",
-      },
-    ],
   },
   pricing: {
     eyebrow: "Investimento",

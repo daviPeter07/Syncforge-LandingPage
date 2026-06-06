@@ -47,60 +47,6 @@ export const financeiroServiceContent: ServiceLandingPageContent = {
       "Projetos demonstrativos de gestao financeira com mais leitura e menos controle espalhado",
     description:
       "A ideia aqui e mostrar como um sistema financeiro pode sair do papel de simples cadastro e virar apoio real para a operacao e a gestao.",
-    note: "Os exemplos abaixo sao demonstrativos para ilustrar contextos em que um sistema financeiro sob medida pode gerar mais previsibilidade.",
-    projects: [
-      {
-        segment: "Servicos recorrentes",
-        title:
-          "Sistema para acompanhar vencimentos, caixa e cobrancas com mais previsibilidade",
-        company: "Prime Office Soluções",
-        client: "Gustavo Mello",
-        href: "#",
-        summary:
-          "Projeto demonstrativo para empresa que precisava consolidar caixa, compromissos e cobrancas em uma rotina menos pulverizada.",
-        scope: [
-          "Entradas e saidas organizadas",
-          "Vencimentos em destaque",
-          "Base para cobranca estruturada",
-        ],
-        outcome:
-          "Menos dependencia de planilhas paralelas e mais clareza para agir antes que o problema apareca no caixa.",
-      },
-      {
-        segment: "Gestao operacional",
-        title:
-          "Painel financeiro com leitura resumida para acompanhar pendencias e periodos criticos",
-        company: "Grupo Duna Eventos",
-        client: "Natália Farias",
-        href: "#",
-        summary:
-          "Uma demonstracao voltada a quem precisa sair do operacional puro e ganhar uma camada gerencial mais clara sobre o financeiro.",
-        scope: [
-          "Painel de indicadores resumidos",
-          "Compromissos por periodo",
-          "Visao de pendencias prioritarias",
-        ],
-        outcome:
-          "Mais seguranca para decidir e menos surpresa ao olhar o financeiro apenas quando a tensao ja chegou.",
-      },
-      {
-        segment: "Escala e integracao",
-        title:
-          "Base financeira preparada para crescer com relatorios, automacoes e conexoes futuras",
-        company: "Verde Norte Distribuição",
-        client: "Leonardo Pires",
-        href: "#",
-        summary:
-          "Exemplo pensado para empresas que querem comecar organizando o financeiro agora, mas sem bloquear a evolucao da operacao depois.",
-        scope: [
-          "Estrutura modular de crescimento",
-          "Base para relatorios futuros",
-          "Espaco para integracoes depois",
-        ],
-        outcome:
-          "Uma fundacao mais limpa para evoluir o controle financeiro junto com o restante da empresa.",
-      },
-    ],
   },
   pricing: {
     eyebrow: "Investimento",

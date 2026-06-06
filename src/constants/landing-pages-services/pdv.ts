@@ -46,60 +46,6 @@ export const pdvServiceContent: ServiceLandingPageContent = {
       "Projetos demonstrativos de PDV para contextos reais de venda e operacao",
     description:
       "Aqui a ideia e mostrar como o PDV pode ser adaptado ao ritmo de cada negocio, com mais clareza para venda, estoque e fechamento.",
-    note: "Os exemplos abaixo sao demonstrativos para ilustrar recortes de operacao que um sistema de PDV sob medida pode atender.",
-    projects: [
-      {
-        segment: "Mercado de bairro",
-        title:
-          "PDV com consulta rapida de produtos e fechamento mais limpo no caixa",
-        company: "Mercado Aurora",
-        client: "Carlos Henrique",
-        href: "#",
-        summary:
-          "Projeto pensado para uma operacao que precisava vender mais rapido no balcao e reduzir confusao entre itens, estoque e fechamento diario.",
-        scope: [
-          "Busca agil de produtos",
-          "Fechamento de venda mais direto",
-          "Visao inicial de estoque e caixa",
-        ],
-        outcome:
-          "Menos atrito no atendimento e mais previsibilidade para quem precisa acompanhar o que entrou, saiu e faltou repor.",
-      },
-      {
-        segment: "Loja especializada",
-        title:
-          "Sistema para operacao com catalogo maior e necessidade de rastrear melhor a venda",
-        company: "Casa do Norte Ramos",
-        client: "Fernanda Lima",
-        href: "#",
-        summary:
-          "Uma proposta para loja com maior variedade de itens, onde a equipe precisava consultar, registrar e conferir com mais consistencia.",
-        scope: [
-          "Catalogo mais organizado",
-          "Fluxo de atendimento por etapas",
-          "Resumo operacional para gestao",
-        ],
-        outcome:
-          "Mais clareza na operacao e menos dependencia de controles paralelos para entender a movimentacao do dia.",
-      },
-      {
-        segment: "Food service",
-        title:
-          "PDV orientado a atendimento rapido e integracao futura com outras rotinas da casa",
-        company: "Bistro Porto 81",
-        client: "Aline Duarte",
-        href: "#",
-        summary:
-          "Demonstracao de um PDV pensado para ambiente com giro mais alto, onde agilidade de operacao pesa tanto quanto controle.",
-        scope: [
-          "Atendimento mais fluido",
-          "Estrutura para evolucao de relatorios",
-          "Base pronta para novas rotinas",
-        ],
-        outcome:
-          "Um sistema com cara de operacao viva, preparado para crescer sem travar a equipe no dia a dia.",
-      },
-    ],
   },
   pricing: {
     eyebrow: "Investimento",

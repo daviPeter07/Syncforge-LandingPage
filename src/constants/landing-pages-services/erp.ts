@@ -46,60 +46,6 @@ export const erpServiceContent: ServiceLandingPageContent = {
       "Projetos demonstrativos de ERP para integrar setores sem improviso entre areas",
     description:
       "O objetivo desta secao e mostrar recortes de ERP em contextos onde a empresa ja precisa conectar operacao, gestao e dados com mais consistencia.",
-    note: "Os exemplos abaixo sao demonstrativos e ajudam a visualizar como um ERP pode nascer por modulo, por fluxo ou por fase de integracao.",
-    projects: [
-      {
-        segment: "Industria leve",
-        title:
-          "ERP para conectar comercial, producao e financeiro em uma mesma base",
-        company: "Metalworks Amazonas",
-        client: "Sergio Paiva",
-        href: "#",
-        summary:
-          "Projeto demonstrativo para empresa em crescimento que ja sentia o impacto de setores operando com planilhas e controles desconectados.",
-        scope: [
-          "Fluxos entre setores criticos",
-          "Base unificada de informacoes",
-          "Visao operacional e gerencial",
-        ],
-        outcome:
-          "Menos retrabalho entre areas e mais confianca no dado que circula pela operacao.",
-      },
-      {
-        segment: "Distribuicao",
-        title:
-          "Sistema para integrar estoque, pedidos e rotina administrativa em etapas mais claras",
-        company: "Norte Log Distribuição",
-        client: "Ricardo Azevedo",
-        href: "#",
-        summary:
-          "Uma demonstracao de ERP construida para empresas que precisam deixar mais clara a passagem de bastao entre operacao comercial e backoffice.",
-        scope: [
-          "Pedidos e acompanhamento interno",
-          "Fluxo entre estoque e administrativo",
-          "Leitura mais clara da operacao",
-        ],
-        outcome:
-          "Mais previsibilidade entre setores e menos ruido quando a empresa cresce em volume e dependencia interna.",
-      },
-      {
-        segment: "Servicos complexos",
-        title:
-          "Base modular de ERP para crescer por fases sem perder governanca da operacao",
-        company: "Vértice Infra & Serviços",
-        client: "Camila Porto",
-        href: "#",
-        summary:
-          "Exemplo de ERP desenhado como infraestrutura de medio prazo, com possibilidade de crescer em modulos sem reinventar a base a cada etapa.",
-        scope: [
-          "Planejamento por modulos",
-          "Integracao progressiva da empresa",
-          "Governanca de dados e processos",
-        ],
-        outcome:
-          "Uma fundacao mais segura para crescer em complexidade sem cair novamente em remendos operacionais.",
-      },
-    ],
   },
   pricing: {
     eyebrow: "Investimento",
