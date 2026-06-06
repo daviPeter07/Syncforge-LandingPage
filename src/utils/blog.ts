@@ -1,4 +1,17 @@
-import type { BlogPost } from "@/types/blog";
+import type { BlogPost, BlogPostHeading } from "@/types/blog";
+
+const MARKDOWN_HEADING_PATTERN = /^(#{2,3})\s+(.+?)\s*#*\s*$/;
+
+export function slugifyHeading(text: string): string {
+  return stripMarkdown(text)
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^\w\s-]/g, "")
+    .trim()
+    .replace(/\s+/g, "-")
+    .replace(/-+/g, "-");
+}
 
 export const stripMarkdown = (md: string): string => {
   return md
@@ -32,6 +45,42 @@ export const generateSlug = (title: string): string => {
     .replace(/^-|-$/g, "")
     .slice(0, 200);
 };
+
+export function extractTableOfContents(content: string): BlogPostHeading[] {
+  const headings: BlogPostHeading[] = [];
+  const slugCounts = new Map<string, number>();
+  let insideCodeBlock = false;
+
+  for (const rawLine of content.split(/\r?\n/)) {
+    const line = rawLine.trim();
+
+    if (/^(```|~~~)/.test(line)) {
+      insideCodeBlock = !insideCodeBlock;
+      continue;
+    }
+
+    if (insideCodeBlock) continue;
+
+    const match = line.match(MARKDOWN_HEADING_PATTERN);
+    if (!match) continue;
+
+    const level = match[1].length as 2 | 3;
+    const text = stripMarkdown(match[2]).trim();
+    if (!text) continue;
+
+    const baseId = slugifyHeading(text) || `secao-${headings.length + 1}`;
+    const occurrences = slugCounts.get(baseId) ?? 0;
+    slugCounts.set(baseId, occurrences + 1);
+
+    headings.push({
+      id: occurrences === 0 ? baseId : `${baseId}-${occurrences + 1}`,
+      text,
+      level,
+    });
+  }
+
+  return headings;
+}
 
 export const mapRow = (row: Record<string, unknown>): BlogPost => {
   return {

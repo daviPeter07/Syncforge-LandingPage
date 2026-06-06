@@ -2,7 +2,9 @@ import { ArrowLeft, Calendar, Clock } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import type { BlogPost as BlogPostType } from "@/types/blog";
+import { cn, extractTableOfContents } from "@/utils";
 import { BlogContent } from "./BlogContent";
+import { BlogTableOfContents } from "./BlogTableOfContents";
 import { ShareButton } from "./ShareButton";
 
 interface BlogPostProps {
@@ -10,8 +12,11 @@ interface BlogPostProps {
 }
 
 export function BlogPost({ post }: BlogPostProps) {
+  const tableOfContents = extractTableOfContents(post.content_md);
+  const hasTableOfContents = tableOfContents.length > 0;
+
   return (
-    <article className="mx-auto w-full max-w-3xl px-6 py-12 sm:py-16 lg:py-20">
+    <article className="mx-auto w-full max-w-7xl px-6 py-12 sm:py-16 lg:py-20">
       <Link
         href="/blog"
         className="mb-8 inline-flex items-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
@@ -20,7 +25,7 @@ export function BlogPost({ post }: BlogPostProps) {
         Voltar para o blog
       </Link>
 
-      <header className="mb-10">
+      <header className="mx-auto mb-10 max-w-3xl">
         <div className="mb-4 flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
           <span className="inline-flex items-center gap-1.5">
             <Calendar className="size-3.5" />
@@ -67,7 +72,7 @@ export function BlogPost({ post }: BlogPostProps) {
       </header>
 
       {post.cover_image && (
-        <div className="mb-10 overflow-hidden rounded-xl ring-1 ring-foreground/10">
+        <div className="mx-auto mb-10 max-w-3xl overflow-hidden rounded-xl ring-1 ring-foreground/10">
           <Image
             src={post.cover_image}
             alt={post.title}
@@ -78,11 +83,30 @@ export function BlogPost({ post }: BlogPostProps) {
         </div>
       )}
 
-      <div className="mx-auto w-full max-w-[70ch]">
-        <BlogContent content={post.content_md} />
+      <div
+        className={cn(
+          "mx-auto",
+          hasTableOfContents
+            ? "grid gap-12 xl:grid-cols-[15rem_minmax(0,70ch)_15rem] xl:justify-center 2xl:grid-cols-[17rem_minmax(0,70ch)_17rem]"
+            : "max-w-[70ch]",
+        )}
+      >
+        {hasTableOfContents && (
+          <div className="hidden xl:block">
+            <div className="sticky top-28">
+              <BlogTableOfContents items={tableOfContents} />
+            </div>
+          </div>
+        )}
+
+        <div className="min-w-0">
+          <div className="mx-auto w-full max-w-[70ch]">
+            <BlogContent content={post.content_md} />
+          </div>
+        </div>
       </div>
 
-      <footer className="mt-12 flex items-center justify-between border-t border-border pt-6">
+      <footer className="mx-auto mt-12 flex max-w-3xl items-center justify-between border-t border-border pt-6">
         <Link
           href="/blog"
           className="inline-flex items-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground"

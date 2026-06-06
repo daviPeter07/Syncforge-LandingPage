@@ -14,6 +14,12 @@ export interface BlogPost {
   updated_at: string;
 }
 
+export interface BlogPostHeading {
+  id: string;
+  text: string;
+  level: 2 | 3;
+}
+
 export interface CreateBlogPostInput {
   title: string;
   content_md: string;
