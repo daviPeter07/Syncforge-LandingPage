@@ -91,49 +91,50 @@ function ListContent({ posts }: { posts: BlogPost[] }) {
               </tr>
             </thead>
             <tbody className="divide-y divide-border">
-              {Array.isArray(posts) && posts.map((post) => (
-                <tr
-                  key={post.id}
-                  className="transition-colors hover:bg-muted/30"
-                >
-                  <td className="max-w-xs truncate px-4 py-3 font-medium text-foreground">
-                    {post.title}
-                  </td>
-                  <td className="px-4 py-3 text-muted-foreground">
-                    {post.author_name}
-                  </td>
-                  <td className="px-4 py-3">
-                    <ToggleStatusButton
-                      postId={post.id}
-                      published={post.published}
-                    />
-                  </td>
-                  <td className="px-4 py-3 text-muted-foreground">
-                    {new Date(post.created_at).toLocaleDateString("pt-BR")}
-                  </td>
-                  <td className="px-4 py-3 text-right">
-                    <div className="flex justify-end gap-1">
-                      <a
-                        href={`/blog/${post.id}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <Button variant="ghost" size="icon-xs">
-                          <ExternalLink className="size-3.5" />
+              {Array.isArray(posts) &&
+                posts.map((post) => (
+                  <tr
+                    key={post.id}
+                    className="transition-colors hover:bg-muted/30"
+                  >
+                    <td className="max-w-xs truncate px-4 py-3 font-medium text-foreground">
+                      {post.title}
+                    </td>
+                    <td className="px-4 py-3 text-muted-foreground">
+                      {post.author_name}
+                    </td>
+                    <td className="px-4 py-3">
+                      <ToggleStatusButton
+                        postId={post.id}
+                        published={post.published}
+                      />
+                    </td>
+                    <td className="px-4 py-3 text-muted-foreground">
+                      {new Date(post.created_at).toLocaleDateString("pt-BR")}
+                    </td>
+                    <td className="px-4 py-3 text-right">
+                      <div className="flex justify-end gap-1">
+                        <a
+                          href={`/blog/${post.id}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Button variant="ghost" size="icon-xs">
+                            <ExternalLink className="size-3.5" />
+                          </Button>
+                        </a>
+                        <Button
+                          variant="ghost"
+                          size="icon-xs"
+                          onClick={() => router.push(`/admin/blog/${post.id}`)}
+                        >
+                          <Edit className="size-3.5" />
                         </Button>
-                      </a>
-                      <Button
-                        variant="ghost"
-                        size="icon-xs"
-                        onClick={() => router.push(`/admin/blog/${post.id}`)}
-                      >
-                        <Edit className="size-3.5" />
-                      </Button>
-                      <DeleteButton postId={post.id} />
-                    </div>
-                  </td>
-                </tr>
-              ))}
+                        <DeleteButton postId={post.id} />
+                      </div>
+                    </td>
+                  </tr>
+                ))}
             </tbody>
           </table>
         </div>

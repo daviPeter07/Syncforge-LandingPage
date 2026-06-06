@@ -55,7 +55,11 @@ export function ContactInfo() {
                   <a
                     href={item.href}
                     target={item.label === "Telefone" ? "_blank" : undefined}
-                    rel={item.label === "Telefone" ? "noopener noreferrer" : undefined}
+                    rel={
+                      item.label === "Telefone"
+                        ? "noopener noreferrer"
+                        : undefined
+                    }
                     className="text-muted-foreground transition-colors hover:text-foreground"
                   >
                     {item.value}

@@ -1,5 +1,5 @@
-import ServicePageContent from "@/features/Services/ServicePageContent";
 import type { Metadata } from "next";
+import ServicePageContent from "@/features/Services/ServicePageContent";
 
 export const metadata: Metadata = {
   title: "Serviços",

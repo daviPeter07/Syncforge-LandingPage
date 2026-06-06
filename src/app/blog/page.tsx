@@ -72,7 +72,6 @@ export default async function BlogPage() {
               </p>
             </div>
           )}
-          
         </div>
       </main>
 

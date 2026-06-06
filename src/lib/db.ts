@@ -1,5 +1,5 @@
-import { createClient } from "@libsql/client";
 import type { Client } from "@libsql/client";
+import { createClient } from "@libsql/client";
 
 let db: Client | null = null;
 let initPromise: Promise<void> | null = null;

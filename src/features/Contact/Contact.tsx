@@ -1,8 +1,8 @@
 "use client";
 
 import { Reveal } from "@/components/Reveal";
-import { ContactInfo } from "./ContactInfo";
 import { ContactForm } from "./ContactForm";
+import { ContactInfo } from "./ContactInfo";
 
 export function Contact() {
   return (

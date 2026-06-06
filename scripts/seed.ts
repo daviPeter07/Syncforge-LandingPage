@@ -1,9 +1,14 @@
-import { createClient } from "@libsql/client";
 import { randomUUID } from "node:crypto";
 import { join } from "node:path";
+import { createClient } from "@libsql/client";
 
-const dbUrl = process.env.TURSO_DATABASE_URL || `file:${join(process.cwd(), "data", "blog.db")}`;
-const db = createClient({ url: dbUrl, authToken: process.env.TURSO_AUTH_TOKEN });
+const dbUrl =
+  process.env.TURSO_DATABASE_URL ||
+  `file:${join(process.cwd(), "data", "blog.db")}`;
+const db = createClient({
+  url: dbUrl,
+  authToken: process.env.TURSO_AUTH_TOKEN,
+});
 
 function stripMarkdown(md: string): string {
   return md

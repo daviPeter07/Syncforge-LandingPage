@@ -1,30 +1,54 @@
+import Link from "next/link";
 import { ImagePlaceholder } from "@/components/image-placeholder";
+import { buttonVariants } from "@/components/ui/button";
 import type { ServiceItem } from "@/types/services";
+import { cn } from "@/utils";
 
 export function ServiceCard({ service }: { service: ServiceItem }) {
   return (
-    <article className="group rounded-[1.7rem] border border-white/10 bg-card/55 p-3 shadow-[0_20px_70px_rgba(0,0,0,0.35)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-[#4d8cff]/35 hover:bg-card/70">
-      <ImagePlaceholder icon={service.icon} className="aspect-video w-full" />
+    <Link
+      href={`/services/${service.id}`}
+      aria-label={`Ver detalhes do serviço ${service.title}`}
+      className="group block rounded-[1.7rem] border border-white/10 bg-card/55 p-3 shadow-[0_20px_70px_rgba(0,0,0,0.35)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-[#4d8cff]/35 hover:bg-card/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4d8cff]/60"
+    >
+      <article>
+        <ImagePlaceholder icon={service.icon} className="aspect-video w-full" />
 
-      <div className="px-1 pt-5 pb-2">
-        <h2 className="text-2xl font-semibold tracking-[-0.03em] text-foreground">
-          {service.title}
-        </h2>
-        <p className="mt-2 text-sm leading-7 text-muted-foreground sm:text-[0.96rem]">
-          {service.description}
-        </p>
+        <div className="px-1 pt-5 pb-2">
+          <h2 className="text-2xl font-semibold tracking-[-0.03em] text-foreground">
+            {service.title}
+          </h2>
+          <p className="mt-2 text-sm leading-7 text-muted-foreground sm:text-[0.96rem]">
+            {service.description}
+          </p>
 
-        <div className="mt-5 flex flex-wrap gap-2.5">
-          {service.tags.map((tag) => (
-            <span
-              key={tag}
-              className="rounded-full border border-[#4d8cff]/20 bg-[#4d8cff]/8 px-3 py-1 text-xs font-medium text-[#4d8cff]"
-            >
-              {tag}
+          <div className="mt-5 flex flex-wrap gap-2.5">
+            {service.tags.map((tag) => (
+              <span
+                key={tag}
+                className="rounded-full border border-[#4d8cff]/20 bg-[#4d8cff]/8 px-3 py-1 text-xs font-medium text-[#4d8cff]"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+
+          <div className="mt-6 flex items-center justify-between gap-3 border-t border-white/8 pt-4">
+            <span className="text-xs font-medium tracking-[0.14em] text-muted-foreground uppercase">
+              Solução sob medida
             </span>
-          ))}
+
+            <span
+              className={cn(
+                buttonVariants({ size: "sm" }),
+                "rounded-full px-4",
+              )}
+            >
+              Ver detalhes
+            </span>
+          </div>
         </div>
-      </div>
-    </article>
+      </article>
+    </Link>
   );
 }

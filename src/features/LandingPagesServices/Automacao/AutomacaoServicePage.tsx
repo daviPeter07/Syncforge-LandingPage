@@ -1,0 +1,29 @@
+import type { ServiceLandingPageEntry } from "@/types/services";
+import { ServiceLandingLayout } from "../shared/ServiceLandingLayout";
+import { ServiceLandingWhySection } from "../shared/ServiceLandingWhySection";
+import { AutomacaoCta } from "./AutomacaoCta";
+import { AutomacaoFaq } from "./AutomacaoFaq";
+import { AutomacaoHero } from "./AutomacaoHero";
+import { AutomacaoPricing } from "./AutomacaoPricing";
+import { AutomacaoShowcase } from "./AutomacaoShowcase";
+
+interface AutomacaoServicePageProps extends ServiceLandingPageEntry {}
+
+export function AutomacaoServicePage({
+  service,
+  content,
+}: AutomacaoServicePageProps) {
+  return (
+    <ServiceLandingLayout>
+      <AutomacaoHero service={service} content={content.hero} />
+      <ServiceLandingWhySection content={content.why} />
+      <AutomacaoShowcase content={content.showcase} />
+      <AutomacaoPricing
+        serviceTitle={service.title}
+        content={content.pricing}
+      />
+      <AutomacaoFaq content={content.faq} />
+      <AutomacaoCta serviceTitle={service.title} content={content.cta} />
+    </ServiceLandingLayout>
+  );
+}
