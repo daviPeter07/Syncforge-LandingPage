@@ -56,11 +56,11 @@ export function Hero() {
               <button
                 type="button"
                 onClick={() => {
-                  window.location.href = "/services";
+                  window.location.href = "/produtos";
                 }}
                 className="text-sm font-semibold tracking-[0.04em] text-muted-foreground transition-colors hover:text-foreground"
               >
-                Ver serviços →
+                Ver produtos →
               </button>
             </div>
           </Reveal>

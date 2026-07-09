@@ -11,19 +11,17 @@ import {
   CONTACT_EMAIL_HREF,
   CONTACT_WHATSAPP_HREF,
 } from "@/constants/contact";
-import { getServiceLandingPageLinks } from "@/constants/landing-pages-services/routes";
 import { useSmoothScroll } from "@/hooks/use-smooth-scroll";
 
-const SERVICE_LINKS = [
-  { label: "Todos os servicos", href: "/services" },
-  ...getServiceLandingPageLinks().map(({ label, href }) => ({ label, href })),
+const PRODUCT_LINKS = [
+  { label: "Todos os produtos", href: "/produtos" },
 ];
 
 const SECTIONS = {
   navegar: [
     { label: "Início", href: "#inicio" },
     { label: "Sobre", href: "#sobre" },
-    { label: "Serviços", href: "/services" },
+    { label: "Produtos", href: "/produtos" },
     { label: "Como trabalhamos", href: "#como-trabalhamos" },
   ],
   empresa: [
@@ -32,7 +30,7 @@ const SECTIONS = {
     { label: "Ajuda / FAQ", href: "#ajuda" },
     { label: "Contato", href: "#contato" },
   ],
-  servicos: [...SERVICE_LINKS],
+  produtos: [...PRODUCT_LINKS],
 };
 
 interface FooterNavigationItemProps {
@@ -213,13 +211,13 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Links: Serviços */}
+          {/* Links: Produtos */}
           <div>
             <h3 className="text-[10.5px] font-medium uppercase tracking-[0.22em] text-muted-foreground">
-              Serviços
+              Produtos
             </h3>
             <ul className="mt-5 space-y-3 text-sm">
-              {SECTIONS.servicos.map((item) => (
+              {SECTIONS.produtos.map((item) => (
                 <li key={item.label}>
                   <FooterNavigationItem
                     href={item.href}
