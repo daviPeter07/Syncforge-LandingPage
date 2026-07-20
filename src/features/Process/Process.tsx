@@ -1,136 +1,154 @@
-"use client";
-
-import { motion } from "motion/react";
-import { useState } from "react";
-
 import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
-import { PROCESS_DELIVERABLES, PROCESS_STEPS } from "@/constants/process";
+import { PROCESS_STEPS } from "@/constants/process";
+import { cn } from "@/utils";
 
 export function Process() {
-  const [active, setActive] = useState(0);
-  const step = PROCESS_STEPS[active];
-  const ActiveIcon = step.icon;
-
   return (
-    <section id="como-trabalhamos" className="relative px-6 py-24 sm:py-32">
+    <section
+      id="como-trabalhamos"
+      className="relative overflow-hidden px-6 py-24 sm:py-32"
+    >
+      <div
+        aria-hidden
+        className="absolute left-1/2 top-[58%] -z-10 h-72 w-72 -translate-x-1/2 rounded-full bg-[#4d8cff]/10 blur-3xl sm:h-[480px] sm:w-[480px]"
+      />
+
       <div className="mx-auto max-w-7xl">
         <SectionHeading
           eyebrow="Como trabalhamos"
           title={
             <>
-              Um processo claro do orçamento ao{" "}
-              <span className="text-[#4d8cff]">suporte final</span>
+              Um caminho claro para transformar ideias em{" "}
+              <span className="text-[#4d8cff]">soluções reais</span>
             </>
           }
-          description="Cada projeto passa por etapas bem definidas: entendemos a necessidade, montamos uma proposta, formalizamos o escopo e desenvolvemos a solução com acompanhamento até a entrega."
+          description="Do primeiro contato ao suporte, você acompanha como organizamos cada projeto com transparência, colaboração e decisões bem definidas."
         />
 
-        <div className="mt-16 overflow-hidden rounded-3xl border border-border/40 bg-card/60 backdrop-blur-sm sm:mt-20">
-          <div className="grid items-start gap-8 text-foreground lg:grid-cols-[1fr_1.5fr]">
-            <div className="flex flex-col gap-2 border-b border-border/40 px-6 py-8 sm:p-10 lg:border-b-0 lg:border-r">
-              {PROCESS_STEPS.map((item, index) => {
-                const isActive = index === active;
-                const StepIcon = item.icon;
+        <Reveal delay={0.15}>
+          <div className="mt-16 overflow-hidden rounded-[2rem] border border-[#4d8cff]/15 bg-[#00072d] shadow-[0_24px_80px_rgba(0,7,45,0.2)] sm:mt-20">
+            <div className="flex items-center justify-between border-b border-white/10 px-5 py-4 sm:px-7">
+              <div className="flex items-center gap-3">
+                <div aria-hidden className="flex gap-1.5">
+                  <span className="size-2 rounded-full bg-[#4d8cff]" />
+                  <span className="size-2 rounded-full bg-[#4d5fa3]" />
+                  <span className="size-2 rounded-full bg-[#b8c2e0]" />
+                </div>
+                <span className="font-mono text-[10px] tracking-[0.16em] text-[#b8c2e0] uppercase sm:text-xs">
+                  Fluxo de trabalho
+                </span>
+              </div>
 
-                return (
-                  <button
-                    type="button"
-                    key={item.step}
-                    onClick={() => setActive(index)}
-                    className={`group relative flex items-center gap-5 rounded-2xl border p-4 text-left transition-all ${
-                      isActive
-                        ? "border-[#4d8cff]/30 bg-[#4d8cff]/10 shadow-sm"
-                        : "border-transparent hover:bg-muted/50"
-                    }`}
-                  >
-                    <span
-                      className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-full transition-colors ${
-                        isActive
-                          ? "bg-[#4d8cff] text-[#00072d]"
-                          : "bg-muted/80 text-muted-foreground group-hover:text-foreground"
-                      }`}
-                    >
-                      <StepIcon className="size-5" />
-                    </span>
-
-                    <div>
-                      <div
-                        className={`font-mono text-xs font-medium tracking-widest ${
-                          isActive ? "text-[#4d8cff]" : "text-muted-foreground"
-                        }`}
-                      >
-                        ETAPA {item.step}
-                      </div>
-
-                      <div
-                        className={`mt-1 text-base font-semibold transition-colors ${
-                          isActive ? "text-foreground" : "text-muted-foreground"
-                        }`}
-                      >
-                        {item.title}
-                      </div>
-                    </div>
-
-                    {isActive && (
-                      <motion.div
-                        layoutId="active-indicator-process"
-                        className="absolute inset-y-0 right-0 w-1 rounded-r-2xl bg-[#4d8cff]"
-                      />
-                    )}
-                  </button>
-                );
-              })}
+              <div className="flex items-center gap-2 font-mono text-[9px] tracking-[0.12em] text-[#b8c2e0]/70 uppercase sm:text-[10px]">
+                <span className="size-1.5 rounded-full bg-[#4d8cff] shadow-[0_0_10px_#4d8cff]" />
+                5 etapas
+              </div>
             </div>
 
-            <div className="flex flex-col justify-center px-6 py-8 sm:p-12 lg:min-h-[500px]">
-              <Reveal>
-                <motion.div
-                  key={step.step}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.4 }}
-                >
-                  <div className="flex items-center gap-3">
-                    <span className="flex h-11 w-11 items-center justify-center rounded-2xl border border-[#4d8cff]/30 bg-[#4d8cff]/10 text-[#4d8cff]">
-                      <ActiveIcon className="size-5" />
-                    </span>
+            <div className="relative px-4 py-10 sm:px-8 sm:py-14 lg:px-14 lg:py-16">
+              <div
+                aria-hidden
+                className="absolute inset-0 opacity-20"
+                style={{
+                  backgroundImage:
+                    "linear-gradient(rgba(143,184,255,0.09) 1px, transparent 1px), linear-gradient(90deg, rgba(143,184,255,0.09) 1px, transparent 1px)",
+                  backgroundSize: "40px 40px",
+                  maskImage:
+                    "radial-gradient(ellipse at center, black 10%, transparent 76%)",
+                }}
+              />
+              <div
+                aria-hidden
+                className="absolute left-1/2 top-1/2 size-80 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#0c3499]/25 blur-[100px] sm:size-[520px]"
+              />
 
-                    <span className="inline-flex h-10 items-center rounded-full border border-border/40 bg-muted/30 px-4 font-mono text-xs uppercase tracking-widest text-[#4d8cff]">
-                      Fase {String(active + 1)} de {PROCESS_STEPS.length}
-                    </span>
-                  </div>
-
-                  <h3 className="mt-8 text-balance text-3xl font-semibold tracking-[-0.02em] sm:text-4xl">
-                    {step.title}
+              <div className="relative z-10 mx-auto max-w-5xl">
+                <div className="mb-12 max-w-xl pl-12 sm:pl-16 lg:mx-auto lg:pl-0 lg:text-center">
+                  <span className="font-mono text-[9px] tracking-[0.2em] text-[#8fb8ff] uppercase sm:text-[10px]">
+                    Da conversa à evolução
+                  </span>
+                  <h3 className="mt-3 text-2xl font-semibold tracking-[-0.03em] text-white sm:text-3xl">
+                    É assim que construímos juntos.
                   </h3>
+                </div>
 
-                  <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-                    {step.description}
-                  </p>
+                <div className="relative">
+                  <div
+                    aria-hidden
+                    className="absolute bottom-0 left-5 top-0 w-px bg-gradient-to-b from-[#4d8cff]/20 via-[#4d8cff] to-[#4d8cff]/20 lg:left-1/2 lg:-translate-x-1/2"
+                  />
 
-                  <div className="mt-12 rounded-2xl border border-border/40 bg-background/50 p-6">
-                    <h4 className="mb-4 text-sm font-semibold tracking-wide">
-                      O QUE ESSA ETAPA ENTREGA
-                    </h4>
+                  <ol>
+                    {PROCESS_STEPS.map((step, index) => {
+                      const StepIcon = step.icon;
+                      const isLeft = index % 2 === 0;
 
-                    <ul className="grid gap-3 sm:grid-cols-2">
-                      {PROCESS_DELIVERABLES[active].map((deliverable) => (
+                      return (
                         <li
-                          key={deliverable}
-                          className="relative pl-6 text-sm font-medium text-muted-foreground"
+                          key={step.step}
+                          className="relative flex items-center pb-10 last:pb-0 sm:pb-12"
                         >
-                          <span className="absolute left-0 top-[7px] h-1.5 w-1.5 rounded-full bg-[#4d8cff]" />
-                          {deliverable}
+                          <span
+                            aria-hidden
+                            className="absolute left-5 top-1/2 h-px w-7 -translate-y-1/2 bg-[#4d8cff]/35 lg:hidden"
+                          />
+                          <span
+                            aria-hidden
+                            className={cn(
+                              "absolute top-1/2 hidden h-px w-12 -translate-y-1/2 bg-[#4d8cff]/35 lg:block",
+                              isLeft ? "right-1/2" : "left-1/2",
+                            )}
+                          />
+                          <span className="absolute left-5 top-1/2 z-20 size-4 -translate-x-1/2 -translate-y-1/2 rounded-full border-[4px] border-[#00072d] bg-[#4d8cff] shadow-[0_0_0_1px_rgba(143,184,255,0.35),0_0_20px_rgba(77,140,255,0.45)] lg:left-1/2" />
+
+                          <article
+                            className={cn(
+                              "ml-12 w-[calc(100%-3rem)] rounded-2xl border border-[#4d8cff]/20 bg-[#051650]/75 p-5 shadow-[0_14px_45px_rgba(0,0,0,0.2)] backdrop-blur-sm sm:ml-16 sm:w-[calc(100%-4rem)] sm:p-6 lg:ml-0 lg:w-[calc(50%-3rem)]",
+                              isLeft ? "lg:mr-auto" : "lg:ml-auto",
+                            )}
+                          >
+                            <div className="flex items-center justify-between gap-4">
+                              <span className="inline-flex items-center gap-2 font-mono text-[9px] tracking-[0.16em] text-[#8fb8ff] uppercase sm:text-[10px]">
+                                <StepIcon
+                                  className="size-4"
+                                  strokeWidth={1.8}
+                                />
+                                Etapa {step.step}
+                              </span>
+                              <span className="font-mono text-[9px] text-[#b8c2e0]/45">
+                                {String(index + 1).padStart(2, "0")} / 05
+                              </span>
+                            </div>
+
+                            <h4 className="mt-4 text-lg font-semibold tracking-tight text-white sm:text-xl">
+                              {step.title}
+                            </h4>
+                            <p className="mt-2 text-sm leading-relaxed text-[#b8c2e0]">
+                              {step.description}
+                            </p>
+
+                            <ul className="mt-5 space-y-2 border-t border-white/10 pt-4">
+                              {step.deliverables.map((deliverable) => (
+                                <li
+                                  key={deliverable}
+                                  className="flex items-start gap-3 text-xs leading-relaxed text-[#b8c2e0]/85 sm:text-sm"
+                                >
+                                  <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-[#4d8cff]" />
+                                  {deliverable}
+                                </li>
+                              ))}
+                            </ul>
+                          </article>
                         </li>
-                      ))}
-                    </ul>
-                  </div>
-                </motion.div>
-              </Reveal>
+                      );
+                    })}
+                  </ol>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );
