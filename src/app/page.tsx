@@ -14,10 +14,6 @@ const Clients = nextDynamic(
   () => import("@/features/Clients").then((mod) => mod.Clients),
   { ssr: true },
 );
-const Process = nextDynamic(
-  () => import("@/features/Process").then((mod) => mod.Process),
-  { ssr: true },
-);
 const Team = nextDynamic(
   () => import("@/features/Team").then((mod) => mod.Team),
   {
@@ -49,7 +45,6 @@ export default function HomePage() {
       <main className="relative">
         <Hero />
         <About />
-        <Process />
         <Team />
         <Clients />
         <BlogStrip />
