@@ -22,11 +22,9 @@ const SECTIONS = {
     { label: "Início", href: "#inicio" },
     { label: "Sobre", href: "#sobre" },
     { label: "Produtos", href: "/produtos" },
-    { label: "Como trabalhamos", href: "#como-trabalhamos" },
   ],
   empresa: [
     { label: "Equipe", href: "#equipe" },
-    { label: "Primeiros passos", href: "#como-trabalhamos" },
     { label: "Ajuda / FAQ", href: "#ajuda" },
     { label: "Contato", href: "#contato" },
   ],
