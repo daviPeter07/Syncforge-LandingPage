@@ -47,7 +47,6 @@ export default function HomePage() {
         <About />
         <Team />
         <Clients />
-        <BlogStrip />
         <Faq />
         <Contact />
       </main>
