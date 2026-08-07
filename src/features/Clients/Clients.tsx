@@ -29,7 +29,7 @@ export function Clients() {
           <div className="mt-12 flex flex-col items-center gap-3">
             <AvatarCircles avatarUrls={AVATAR_URLS} numPeople={100} />
             <p className="text-xs tracking-wide text-muted-foreground">
-              100 empresas atuando conosco
+              Veja as empresas que atuam conosco
             </p>
           </div>
         </Reveal>
