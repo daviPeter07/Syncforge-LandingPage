@@ -1,11 +1,11 @@
 "use client";
 
-import { Sparkles } from "lucide-react";
+import { ChevronDown } from "lucide-react";
+import { motion } from "motion/react";
 import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";
 import { TypingAnimation } from "@/components/magicui/typing-animation";
 import { Reveal } from "@/components/Reveal";
 import { useSmoothScroll } from "@/hooks/use-smooth-scroll";
-import { HeroTerminal } from "./HeroTerminal";
 
 export function Hero() {
   const { scrollToId } = useSmoothScroll();
@@ -15,19 +15,10 @@ export function Hero() {
       id="inicio"
       className="relative flex min-h-svh items-center px-6 pt-32 pb-20 lg:pt-40"
     >
-      <div className="mx-auto grid w-full max-w-7xl items-center gap-12 lg:grid-cols-2 lg:gap-16">
-        <div className="flex flex-col">
-          <Reveal>
-            <div className="inline-flex w-fit items-center gap-2 rounded-full border border-border/60 bg-card/60 px-3.5 py-1.5 backdrop-blur-sm">
-              <Sparkles className="size-3.5 text-[#4d8cff]" />
-              <span className="text-[10.5px] font-medium tracking-[0.22em] text-muted-foreground uppercase">
-                Software sob medida
-              </span>
-            </div>
-          </Reveal>
-
+      <div className="mx-auto w-full max-w-5xl text-center">
+        <div className="flex flex-col items-center">
           <Reveal delay={0.1}>
-            <h1 className="mt-6 text-balance text-4xl font-semibold tracking-[-0.03em] sm:text-5xl lg:text-[3.6rem] lg:leading-[1.05]">
+            <h1 className="text-balance text-4xl font-semibold tracking-[-0.03em] sm:text-5xl lg:text-[3.6rem] lg:leading-[1.05]">
               Sistemas e soluções digitais para negócios que precisam{" "}
               <span className="bg-linear-to-r from-[#18181b] via-[#4d8cff] to-[#4d8cff] bg-clip-text text-transparent dark:from-white dark:via-[#9ec0ff]">
                 sair do improviso
@@ -37,7 +28,7 @@ export function Hero() {
           </Reveal>
 
           <Reveal delay={0.2}>
-            <div className="mt-6 max-w-xl text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg">
+            <div className="mx-auto mt-6 max-w-2xl text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg">
               <TypingAnimation duration={18}>
                 Desenvolvemos softwares, landing pages e sistemas web para
                 empresas, comércios e profissionais que querem organizar
@@ -47,7 +38,7 @@ export function Hero() {
           </Reveal>
 
           <Reveal delay={0.35}>
-            <div className="mt-10 flex flex-wrap items-center gap-4">
+            <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
               <InteractiveHoverButton
                 text="Começar projeto"
                 onClick={() => scrollToId("#contato")}
@@ -65,15 +56,18 @@ export function Hero() {
             </div>
           </Reveal>
         </div>
-
-        <Reveal
-          delay={0.2}
-          y={40}
-          className="flex justify-center lg:justify-end"
-        >
-          <HeroTerminal />
-        </Reveal>
       </div>
+
+      <motion.button
+        type="button"
+        onClick={() => scrollToId("#sobre")}
+        aria-label="Rolar para a próxima seção"
+        animate={{ y: [0, 8, 0], opacity: [0.45, 1, 0.45] }}
+        transition={{ duration: 1.6, ease: "easeInOut", repeat: Infinity }}
+        className="absolute bottom-8 left-1/2 flex -translate-x-1/2 cursor-pointer items-center justify-center text-[#4d8cff] transition-colors hover:text-[#9ec0ff]"
+      >
+        <ChevronDown className="size-7" />
+      </motion.button>
     </section>
   );
 }

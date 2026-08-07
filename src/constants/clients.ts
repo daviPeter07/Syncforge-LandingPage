@@ -1,5 +1,5 @@
 import { Zap } from "lucide-react";
-import type { ClientLogo, Testimonial } from "@/types/clients";
+import type { Testimonial } from "@/types/clients";
 
 export const TESTIMONIALS: Testimonial[] = [
   {
@@ -10,6 +10,15 @@ export const TESTIMONIALS: Testimonial[] = [
     message:
       "Ficamos muito satisfeitos com o resultado. Hoje temos compras, vendas, finanças e equipe mais organizadas, o que facilitou muito a gestão da empresa.",
     avatar: "/company/dg-logo.jpg",
+  },
+  {
+    name: "Ideiagen",
+    role: "Startup de IA e soluções digitais",
+    company: "Ideiagen",
+    website: "https://www.ideiagen.com.br/",
+    message:
+      "Gostamos muito do resultado. O aplicativo, o dashboard e o site ficaram bem integrados e facilitaram tanto o acompanhamento dos dados quanto a evolução do projeto.",
+    avatar: "/company/logo-ideiagen.png",
   },
   {
     name: "Viviane Conde",
@@ -46,4 +55,5 @@ export const AVATAR_URLS: string[] = [
   "/company/dg-logo.jpg",
   "/company/viviane.png",
   "/company/logo-maucco2.png",
+  "/company/logo-ideiagen.png",
 ];

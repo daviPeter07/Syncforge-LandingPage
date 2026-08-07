@@ -8,8 +8,9 @@ import { AVATAR_URLS, TESTIMONIALS } from "@/constants/clients";
 import { TestimonialCard } from "./TestimonialCard";
 
 export function Clients() {
-  const firstRow = TESTIMONIALS.slice(0, TESTIMONIALS.length / 2);
-  const secondRow = TESTIMONIALS.slice(TESTIMONIALS.length / 2);
+  const firstRowLength = Math.ceil(TESTIMONIALS.length / 2);
+  const firstRow = TESTIMONIALS.slice(0, firstRowLength);
+  const secondRow = TESTIMONIALS.slice(firstRowLength);
 
   return (
     <section id="clientes" className="relative px-6 py-24 sm:py-32">
