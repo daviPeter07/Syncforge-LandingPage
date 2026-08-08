@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowLeft, Check, ShieldCheck, Sparkles } from "lucide-react";
+import { ArrowLeft, Check, ShieldCheck } from "lucide-react";
 import { type FormEvent, useEffect, useRef, useState } from "react";
 import { WhatsappIcon } from "@/components/icons/WhatsappIcon";
 import { buildWhatsAppHref } from "@/constants/contact";
@@ -418,38 +418,6 @@ export function ServiceConsultation() {
                     Informe seus dados para iniciar a conversa com o contexto do
                     projeto já organizado.
                   </p>
-
-                  <div className="mt-6 rounded-2xl border border-dashed border-[#4d8cff]/35 bg-[#4d8cff]/6 p-4 sm:p-5">
-                    <div className="flex items-center gap-2 text-xs font-semibold tracking-[0.1em] text-[#4d8cff] uppercase">
-                      <Sparkles className="size-4" />
-                      Diagnóstico inicial
-                    </div>
-                    <div className="mt-3 flex flex-wrap gap-2">
-                      {selectedOptions.map(({ question, option }) => (
-                        <span
-                          key={question.id}
-                          className="rounded-full border border-border/70 bg-background/55 px-3 py-1.5 text-xs font-medium text-foreground"
-                        >
-                          {option?.label}
-                        </span>
-                      ))}
-                    </div>
-                    <div className="mt-4 border-t border-border/50 pt-4">
-                      <p className="text-[10px] font-semibold tracking-[0.12em] text-muted-foreground uppercase">
-                        Soluções escolhidas
-                      </p>
-                      <div className="mt-2 flex flex-wrap gap-2">
-                        {selectedServices.map((service) => (
-                          <span
-                            key={service.value}
-                            className="rounded-full border border-[#4d8cff]/30 bg-[#4d8cff]/10 px-3 py-1.5 text-xs font-medium text-[#4d8cff]"
-                          >
-                            {service.label}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
 
                   <form
                     onSubmit={submitConsultation}
