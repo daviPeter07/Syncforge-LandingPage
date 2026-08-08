@@ -25,6 +25,7 @@ const SECTIONS = {
   ],
   empresa: [
     { label: "Equipe", href: "#equipe" },
+    { label: "Atendimento guiado", href: "/consulta" },
     { label: "Ajuda / FAQ", href: "#ajuda" },
     { label: "Contato", href: "#contato" },
   ],

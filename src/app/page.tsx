@@ -20,10 +20,6 @@ const Team = nextDynamic(
     ssr: true,
   },
 );
-const BlogStrip = nextDynamic(
-  () => import("@/features/BlogStrip").then((mod) => mod.BlogStrip),
-  { ssr: true },
-);
 const Faq = nextDynamic(() => import("@/features/Faq").then((mod) => mod.Faq), {
   ssr: true,
 });

@@ -41,7 +41,9 @@ export function Hero() {
             <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
               <InteractiveHoverButton
                 text="Começar projeto"
-                onClick={() => scrollToId("#contato")}
+                onClick={() => {
+                  window.location.href = "/consulta";
+                }}
               />
 
               <button
