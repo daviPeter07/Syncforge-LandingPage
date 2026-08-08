@@ -22,6 +22,31 @@ const STEP_LABELS = [
   "Contato",
 ];
 
+function formatPhone(value: string) {
+  const digits = value.replace(/\D/g, "").slice(0, 11);
+
+  if (digits.length === 0) {
+    return "";
+  }
+
+  if (digits.length <= 2) {
+    return `(${digits}`;
+  }
+
+  const areaCode = digits.slice(0, 2);
+  const number = digits.slice(2);
+
+  if (number.length <= 4) {
+    return `(${areaCode}) ${number}`;
+  }
+
+  if (number.length <= 8) {
+    return `(${areaCode}) ${number.slice(0, 4)}-${number.slice(4)}`;
+  }
+
+  return `(${areaCode}) ${number.slice(0, 5)}-${number.slice(5)}`;
+}
+
 interface ConsultationOptionButtonProps {
   option: ConsultationOption;
   selected: boolean;
@@ -459,9 +484,12 @@ export function ServiceConsultation() {
                         type="tel"
                         inputMode="tel"
                         value={phone}
-                        onChange={(event) => setPhone(event.target.value)}
+                        onChange={(event) =>
+                          setPhone(formatPhone(event.target.value))
+                        }
                         placeholder="Ex: (92) 99999-9999"
                         autoComplete="tel"
+                        maxLength={15}
                         className="h-12 rounded-xl border border-border/70 bg-background/55 px-4 text-sm outline-none focus:border-[#4d8cff]/70 focus:ring-2 focus:ring-[#4d8cff]/20"
                       />
                     </label>
