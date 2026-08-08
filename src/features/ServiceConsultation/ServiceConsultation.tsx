@@ -106,6 +106,7 @@ export function ServiceConsultation() {
   const [selectedServiceIds, setSelectedServiceIds] = useState<string[]>([]);
   const [name, setName] = useState("");
   const [company, setCompany] = useState("");
+  const [segment, setSegment] = useState("");
   const [phone, setPhone] = useState("");
   const [error, setError] = useState("");
 
@@ -211,6 +212,7 @@ export function ServiceConsultation() {
       "",
       `Nome: ${name.trim()}`,
       `Empresa: ${company.trim()}`,
+      ...(segment.trim() ? [`Segmento: ${segment.trim()}`] : []),
       `WhatsApp: ${phone.trim()}`,
       "",
       ...answerLines,
@@ -471,8 +473,23 @@ export function ServiceConsultation() {
                         required
                         value={company}
                         onChange={(event) => setCompany(event.target.value)}
-                        placeholder="Ex: Empresa Silva"
+                        placeholder="Ex: Empresa"
                         autoComplete="organization"
+                        className="h-12 rounded-xl border border-border/70 bg-background/55 px-4 text-sm outline-none focus:border-[#4d8cff]/70 focus:ring-2 focus:ring-[#4d8cff]/20"
+                      />
+                    </label>
+
+                    <label className="grid gap-2 text-sm font-medium">
+                      <span>
+                        Segmento da empresa{" "}
+                        <span className="text-xs font-normal text-muted-foreground">
+                          (opcional)
+                        </span>
+                      </span>
+                      <input
+                        value={segment}
+                        onChange={(event) => setSegment(event.target.value)}
+                        placeholder="Ex: Loja de informática"
                         className="h-12 rounded-xl border border-border/70 bg-background/55 px-4 text-sm outline-none focus:border-[#4d8cff]/70 focus:ring-2 focus:ring-[#4d8cff]/20"
                       />
                     </label>
