@@ -2,7 +2,8 @@ import type { DisabledLanguage, NavItem } from "@/types/navbar";
 
 export const NAV_ITEMS: NavItem[] = [
   { label: "INÍCIO", href: "#inicio" },
-  { label: "PRODUTOS", href: "/produtos" },
+  { label: "SOBRE", href: "#sobre" },
+  { label: "PRODUTOS", href: "#produtos" },
   { label: "BLOG", href: "/blog" },
   { label: "CONSULTA", href: "/consulta" },
   { label: "AJUDA", href: "#ajuda" },

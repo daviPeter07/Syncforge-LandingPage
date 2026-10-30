@@ -42,7 +42,11 @@ Each service has a stable `ServiceId` slug (`landing-page`, `pdv`, `crm`, `autom
 
 Adding a service means touching the `ServiceId` union, `constants/services.ts`, a new content file, `routes.ts`, `registry.ts`, the router switch, and a new feature subfolder.
 
-**Route mismatch to be aware of:** the dynamic page currently lives at `src/app/produtos/[id]/page.tsx` (with `dynamicParams = false`), and the navbar/footer/sitemap use `/produtos`. But `ServiceCard`, `routes.ts`, the shared Hero/CTA, and the canonical URL in `generateMetadata` point to `/services/...`, and `src/app/services/` does not exist. `AGENTS.md` specifies `/services/[id]`. Settle on one route before adding links.
+**Route mismatch to be aware of:** the dynamic service page currently lives at `src/app/produtos/[id]/page.tsx` (with `dynamicParams = false`). But `ServiceCard`, `routes.ts`, the shared Hero/CTA, and the canonical URL in `generateMetadata` point to `/services/...`, and `src/app/services/` does not exist. `AGENTS.md` specifies `/services/[id]`. Settle on one route before adding links.
+
+### Products
+
+SyncForge's own products (SIGEM, Mastermind) are a section of the home page (`#produtos`), not a separate page: `constants/products.ts` → `features/Products/Products.tsx` → `ProductCard`. Adding a product = adding an item to `PRODUCTS` (the footer lists them automatically). `/produtos` redirects to `/#produtos` via `next.config.ts`.
 
 ### Blog (the only backend feature)
 

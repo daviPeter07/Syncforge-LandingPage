@@ -35,7 +35,26 @@ export function Clients() {
           </div>
         </Reveal>
 
-        <Reveal delay={0.3}>
+        {/* Celular: uma fileira só, mais lenta e com cards do tamanho da tela
+            para dar tempo de ler. Tocar no card pausa. */}
+        <Reveal delay={0.3} className="md:hidden">
+          <div className="relative -mx-6 mt-12 overflow-hidden">
+            <Marquee pauseOnHover className="[--duration:70s] [--gap:0.75rem]">
+              {TESTIMONIALS.map((t) => (
+                <TestimonialCard
+                  key={t.name}
+                  data={t}
+                  className="w-[80vw] max-w-80"
+                />
+              ))}
+            </Marquee>
+
+            <div className="pointer-events-none absolute inset-y-0 left-0 w-6 bg-gradient-to-r from-background to-transparent" />
+            <div className="pointer-events-none absolute inset-y-0 right-0 w-6 bg-gradient-to-l from-background to-transparent" />
+          </div>
+        </Reveal>
+
+        <Reveal delay={0.3} className="hidden md:block">
           <div className="relative mt-14 flex w-full flex-col gap-4 overflow-hidden">
             <Marquee pauseOnHover className="[--duration:50s]">
               {firstRow.map((t) => (

@@ -4,9 +4,10 @@ import { cn } from "@/utils";
 
 interface TestimonialCardProps {
   data: Testimonial;
+  className?: string;
 }
 
-export function TestimonialCard({ data }: TestimonialCardProps) {
+export function TestimonialCard({ data, className }: TestimonialCardProps) {
   const IconComponent = data.icon;
 
   return (
@@ -15,7 +16,10 @@ export function TestimonialCard({ data }: TestimonialCardProps) {
       target="_blank"
       rel="noopener noreferrer"
       aria-label={`Visitar o site da ${data.name}`}
-      className="group/testimonial block w-80 shrink-0 rounded-2xl outline-none focus-visible:ring-2 focus-visible:ring-[#4d8cff] focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+      className={cn(
+        "group/testimonial block w-80 shrink-0 rounded-2xl outline-none focus-visible:ring-2 focus-visible:ring-[#4d8cff] focus-visible:ring-offset-2 focus-visible:ring-offset-background",
+        className,
+      )}
     >
       <figure
         className={cn(
@@ -44,17 +48,17 @@ export function TestimonialCard({ data }: TestimonialCardProps) {
             />
           )}
           <div className="min-w-0">
-            <figcaption className="truncate text-sm font-semibold text-[#7da8ff] underline decoration-[#4d8cff]/40 underline-offset-4 transition-colors group-hover/testimonial:text-[#9ec0ff] group-hover/testimonial:decoration-[#4d8cff]">
+            <figcaption className="truncate text-sm font-semibold text-[#2459f5] underline decoration-[#4d8cff]/40 underline-offset-4 transition-colors group-hover/testimonial:text-[#1d4bd6] dark:text-[#7da8ff] dark:group-hover/testimonial:text-[#9ec0ff] group-hover/testimonial:decoration-[#4d8cff]">
               {data.name}
             </figcaption>
-            <p className="truncate text-[10px] text-muted-foreground">
+            <p className="truncate text-xs text-muted-foreground">
               {data.name === data.company
                 ? data.role || data.company
                 : `${data.role} · ${data.company}`}
             </p>
           </div>
         </div>
-        <blockquote className="mt-4 text-sm leading-relaxed text-muted-foreground">
+        <blockquote className="mt-4 text-sm leading-relaxed text-foreground/80">
           {data.message}
         </blockquote>
       </figure>

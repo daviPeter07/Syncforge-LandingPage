@@ -13,7 +13,7 @@ export function FaqAccordion({ items }: FaqAccordionProps) {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <div className="flex flex-col gap-3">
+    <div className="flex flex-col gap-2.5 sm:gap-3">
       {items.map((item, i) => {
         const isOpen = open === i;
         return (
@@ -30,9 +30,9 @@ export function FaqAccordion({ items }: FaqAccordionProps) {
               type="button"
               onClick={() => setOpen(isOpen ? null : i)}
               aria-expanded={isOpen}
-              className="flex w-full items-center gap-4 px-5 py-4 text-left"
+              className="flex w-full items-center gap-3 px-4 py-3.5 text-left sm:gap-4 sm:px-5 sm:py-4"
             >
-              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-border/60 bg-background/40 text-muted-foreground transition-all">
+              <span className="flex size-7 shrink-0 items-center justify-center rounded-full border border-border/60 bg-background/40 text-muted-foreground transition-all sm:size-8">
                 {isOpen ? (
                   <Minus className="size-4 text-[#4d8cff]" />
                 ) : (
@@ -40,7 +40,7 @@ export function FaqAccordion({ items }: FaqAccordionProps) {
                 )}
               </span>
               <div className="flex-1">
-                <span className="block mb-1 text-[10px] font-medium uppercase tracking-[0.2em] text-[#4d8cff]/80">
+                <span className="mb-1 hidden text-[10px] font-medium uppercase tracking-[0.2em] text-[#4d8cff]/80 sm:block">
                   {item.category}
                 </span>
                 <h3 className="text-sm font-semibold tracking-tight sm:text-base">
@@ -59,7 +59,7 @@ export function FaqAccordion({ items }: FaqAccordionProps) {
               )}
             >
               <div className="overflow-hidden">
-                <div className="px-5 pb-5 pl-[calc(20px+32px+16px)] text-sm leading-relaxed text-muted-foreground">
+                <div className="px-4 pb-4 pl-[calc(16px+28px+12px)] text-sm leading-relaxed text-muted-foreground sm:px-5 sm:pb-5 sm:pl-[calc(20px+32px+16px)]">
                   {item.answer}
                 </div>
               </div>
