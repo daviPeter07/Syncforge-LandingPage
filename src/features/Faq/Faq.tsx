@@ -9,6 +9,40 @@ import { useSmoothScroll } from "@/hooks/use-smooth-scroll";
 import { cn } from "@/utils";
 import { FaqAccordion } from "./FaqAccordion";
 
+function FaqHelp({
+  onContact,
+  className,
+}: {
+  onContact: () => void;
+  className?: string;
+}) {
+  return (
+    <div
+      className={cn(
+        "rounded-2xl border border-border/50 bg-background/30 p-4",
+        className,
+      )}
+    >
+      <div className="flex items-center gap-2 text-sm font-semibold">
+        <LifeBuoy className="size-4 text-[#4d8cff]" />
+        Ainda tem dúvidas?
+      </div>
+
+      <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
+        Fale com a gente sobre a sua ideia ou sobre orçamento.
+      </p>
+
+      <button
+        type="button"
+        onClick={onContact}
+        className="mt-3 w-full rounded-lg bg-[#0a3499] px-3 py-2.5 text-xs font-semibold text-white transition-colors hover:bg-[#0e3eb8]"
+      >
+        Falar com a SyncForge
+      </button>
+    </div>
+  );
+}
+
 export function Faq() {
   const { scrollToId } = useSmoothScroll();
 
@@ -24,67 +58,57 @@ export function Faq() {
       ? FAQ_ITEMS
       : FAQ_ITEMS.filter((f) => f.category === active);
 
+  const goToContact = () => scrollToId("#contato");
+
   return (
-    <section id="ajuda" className="relative px-6 py-24 sm:py-32">
+    <section id="ajuda" className="relative px-6 py-20 sm:py-32">
       <div className="mx-auto max-w-7xl">
         <SectionHeading
           eyebrow="Dúvidas frequentes"
           title={
             <>
-              Antes de começar um projeto,{" "}
-              <span className="text-[#4d8cff]">entenda como trabalhamos</span>
+              Tire suas dúvidas{" "}
+              <span className="text-[#4d8cff]">antes de começar</span>
             </>
           }
-          description="Reunimos as principais dúvidas sobre serviços, orçamento, contrato, suporte e desenvolvimento de soluções digitais."
+          description="Respostas rápidas para as perguntas que mais recebemos."
         />
 
-        <div className="mt-16 grid gap-8 lg:grid-cols-[280px_1fr]">
+        <div className="mt-10 grid grid-cols-[minmax(0,1fr)] gap-6 sm:mt-16 lg:grid-cols-[280px_minmax(0,1fr)] lg:gap-8">
           <Reveal>
-            <aside className="flex flex-col gap-2 rounded-3xl border border-border/50 bg-card/40 p-4 backdrop-blur-md">
-              <div className="px-3 py-2 text-[10px] font-medium uppercase tracking-[0.2em] text-muted-foreground">
+            <aside className="lg:rounded-3xl lg:border lg:border-border/50 lg:bg-card/40 lg:p-4 lg:backdrop-blur-md">
+              <div className="hidden px-3 py-2 text-[10px] font-medium uppercase tracking-[0.2em] text-muted-foreground lg:block">
                 Categorias
               </div>
 
-              {categories.map((category) => (
-                <button
-                  key={category}
-                  type="button"
-                  onClick={() => setActive(category)}
-                  className={cn(
-                    "rounded-xl px-3 py-2 text-left text-sm font-medium transition-colors",
-                    active === category
-                      ? "bg-[#0a3499]/30 text-foreground"
-                      : "text-muted-foreground hover:bg-card/60 hover:text-foreground",
-                  )}
-                >
-                  {category}
-                </button>
-              ))}
-
-              <div className="mt-4 rounded-2xl border border-border/50 bg-background/30 p-4">
-                <div className="flex items-center gap-2 text-sm font-semibold">
-                  <LifeBuoy className="size-4 text-[#4d8cff]" />
-                  Ainda tem dúvidas?
-                </div>
-
-                <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
-                  Fale com a gente para explicar sua ideia, tirar dúvidas sobre
-                  orçamento ou entender qual solução faz mais sentido.
-                </p>
-
-                <button
-                  type="button"
-                  onClick={() => scrollToId("#contato")}
-                  className="mt-3 w-full rounded-lg bg-[#0a3499] px-3 py-2 text-xs font-semibold text-white transition-colors hover:bg-[#0e3eb8]"
-                >
-                  Falar com a SyncForge
-                </button>
+              <div className="-mx-6 flex gap-2 overflow-x-auto px-6 [scrollbar-width:none] lg:mx-0 lg:flex-col lg:px-0 [&::-webkit-scrollbar]:hidden">
+                {categories.map((category) => (
+                  <button
+                    key={category}
+                    type="button"
+                    onClick={() => setActive(category)}
+                    className={cn(
+                      "shrink-0 rounded-full border px-4 py-2 text-sm font-medium transition-colors lg:rounded-xl lg:border-transparent lg:px-3 lg:text-left",
+                      active === category
+                        ? "border-[#4d8cff]/40 bg-[#4d8cff]/15 text-foreground lg:bg-[#0a3499]/30"
+                        : "border-border/60 text-muted-foreground hover:bg-card/60 hover:text-foreground",
+                    )}
+                  >
+                    {category}
+                  </button>
+                ))}
               </div>
+
+              <FaqHelp
+                onContact={goToContact}
+                className="mt-4 hidden lg:block"
+              />
             </aside>
           </Reveal>
 
           <Reveal delay={0.1}>
             <FaqAccordion items={filtered} />
+            <FaqHelp onContact={goToContact} className="mt-6 lg:hidden" />
           </Reveal>
         </div>
       </div>
