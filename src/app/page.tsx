@@ -10,6 +10,10 @@ const About = nextDynamic(
   () => import("@/features/About").then((mod) => mod.About),
   { ssr: true },
 );
+const Products = nextDynamic(
+  () => import("@/features/Products").then((mod) => mod.Products),
+  { ssr: true },
+);
 const Clients = nextDynamic(
   () => import("@/features/Clients").then((mod) => mod.Clients),
   { ssr: true },
@@ -41,6 +45,7 @@ export default function HomePage() {
       <main className="relative">
         <Hero />
         <About />
+        <Products />
         <Team />
         <Clients />
         <Faq />

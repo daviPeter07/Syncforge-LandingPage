@@ -11,17 +11,19 @@ import {
   CONTACT_EMAIL_HREF,
   CONTACT_WHATSAPP_HREF,
 } from "@/constants/contact";
+import { PRODUCTS } from "@/constants/products";
 import { useSmoothScroll } from "@/hooks/use-smooth-scroll";
 
-const PRODUCT_LINKS = [
-  { label: "Todos os produtos", href: "/produtos" },
-];
+const PRODUCT_LINKS = PRODUCTS.map((product) => ({
+  label: `${product.name} · ${product.category}`,
+  href: "#produtos",
+}));
 
 const SECTIONS = {
   navegar: [
     { label: "Início", href: "#inicio" },
     { label: "Sobre", href: "#sobre" },
-    { label: "Produtos", href: "/produtos" },
+    { label: "Produtos", href: "#produtos" },
   ],
   empresa: [
     { label: "Equipe", href: "#equipe" },
