@@ -12,12 +12,12 @@ export const dynamic = "force-dynamic";
 const siteUrl = getSiteUrl();
 
 export const metadata: Metadata = {
-  title: "Blog | SyncForge",
+  title: "Blog",
   description:
     "Artigos sobre desenvolvimento de software, CRM, sistemas web, landing pages, IA e tecnologia em Manaus.",
   alternates: { canonical: "/blog" },
   openGraph: {
-    title: "Blog | SyncForge",
+    title: "Blog",
     description:
       "Artigos sobre desenvolvimento de software, CRM, sistemas web e tecnologia.",
     url: `${siteUrl}/blog`,
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Blog | SyncForge",
+    title: "Blog",
     description:
       "Artigos sobre desenvolvimento de software, CRM, sistemas web e tecnologia.",
   },

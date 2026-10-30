@@ -33,11 +33,13 @@ export async function generateMetadata({
   return {
     title: entry.content.seoTitle,
     description: entry.content.seoDescription,
-    alternates: { canonical: `/services/${entry.content.id}` },
+    alternates: { canonical: `/produtos/${entry.content.id}` },
+    // Páginas ainda com mockups temporários: fora do Google até o conteúdo real entrar.
+    robots: { index: false, follow: true },
     openGraph: {
       title: entry.content.seoTitle,
       description: entry.content.seoDescription,
-      url: `${siteUrl}/services/${entry.content.id}`,
+      url: `${siteUrl}/produtos/${entry.content.id}`,
       siteName: "SyncForge",
       type: "website",
       locale: "pt_BR",

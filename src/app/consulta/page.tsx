@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: "Consulta de soluções",
   description:
     "Responda algumas perguntas e descubra quais soluções da SyncForge combinam com o momento do seu negócio.",
+  alternates: { canonical: "/consulta" },
 };
 
 export default function ConsultationPage() {

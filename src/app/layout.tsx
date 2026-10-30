@@ -1,8 +1,10 @@
 import { Analytics } from "@vercel/analytics/next";
 import type { Metadata, Viewport } from "next";
 import { Geist_Mono, Poppins } from "next/font/google";
+import { JsonLd } from "@/components/JsonLd";
 import { Providers } from "@/components/Providers";
 import { FAQ_ITEMS } from "@/constants/faq";
+import { SEO_DESCRIPTION, SEO_TITLE, SOCIAL_IMAGE_ALT } from "@/constants/seo";
 import { getSiteUrl } from "@/lib/seo";
 import "./globals.css";
 
@@ -14,8 +16,18 @@ const organizationStructuredData = {
   name: "SyncForge",
   url: siteUrl,
   logo: `${siteUrl}/syncforge.png`,
+  description: SEO_DESCRIPTION,
   email: "contato.syncforge@gmail.com",
   telephone: "+55-92-99258-4985",
+  sameAs: ["https://www.instagram.com/syncforge.company/"],
+  areaServed: "BR",
+  contactPoint: {
+    "@type": "ContactPoint",
+    contactType: "customer service",
+    telephone: "+55-92-99258-4985",
+    email: "contato.syncforge@gmail.com",
+    availableLanguage: "Portuguese",
+  },
   address: {
     "@type": "PostalAddress",
     addressCountry: "BR",
@@ -58,13 +70,18 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "SyncForge | Software sob medida em Manaus",
-  description:
-    "A SyncForge desenvolve software sob medida em Manaus: CRM, ERP, PDV, OS, WMS, sistemas web, automações com bots e landing pages para empresas.",
+  title: {
+    default: SEO_TITLE,
+    template: "%s | SyncForge",
+  },
+  description: SEO_DESCRIPTION,
+  applicationName: "SyncForge",
   icons: {
-    icon: "/syncforge.png",
-    shortcut: "/syncforge.png",
-    apple: "/syncforge.png",
+    icon: [
+      { url: "/syncforge.svg", type: "image/svg+xml" },
+      { url: "/syncforge.png", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-icon", sizes: "180x180", type: "image/png" }],
   },
   alternates: {
     canonical: "/",
@@ -87,6 +104,8 @@ export const metadata: Metadata = {
     "Empresa de software Manaus",
     "Sistema sob medida",
     "Sistema para empresas",
+    "Sistema de gestão para pequenas empresas",
+    "SIGEM",
     "CRM",
     "ERP",
     "PDV",
@@ -108,11 +127,10 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: {
-      default: "SyncForge | Software sob medida em Manaus",
+      default: SEO_TITLE,
       template: "%s | SyncForge",
     },
-    description:
-      "Sistemas web, CRM, ERP, PDV, OS, WMS, automações e landing pages para empresas em Manaus.",
+    description: SEO_DESCRIPTION,
     url: siteUrl,
     siteName: "SyncForge",
     type: "website",
@@ -122,18 +140,17 @@ export const metadata: Metadata = {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "SyncForge - Software sob medida em Manaus",
+        alt: SOCIAL_IMAGE_ALT,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title: {
-      default: "SyncForge | Software sob medida em Manaus",
+      default: SEO_TITLE,
       template: "%s | SyncForge",
     },
-    description:
-      "Sistemas web, CRM, ERP, PDV, OS, WMS, automações e landing pages para empresas em Manaus.",
+    description: SEO_DESCRIPTION,
     images: ["/twitter-image"],
   },
 };
@@ -159,24 +176,9 @@ export default function RootLayout({
         suppressHydrationWarning
         className="min-h-full flex flex-col bg-background text-foreground"
       >
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(organizationStructuredData),
-          }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(websiteStructuredData),
-          }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(faqStructuredData),
-          }}
-        />
+        <JsonLd data={organizationStructuredData} />
+        <JsonLd data={websiteStructuredData} />
+        <JsonLd data={faqStructuredData} />
         <Analytics />
         <Providers>{children}</Providers>
       </body>
