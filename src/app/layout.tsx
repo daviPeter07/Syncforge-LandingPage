@@ -106,6 +106,7 @@ export const metadata: Metadata = {
     "Sistema para empresas",
     "Sistema de gestão para pequenas empresas",
     "SIGEM",
+    "Operis",
     "CRM",
     "ERP",
     "PDV",

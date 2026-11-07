@@ -1,6 +1,6 @@
 import type { LucideIcon } from "lucide-react";
 
-export type ProductId = "sigem" | "mastermind";
+export type ProductId = "sigem" | "operis" | "mastermind";
 
 export type ProductStatus = "available" | "coming-soon";
 

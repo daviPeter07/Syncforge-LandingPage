@@ -1,4 +1,4 @@
-import { Blocks, Wallet } from "lucide-react";
+import { Blocks, Settings2, Wallet } from "lucide-react";
 import { buildWhatsAppHref } from "@/constants/contact";
 import type { ProductItem, ProductStatus } from "@/types/products";
 
@@ -22,6 +22,24 @@ export const PRODUCTS: ProductItem[] = [
       href: buildWhatsAppHref(
         "Olá, vim pelo site da SyncForge e quero saber mais sobre o SIGEM.",
       ),
+    },
+  },
+  {
+    id: "operis",
+    name: "Operis",
+    category: "Gestão de operações",
+    status: "available",
+    summary:
+      "Sistema completo para gestão de operações da sua empresa: ordens de serviço, controle de equipes e relatórios em um só lugar.",
+    tags: ["Ordens de serviço", "Equipes", "Relatórios"],
+    icon: Settings2,
+    image: {
+      src: "/products/og-image.png",
+      alt: "Tela do Operis",
+    },
+    cta: {
+      label: "Acessar",
+      href: "https://www.dgcomputer.com.br/operis/",
     },
   },
   {
