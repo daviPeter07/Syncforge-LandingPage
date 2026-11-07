@@ -1,5 +1,4 @@
 import { Blocks, Settings2, Wallet } from "lucide-react";
-import { buildWhatsAppHref } from "@/constants/contact";
 import type { ProductItem, ProductStatus } from "@/types/products";
 
 export const PRODUCT_STATUS_LABELS: Record<ProductStatus, string> = {
@@ -17,11 +16,13 @@ export const PRODUCTS: ProductItem[] = [
       "Organiza a sua empresa em um só lugar: vendas no caixa, controle de estoque e contas a pagar e a receber, tudo conectado. Você contrata só as partes de que precisa.",
     tags: ["Vendas e caixa", "Estoque", "Financeiro"],
     icon: Blocks,
+    image: {
+      src: "/products/sigem.png",
+      alt: "Tela do SIGEM",
+    },
     cta: {
       label: "Quero saber mais",
-      href: buildWhatsAppHref(
-        "Olá, vim pelo site da SyncForge e quero saber mais sobre o SIGEM.",
-      ),
+      href: "https://sigem-erp.vercel.app/",
     },
   },
   {
